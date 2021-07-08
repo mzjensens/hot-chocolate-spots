@@ -1,0 +1,9 @@
+site_name: 'ReadTheDocs Plug-in'
+
+    pages:
+      -  Home: index.md
+      -  'ReadTheDocs':
+           -  'Examples': 'topics/examples.md'
+           -  'Full list of features': 'topics/features-full.md'
+           -  'Basic usage': 'topics/basic-usage.md'
+    theme: mkdocs

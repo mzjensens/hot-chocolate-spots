@@ -1,0 +1,4 @@
+[ERROR]  [/topics/incorrect-spelling.dita]
+ Line 17: p - [incorrect-spelling]
+The word 'separate' is spelt incorrectly ('seperate') in the following text:
+Seperate accommodation can be found within the main building.

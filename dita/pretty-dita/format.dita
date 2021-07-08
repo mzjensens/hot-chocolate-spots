@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="formatting-rules">
+  <title>Formatting Rules</title>
+  <abstract>
+    <shortdesc>
+       The pretty-dita DITA-OT Plug-in is an <b>opinionated</b> code formatter, DITA
+       files are formatted to according to a well-defined set of rules.
+    </shortdesc>
+  </abstract>
+  <body>
+    <section id="basic-block-elements">
+      <title outputclass="h3 mt-3">Basic Block Elements</title>
+      <p>
+         By default all DITA elements (not listed in the categories below) are indented
+         one level further than the containing DITA element.
+      </p>
+      <codeblock scale="80" outputclass="language-xml">&lt;topic id="basic-usage"&gt;
+    &lt;title&gt;Basic usage&lt;/title&gt;
+    &lt;body outputclass="language-markup"&gt;
+        ...etc
+    &lt;/body&gt;
+&lt;/topic&gt;</codeblock>
+    </section>
+    <section id="indented-block-elements">
+      <title outputclass="h3 mt-3">Indented Block Elements</title>
+      <indexterm><xmlelement>abstract</xmlelement></indexterm>
+      <indexterm><xmlelement>shortdesc</xmlelement></indexterm>
+      <indexterm><xmlelement>p</xmlelement></indexterm>
+      <indexterm><xmlelement>li</xmlelement></indexterm>
+      <indexterm><xmlelement>note</xmlelement></indexterm>
+      <indexterm><xmlelement>lq</xmlelement></indexterm>
+      <p>
+         The following elements frequently contain a large body of text within them. The
+         opening and closing tags are therefore always placed on a separate line before
+         displaying the text found within them:
+      </p>
+      <ul>
+        <li>
+           Topic elements: <xmlelement>abstract</xmlelement>, <xmlelement>shortdesc</xmlelement>
+        </li>
+        <li>
+           Body elements: <xmlelement>p</xmlelement>, <xmlelement>li</xmlelement>,
+           <xmlelement>note</xmlelement>, <xmlelement>lq</xmlelement>
+        </li>
+      </ul>
+      <codeblock scale="80" outputclass="language-xml">&lt;ul&gt;
+    &lt;li&gt;
+      This is an item in an unordered list.
+    &lt;/li&gt;
+    &lt;li&gt;
+      To separate it from other items in the list, the formatter puts a bullet beside it.
+    &lt;/li&gt;
+    &lt;li&gt;
+      The following paragraph, contained in the list item element, is part of the list
+      item which contains it.
+        &lt;p&gt;
+          This is the contained paragraph.
+        &lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      This is the last list item in our unordered list.
+    &lt;/li&gt;
+&lt;/ul&gt;</codeblock>
+    </section>
+    <section id="inline-elements">
+      <title outputclass="h3 mt-3">Inline Elements</title>
+      <p>
+         The following elements are treated as inline elements, they do not warrant an
+         additional line and are kept within the surrounding text.
+      </p>
+      <ul>
+        <li>
+           Body elements: <xmlelement>ph</xmlelement>, <xmlelement>codeph</xmlelement>, <xmlelement>synph</xmlelement>,
+           <xmlelement>term</xmlelement>, <xmlelement>xref</xmlelement>, <xmlelement>cite</xmlelement>,
+           <xmlelement>q</xmlelement>, <xmlelement>boolean</xmlelement>, <xmlelement>state</xmlelement>,
+           <xmlelement>keyword</xmlelement>, <xmlelement>option</xmlelement>,
+           <xmlelement>tm</xmlelement>, <xmlelement>fn</xmlelement>, <xmlelement>xref</xmlelement>
+        </li>
+        <li>
+           Programming elements: <xmlelement>parmname</xmlelement>, <xmlelement>apiname</xmlelement>
+        </li>
+        <li>
+           Typographic elements: <xmlelement>b</xmlelement>, <xmlelement>i</xmlelement>,
+           <xmlelement>sup</xmlelement>, <xmlelement>sub</xmlelement>, <xmlelement>tt</xmlelement>, <xmlelement>u</xmlelement>
+        </li>
+        <li>
+           Software elements: <xmlelement>filepath</xmlelement>, <xmlelement>msgph</xmlelement>,
+           <xmlelement>userinput</xmlelement>, <xmlelement>systemoutput</xmlelement>,
+           <xmlelement>cmdname</xmlelement>, <xmlelement>msgnum</xmlelement>, <xmlelement>varname</xmlelement>
+        </li>
+        <li>
+           Userinteface elements: <xmlelement>uicontrol</xmlelement>,
+           <xmlelement>menucascade</xmlelement>, <xmlelement>wintitle</xmlelement>
+        </li>
+        <li>
+           XML Mention Domain: <xmlelement>numcharref</xmlelement>, <xmlelement>parameterentity</xmlelement>,
+           <xmlelement>textentity</xmlelement>, <xmlelement>xmlatt</xmlelement>,
+           <xmlelement>xmlelement</xmlelement>, <xmlelement>xmlnsname</xmlelement>, <xmlelement>xmlpi</xmlelement>
+        </li>
+      </ul>
+      <codeblock scale="80" outputclass="language-xml">&lt;p&gt;
+  &lt;b&gt;STOP!&lt;/b&gt; This is &lt;b&gt;very&lt;/b&gt; important! Unplug the unit &lt;i&gt;before&lt;/i&gt; placing the
+  metal screwdriver against the terminal screw.
+&lt;/p&gt;</codeblock>
+    </section>
+    <section id="text-elements">
+      <title outputclass="h3 mt-3">Text Elements</title>
+      <p>
+         Text elements on a single line are kept within the containing element Text
+         element on multiple lines are indented one level further than the surrounding
+         text. Long lines of text are truncated to approximately 80 characters length by
+         default before adding a carriage return. Carriage returns are usually placed so
+         as not to split inline elements, but this is sometimes not feasable within the
+         line limits, so a line break may occur before an inline attribute.
+      </p>
+      <codeblock scale="80" outputclass="language-xml">&lt;p&gt;
+  The &lt;xref format="html" scope="external"
+  href="https://www.w3.org/TR/html5/grouping-content.html#the-pre-element"&gt;recommended
+  way to mark up a code block&lt;/xref&gt; (both for semantics and for Prism) is a &lt;codeph&gt;&amp;lt;pre&amp;gt;&lt;/codeph&gt;
+  element with a &lt;codeph&gt;&amp;lt;code&amp;gt;&lt;/codeph&gt; element inside, like so:
+&lt;/p&gt;</codeblock>
+    </section>
+    <section id="whitespace-sensitive-elements">
+      <title outputclass="h3 mt-3">Whitespace sensitive elements</title>
+      <indexterm><xmlelement>codeblock</xmlelement></indexterm>
+      <indexterm><xmlelement>lines</xmlelement></indexterm>
+      <indexterm><xmlelement>msgblock</xmlelement></indexterm>
+      <indexterm><xmlelement>pre</xmlelement></indexterm>
+      <indexterm><xmlelement>foreign</xmlelement></indexterm>
+      <indexterm><xmlelement>coderef</xmlelement></indexterm>
+      <p>
+         The following elements are whitespace sensitive and require special processing:
+      </p>
+      <ul>
+        <li>
+           <xmlelement>codeblock</xmlelement>, <xmlelement>lines</xmlelement>,
+           <xmlelement>msgblock</xmlelement>, <xmlelement>pre</xmlelement>, <xmlelement>foreign</xmlelement>,
+        </li>
+      </ul>
+      <p>
+         The opening tag of a <xmlelement>codeblock</xmlelement> is indented normally,
+         the text within a <xmlelement>codeblock</xmlelement> (if any) is not indented
+      </p>
+      <codeblock scale="80" outputclass="language-xml">&lt;topic id="basic-usage"&gt;
+    &lt;title&gt;Basic usage&lt;/title&gt;
+    &lt;body outputclass="language-markup"&gt;
+        &lt;p&gt;
+          You will need to include the &lt;codeph&gt;prism.css&lt;/codeph&gt; and &lt;codeph&gt;prism.js&lt;/codeph&gt;
+          files you downloaded in your page. Example:
+        &lt;/p&gt;
+        &lt;codeblock&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  ...
+  &amp;lt;link href="themes/prism.css" rel="stylesheet" /&amp;gt;
+  &amp;gt;&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  ...
+  &amp;lt;script src="prism.js"&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/codeblock&gt;
+        ...etc</codeblock>
+      <p>
+         <xmlelement>codeblock</xmlelement> elements containing <xmlelement>coderef</xmlelement>
+         elements are indented as shown:
+      </p>
+      <codeblock scale="80" outputclass="language-xml">&lt;codeblock outputclass="language-markup"&gt;&lt;coderef href="../src/logo.svg"/&gt;
+&lt;/codeblock&gt;</codeblock>
+      <p>
+         Other white-space sensitive elements such as <xmlelement>lines</xmlelement> are
+         supported in a similar manner. If processing is found to be incorrect due to
+         embedded elements, it is suggested that the author uses the <codeph>pretty-ignore</codeph>
+         directive to maintain whitespace.
+      </p>
+    </section>
+  </body>
+</topic>

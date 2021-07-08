@@ -1,0 +1,5 @@
+<plugin id="com.example.watermark.dita">
+  <require plugin="fox.jason.watermark"/>
+  <feature extension="watermark.pre" value="watermark.auth"/>
+  <feature extension="depend.preprocess.pre" value="watermark.check"/>
+</plugin>

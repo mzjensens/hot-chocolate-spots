@@ -1,0 +1,8 @@
+<!--
+    We want to display the text below which would usually
+    result in a warning
+-->
+<p>
+    <!-- ignore-rule:running-text-fixme,comment-fixme -->
+    FIXME is usually banned in the running text.
+</p>

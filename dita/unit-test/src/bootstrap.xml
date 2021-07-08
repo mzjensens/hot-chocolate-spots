@@ -1,0 +1,5 @@
+<project name="bootstrap.unit-test">
+  <dirname property="test.root.dir" file="${ant.file.bootstrap.unit-test}/.." />
+  <property name="dita.dir" location="PATH_TO_DITA_OT"/>
+  <typedef file="${dita.dir}/plugins/fox.jason.unit-test/resource/antlib.xml"/>
+</project>

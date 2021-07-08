@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="usage">
+  <title>Usage</title>
+  <abstract>
+    <shortdesc>
+       To highlight the syntax within codeblocks, add an <xmlatt>outputclass</xmlatt>
+       attribute to any <xmlelement>codeph</xmlelement> or <xmlelement>codeblock</xmlelement>
+       elements in your <codeph>*.dita</codeph> files. Alternatively add an <xmlatt>outputclass</xmlatt>
+       attribute to the <xmlelement>body</xmlelement> element, and all <xmlelement>codeph</xmlelement>
+       or <xmlelement>codeblock</xmlelement> elements will inherit from it.
+    </shortdesc>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm><xmlelement>codeph</xmlelement></indexterm>
+        <indexterm><xmlelement>codeblock</xmlelement></indexterm>
+        <indexterm><xmlatt>outputclass</xmlatt></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p>
+       With the default Prism-JS <xref
+       href="https://prismjs.com/download.html#themes=prism&amp;languages=markup+css+clike+javascript"
+       format="html" scope="external">library</xref> the following languages can be
+       highlighted
+    </p>
+    <ul>
+      <li>
+         <xmlatt>outputclass="language-markup"</xmlatt> - HTML, XML etc.
+      </li>
+      <li>
+         <xmlatt>outputclass="language-css"</xmlatt> - Cascading Style Sheet highlighting
+      </li>
+      <li>
+         <xmlatt>outputclass="language-clike"</xmlatt> - C-language family highlighting
+      </li>
+      <li>
+         <xmlatt>outputclass="language-javascript"</xmlatt> - JavaScript highlighting …etc.
+      </li>
+    </ul>
+    <fig>
+      <title>Usage</title>
+      <codeblock scale="80" outputclass="language-xml"><coderef href="./src/usage.xml"/></codeblock>
+    </fig>
+    <p>
+       A test document including HTML, CSS and JavaScript code snippets can be found
+       within the plug-in at: <codeph>PATH_TO_DITA_OT/plugins/fox.jason.prismjs/sample</codeph>.
+    </p>
+    <section id="invocation-from-the-command-line">
+      <title outputclass="h3 mt-3">Invocation from the command line</title>
+      <p>
+         The Plug-in extends the existing PDF and HTML transforms.
+      </p>
+      <ul>
+        <li>
+           to create a PDF with highlighted code snippets run:
+        </li>
+      </ul>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>pdf</option> \
+    <parmname>--input</parmname> document.ditamap \
+    <parmname>--output</parmname> out</codeblock>
+      <fig>
+        <title>PDF Output</title>
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.prismjs/prism-pdf.png" scope="external"/>
+      </fig>
+
+      <ul>
+        <li>
+           to create static HTML with highlighted code snippets run:
+        </li>
+      </ul>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>html5</option> \
+    <parmname>--input</parmname> document.ditamap \
+    <parmname>--output</parmname> out</codeblock>
+
+      <fig>
+        <title>HTML Output</title>
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.prismjs/prism-html.png" scope="external"/>
+      </fig>
+
+    </section>
+    <section id="customizing-the-output">
+      <title outputclass="h3 mt-3">Customizing the output</title>
+      <p>
+         Prism-JS is easily extended to other languages since it purely relies on regular
+         expressions. Additional languages are loaded dynamically during processing. A
+         large number of additional languages are supported - just look at the list on
+         <xref href="https://github.com/prismjs/prism/tree/master/components"
+         format="html" scope="external">https://github.com/PrismJS/prism/tree/master/components</xref>.
+      </p>
+      <p>
+         Extend with an additional plug-in which overrides the default <parmname>prismjs.css.file</parmname>
+         property and amend a copy of the <codeph>resource/style.css</codeph> file to
+         alter the look-and-feel of the rendered HTML.
+      </p>
+      <fig>
+        <title>Plugin.xml</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/plugin-html.xml"/></codeblock>
+      </fig>
+      <fig>
+        <title>ANT Target</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/ant-target.xml"/></codeblock>
+      </fig>
+      <p>
+         A working example can be found in the <xref
+         href="https://github.com/jason-fox/fox.jason.prismjs.dark-theme" format="html"
+         scope="external">Dark Theme CSS DITA-OT plug-in</xref>.
+      </p>
+      <p>
+         The <codeph>cfg/fo/attrs/prismjs-attr.xsl</codeph> provides the colors for the
+         PDF output. The names of the attributes match the CSS file, copy and amend the
+         <parmname>prismjs-attr.xsl</parmname> file in your own plug-in.
+      </p>
+      <fig>
+        <title>Plugin.xml</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/plugin-pdf.xml"/></codeblock>
+      </fig>
+      <p>
+         Override the <xmlelement>xsl:template match="*[contains(@class,' topic/ph ') and
+         contains(@outputclass, 'token')]"</xmlelement> template as shown:
+      </p>
+      <fig>
+        <title>xslfo.xsl</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/xslfo.xsl"/></codeblock>
+      </fig>
+      <p>
+         A working example can be found in the <xref
+         href="https://github.com/jason-fox/fox.jason.prismjs.dark-theme" format="html"
+         scope="external">Dark Theme CSS DITA-OT plug-in</xref>.
+      </p>
+    </section>
+  </body>
+</topic>

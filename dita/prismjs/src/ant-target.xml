@@ -1,0 +1,5 @@
+<project name="com.example.prismjs-theme">
+  <target name="prismjs.override.css">
+    <property name="prismjs.css.file" value="${dita.plugin.com.example.prismjs-theme.dir}/resource/style.css"/>
+  </target>
+</project>

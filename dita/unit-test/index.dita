@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="unit-test-plug-in">
+  <title>Unit Test Plug-in</title>
+  <abstract>
+    <shortdesc>
+       This is a Unit Testing framework for the DITA Open Toolkit. This plug-in
+       consists of seven DITA-OT transforms and an ANT library:
+    </shortdesc>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>XSL</indexterm>
+        <indexterm>coverage</indexterm>
+        <indexterm>unit-testing</indexterm>
+        <indexterm>plug-in</indexterm>
+        <indexterm>antro</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body/>
+  <topic id="transforms">
+    <title outputclass="h3 mt-3">Transforms</title>
+    <body>
+      <section id="unit-testing">
+        <title outputclass="h4">Unit Testing</title>
+        <ul>
+          <li>
+             The <option>unit-test</option> transform allows a user to runs a sequence of <cmdname>dita</cmdname>
+             commands and checks that the documents created match the expected output. This
+             is useful for regresssion testing, and confirming that any custom plug-ins do
+             not conflict when upgrading the base DITA-OT engine.
+          </li>
+          <li>
+             The <filepath>resource/antlib.xml</filepath> library offers a series of
+             convenience methods for creating DITA-OT unit tests.
+          </li>
+        </ul>
+      </section>
+      <section id="code-coverage">
+        <title outputclass="h4">Code Coverage</title>
+        <ul>
+          <li>
+             The <option>token-report</option> transform checks to see if a series of tokens
+             representing all potential output values are covered by unit tests
+          </li>
+          <li>
+             The <option>xsl-instrument</option> transform annotates an DITA-OT plug-in to
+             enable code coverage reporting
+          </li>
+          <li>
+             The <option>xsl-deinstrument</option> transform removes the instrumentation
+             annotation from a specified plugin
+          </li>
+          <li>
+             The <option>xsl-report</option> transform displays which templates have been
+             invoked whilst running unit tests
+          </li>
+        </ul>
+      </section>
+      <section id="profiling">
+        <title outputclass="h4">ANT Profiling</title>
+        <ul>
+          <li>
+             The <option>antro</option> transform runs an ANT script profiler against a
+             specified transform and outputs a profiler JSON file
+          </li>
+          <li>
+             The <option>antro.ui</option> transform starts up the UI for the ANT script
+             profiler, allowing a user to load a JSON file and interpret the results.
+          </li>
+        </ul>
+      </section>
+    </body>
+  </topic>
+</topic>

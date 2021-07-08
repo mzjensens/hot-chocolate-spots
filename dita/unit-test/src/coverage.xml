@@ -1,0 +1,12 @@
+<package name="org.dita.pdf2">
+  <lines>
+    <line id="plain-text">font-family="STANDARD"</line>
+    <line id="monospace-text">font-family="MONOSPACE"</line>
+  </lines>
+  <elements>
+    <element id="codeblock">fo:block font-family="MONOSPACE"</element>
+    <element id="codeph-tt">fo:inline font-family="MONOSPACE"</element>
+    <element id="colspec">fo:table-column</element>
+    <element id="colspec-width">fo:table-column column-width</element>
+  </elements>
+</package>

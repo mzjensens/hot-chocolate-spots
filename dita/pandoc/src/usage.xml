@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//xmlattDTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap>
+    ...etc
+    <chapter format="pandoc" href="sample.docx"/>
+</bookmap>

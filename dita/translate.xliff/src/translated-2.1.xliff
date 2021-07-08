@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff srcLang="en" trgLang="la" version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="2" original="/topic.dita">
+    <skeleton href="./skl/topic.dita.skl"></skeleton>
+    <unit fs:fs="p" id="9962" xmlns:fs="urn:oasis:names:tc:xliff:fs:2.0">
+      <originalData>
+        <data id="sd4e14">&amp;lt;b&amp;gt;</data>
+        <data id="ed4e14">&amp;lt;/b&amp;gt;</data>
+      </originalData>
+      <segment state="translated">
+        <source xml:lang="en" xml:space="preserve">Loves or pursues or desires to obtain pain of
+            itself, because it is pain, but occasionally circumstances occur in which toil and pain
+            can procure him some  great pleasure. To take a trivial example, <pc dataRefEnd="ed4e14"
+            dataRefStart="sd4e14" fs:fs="b" id="d4e14">which of us ever undertakes laborious physical
+            exercise</pc>except to obtain some advantage from it? But who has any right to find fault with
+            a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain
+            that produces no resultant pleasure?
+        </source>
+        <target xml:lang="la">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, <pc dataRefEnd="ed4e14" dataRefStart="sd4e14" fs:fs="b" id="d4e14">
+            quis nostrud exercitation ullamco laboris,</pc> nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+        </target>
+      </segment>
+    </unit>
+    ...etc
+  </file>
+  ...etc

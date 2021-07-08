@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="splash-screen-plug-in">
+  <title>Splash Screen Plug-in</title>
+  <abstract>
+    <shortdesc>
+       This simple DITA-OT plug-in automatically displays a random cat picture from the
+       <xref href="http://thecatapi.com/" format="html" scope="external">Cat API</xref>
+       or an <xref href="https://xkcd.com/" format="html" scope="external">xkcd</xref>
+       comic strip as a splash screen whilst waiting for a build job to complete.
+    </shortdesc>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>splash screen</indexterm>
+        <indexterm>plug-in</indexterm>
+        <indexterm>Cats API</indexterm>
+        <indexterm>XKCD</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body/>
+  <topic id="example-splash-screen">
+    <title outputclass="h3 mt-3">Example</title>
+    <body>
+      <section id="the-cat-api">
+        <title outputclass="h4">The Cat API</title>
+        <image deliveryTarget="html" scope="external" href="https://cdn2.thecatapi.com/logos/thecatapi_256xW.png" outputclass="float-start mt-1 me-3" height="55"/>
+        <p>
+           The Cat API was created by Aden Forshaw back in 2012 as a way to give back and
+           help teach people to code, it’s now been used by thousands of App developers
+           making all sorts of weird &amp; wonderful creations.
+        </p>
+        <p>
+           It allows anyone to build apps that search for Cat images, upload their own,
+           vote or favourite them, and to allow their users to do the same.
+        </p>
+        <p>
+           It’s completely free to use &amp; primarily a learning tool to teach anyone the
+           basics of using APIs in a fun &amp; interesting way. Perfect for classrooms,
+           hackathons, or weekend side projects.
+        </p>
+        <fig>
+          <title>Image from Cat API</title>
+          <image outputclass="img-thumbnail" scalefit="yes" href="http://thecatapi.com/api/images/get?format=src&amp;type=gif" scope="external">
+            <alt/>
+          </image>
+        </fig>
+      </section>
+      <section id="xkcd">
+        <title outputclass="h4">XKCD</title>
+        <image deliveryTarget="html" scope="external" href="https://xkcd.com/s/0b7742.png" outputclass="float-start mt-1 me-3" height="55"/>
+        <p>
+           xkcd, sometimes styled XKCD is a webcomic created by Randall Munroe. The comic’s
+           tagline describes it as "A webcomic of romance, sarcasm, math, and language".
+           Munroe states on the comic’s website that the name of the comic is not an
+           initialism but "just a word with no phonetic pronunciation".
+        </p>
+        <p>
+           The subject matter of the comic varies from statements on life and love to
+           mathematical, programming, and scientific in-jokes. Some strips feature simple
+           humor or pop-culture references. Although it has a cast of stick figures, the
+           comic occasionally features landscapes, graphs and charts, and intricate
+           mathematical patterns such as fractals. New cartoons are added three times a
+           week, on Mondays, Wednesdays, and Fridays.
+        </p>
+        <fig>
+          <title>Image from XKCD</title>
+          <image outputclass="img-thumbnail" scalefit="yes" href="https://imgs.xkcd.com/comics/compiling.png" scope="external">
+            <alt/>
+          </image>
+        </fig>
+      </section>
+    </body>
+  </topic>
+</topic>

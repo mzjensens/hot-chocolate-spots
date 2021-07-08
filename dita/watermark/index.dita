@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="watermark-plug-in">
+  <title>Watermark Plug-in</title>
+  <abstract>
+    <shortdesc>
+       This is a <xref href="https://www.dita-ot.org/plugins" format="html"
+       scope="external">DITA-OT Plug-in</xref> to add a watermark to generated PDF
+       files. The plugin extends standard PDF processing. It offers an extension-point
+       for further processing.
+    </shortdesc>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>plug-in</indexterm>
+        <indexterm>watermark</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body/>
+  <topic id="example">
+    <title outputclass="h3 mt-3">Example</title>
+    <body>
+      <fig>
+        <title>Sample PDF Watermark</title>
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.watermark/watermark-pdf.png" scope="external">
+          <alt/>
+        </image>
+      </fig>
+    </body>
+  </topic>
+</topic>

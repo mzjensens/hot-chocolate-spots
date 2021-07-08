@@ -1,0 +1,6 @@
+[ERROR] [/document.ditamap]
+ Line 89: topicref - [href-not-lower-case]
+The value provided in href="topics/FILE-NOT-LOWER-CASE.dita" is invalid, allowed characters are: lowercase, a-z only, words separated by hyphens.
+
+Found 1 Errors 0 Warnings
+Error: [SVRL001F][FATAL] Errors detected during validation

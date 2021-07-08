@@ -1,0 +1,24 @@
+<dirname property="dita.dir" file="PATH_TO_DITA_OT"/>
+<property name="dita.exec" value="${dita.dir}/bin/dita"/>
+<property name="args.input" value="PATH_TO_DITA_DOCUMENT/document.ditamap"/>
+
+<target name="spell-check" description="spell-check a document">
+  <!-- For Unix run the DITA executable-->
+  <exec executable="${dita.exec}" osfamily="unix" failonerror="true">
+    <arg value="-input"/>
+    <arg value="${args.input}"/>
+    <arg value="-output"/>
+    <arg value="${dita.dir}/out/svrl"/>
+    <arg value="-format"/>
+    <arg value="text-rules-echo"/>
+    <!-- validation transform specific parameters -->
+    <arg value="--args.validate.blacklist=(kilo)?metre|colour|teh|seperate"/>
+    <arg value="--args.validate.check.case=Bluetooth|HTTP[S]? |IoT|JSON|Java|Javadoc|JavaScript|XML"/>
+    <arg value="--args.validate.color=true"/>
+  </exec>
+  <!-- For Windows run from a DOS command -->
+  <exec dir="${dita.dir}/bin" executable="cmd" osfamily="windows" failonerror="true">
+    <arg value="/C"/>
+    <arg value="dita -input ${args.input} -output ${dita.dir}/out/svrl -format text-rules-echo --args.validate.blacklist=&amp;quot;(kilo)?metre|colour|teh|seperate&amp;quot; --args.validate.check.case=&amp;quot;Bluetooth|HTTP[S]? |IoT|JSON|Java|Javadoc|JavaScript|XML&amp;quot;"/>
+  </exec>
+</target>

@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="validator-error-messages">
+  <title>Validator Error Messages</title>
+  <body>
+    <p>
+       The following tables list the validator error messages by type and message ID.
+       Base DITA validator rules are in normal text. Rules in <b>bold</b> are examples
+       of custom rules which can be detected if the <codeph>overrides</codeph>
+       transform from the <xref
+       href="https://github.com/jason-fox/com.here.validate.svrl.overrides"
+       format="html" scope="external">Extended DITA Validator</xref> is used.
+    </p>
+    <section id="content-validation">
+      <title>Content Validation</title>
+      <table outputclass="align-middle">
+        <tgroup cols="4">
+          <colspec colname="col1" colnum="1" colwidth="6%"/>
+          <colspec colname="col2" colnum="2" colwidth="22%"/>
+          <colspec colname="col3" colnum="3" colwidth="35%"/>
+          <colspec colname="col4" colnum="4" colwidth="35%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Fix</entry>
+              <entry colname="col2" align="left">Message ID</entry>
+              <entry colname="col3" align="left">Message</entry>
+              <entry colname="col4" align="left">Corrective Action/Comment</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">comment-fixme</entry>
+              <entry colname="col3" align="left">Found  comments within the <xmlelement>{name}</xmlelement> element - fix as requested and delete the comment.</entry>
+              <entry colname="col4" align="left">Replace the draft content with the correct information.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">comment-todo</entry>
+              <entry colname="col3" align="left">Found  within the following text of the <xmlelement>{name}</xmlelement> element - fix as requested and delete the comment.</entry>
+              <entry colname="col4" align="left">Replace the draft content with the correct information.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">blacklisted-words</entry>
+              <entry colname="col3" align="left">Words in the blacklist should not appear in the running text:</entry>
+              <entry colname="col4" align="left">Remove the blacklisted words.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">incorrect-capitalization</entry>
+              <entry colname="col3" align="left">The word  is incorrectly capitalized in the following text:</entry>
+              <entry colname="col4" align="left">The indicated word is not capitalized correctly. Fix the capitalization.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">running-text-fixme</entry>
+              <entry colname="col3" align="left">Found  comments in the following text in this <xmlelement>{name}</xmlelement> element - fix as requested and delete the comment.</entry>
+              <entry colname="col4" align="left">Replace the draft content with the correct information.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">running-text-lorem-ipsum</entry>
+              <entry colname="col3" align="left">Found dummy text in this <xmlelement>{name}</xmlelement> element, remove or replace with valid content.</entry>
+              <entry colname="col4" align="left">Replace the standard lorem ipsum filler text with the correct information.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">running-text-todo</entry>
+              <entry colname="col3" align="left">Found  comments in the following text in this <xmlelement>{name}</xmlelement> element - fix as requested and delete the comment.</entry>
+              <entry colname="col4" align="left">Replace the draft content with the correct information.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section id="style-validation">
+      <title>Style Validation</title>
+      <table outputclass="align-middle">
+        <tgroup cols="4">
+          <colspec colname="col1" colnum="1" colwidth="6%"/>
+          <colspec colname="col2" colnum="2" colwidth="22%"/>
+          <colspec colname="col3" colnum="3" colwidth="35%"/>
+          <colspec colname="col4" colnum="4" colwidth="35%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Fix</entry>
+              <entry colname="col2" align="left">Message ID</entry>
+              <entry colname="col3" align="left">Message</entry>
+              <entry colname="col4" align="left">Corrective Action/Comment</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">codeblock-outputclass-missing</entry>
+              <entry colname="col3" align="left">Always provide an outputclass attribute in <xmlelement>codeblock</xmlelement>
+                 elements (for example, add outputclass="language-javascript").</entry>
+              <entry colname="col4" align="left">This <xmlatt>outputclass</xmlatt> attribute
+                 is used for decorating the HTML output to make code easier to read. If the
+                 content in the <xmlelement>codeblock</xmlelement> element is JSON use the key
+                 value pair <xmlatt>outputclass="language-javascript"</xmlatt>. For more
+                 information on the <xmlelement>codeblock</xmlelement> element, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/codeblock.html"
+                 format="html" scope="external">codeblock</xref>.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">codeblock-scale-missing</entry>
+              <entry colname="col3" align="left">Always provide a scale attribute in
+                 <xmlelement>codeblock</xmlelement> elements (for example, add <xmlatt>scale="80"</xmlatt>).</entry>
+              <entry colname="col4" align="left">This <xmlatt>scale</xmlatt> attribute reduces
+                 the size of the code text in the output to make it easier to read (the values
+                 are percent). We recommend you set the scale to 80 percent. For more
+                 information on the <xmlelement>codeblock</xmlelement> element, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/codeblock.html"
+                 format="html" scope="external">codeblock</xref>.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">conref-not-lower-case</entry>
+              <entry colname="col3" align="left">The specification of <xmlatt>conref="..."</xmlatt>
+                 is invalid, allowed characters are: lower case, a-z only, words separated by
+                 hyphens.</entry>
+              <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
+                 for importing documentation segements reused across the document when the
+                 validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
+                 attribute, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                 format="html" scope="external">conref</xref>. When you get this error, the
+                 source file specified in the <xmlatt>conref</xmlatt> attribute references a
+                 file with an invalid name. For instance, if you define the <xmlatt>conref</xmlatt>
+                 attribute as follows <xmlelement>p
+                 conref="&lt;InvalidFileName&gt;#invalid-file-name/submission-note"</xmlelement>
+                 the file name does not comply with the file naming guidelines. - Only use lower
+                 case letters in a file name. - If a file name contains multiple words, use a
+                 hyphen to separate them, for example, <codeph>overview-map.dita</codeph> or
+                 <codeph>request-map-report.dita</codeph>. - The file type (and file extension)
+                 for all DITA XML files in the repository must be <i>.dita</i> or <i>.ditamap</i>.
+                 - Base the file name on the main topic title. If the title is <codeph>Naming Conventions</codeph>
+                 then the topic <xmlatt>id</xmlatt> should be <codeph>naming-conventions</codeph>
+                 and the file name should be <codeph>naming-conventions.dita</codeph>. - Do not
+                 include arbitrary strings to indicate the contents of the chapter, topic type,
+                 etc. - Do not include computer-generated text such as <codeph>topic-2</codeph>
+                 or <codeph>GUID-1234-5678-1234</codeph>. - Do not use non-standard acronyms,
+                 for instance, <codeph>border-xing</codeph> instead of <codeph>border-crossing</codeph>.</entry>
+            </row>
+            <row outputclass="table-secondary">
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left"><b>element-blacklisted</b></entry>
+              <entry colname="col3" align="left"><b>The <xmlelement>name</xmlelement> element
+                 is not compliant with our subset of DITA documentation standards.</b></entry>
+              <entry colname="col4" align="left"><b>Custom Rule</b>: While the DITA open
+                 standard supports a large number of elements, the extended validator only
+                 supports a subset of these elements in order to make the documents more
+                 consistent. Replace the rejected element with a supported element.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">fig-id-invalid</entry>
+              <entry colname="col3" align="left"><xmlatt>id</xmlatt> values must start with <xmlatt>'fig-'</xmlatt>
+                 in all <xmlelement>fig</xmlelement> elements.</entry>
+              <entry colname="col4" align="left">In order to assist with search engine
+                 optimization (SEO) of content, all <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/fig.html"
+                 format="html" scope="external">figure</xref> elements must have an <xmlatt>id</xmlatt>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">fig-id-missing</entry>
+              <entry colname="col3" align="left">Always provide an <xmlatt>id</xmlatt> value
+                 in <xmlelement>fig</xmlelement> elements.</entry>
+              <entry colname="col4" align="left">In order to assist with search engine
+                 optimization (SEO) of content, all <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/fig.html"
+                 format="html" scope="external">figure</xref> elements must have an <xmlatt>id</xmlatt>.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">file-not-lower-case</entry>
+              <entry colname="col3" align="left">Found file <codeph>'...'</codeph> with
+                 invalid name, allowed characters in file names are: lowercase, a-z only, words
+                 separated by hyphens.</entry>
+              <entry colname="col4" align="left">In order to assist with search engine optimization (SEO) of content, file names must be lower case. Fix the name as appropriate.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">href-not-lower-case</entry>
+              <entry colname="col3" align="left">The value provided in <xmlatt>href="..."</xmlatt>
+                 is invalid, allowed characters are: lowercase, a-z only, words separated by
+                 hyphens.</entry>
+              <entry colname="col4" align="left">The file specified in the <xmlatt>href</xmlatt>
+                 attribute does not comply with the file naming conventions. Fix the name as
+                 appropriate.</entry>
+            </row>
+            <row outputclass="table-secondary">
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left"><b>id-blacklisted</b></entry>
+              <entry colname="col3" align="left"><b><xmlatt>id</xmlatt> attribute values must
+                 not use the word <codeph>'content'</codeph>. Change the <xmlatt>id</xmlatt> value.</b></entry>
+              <entry colname="col4" align="left"><b>Custom Rule</b>: Some delivery channels
+                 used to deliver content to customers may be configured to already use certain <xmlatt>id</xmlatt>
+                 values. Change the word content to another <xmlatt>id</xmlatt>. For more information on <xmlatt>id</xmlatt>
+                 attributes, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html"
+                 format="html" scope="external">id</xref>.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">id-not-lower-case</entry>
+              <entry colname="col3" align="left">The ID value in <xmlatt>id="..."</xmlatt> is
+                 invalid, allowed characters are: lowercase, a-z only, words separated by hyphens.</entry>
+              <entry colname="col4" align="left">In order to assist with search engine
+                 optimization (SEO) of content, <xmlatt>id</xmlatt> attributes must comply with the <xmlatt>id</xmlatt>
+                 conventions. Fix the name as appropriate. - Only use lower case letters in a
+                 file name. - If a file name contains multiple words, use a hyphen to separate
+                 them, for example, <codeph>overview-map.dita</codeph> or <codeph>request-map-report.dita</codeph>.
+                 - The file type (and file extension) for all DITA XML files in the repository must be <i>.dita</i>
+                 or <i>.ditamap</i>. - Base the file name on the main topic title. If the title
+                 is <codeph>Naming Conventions</codeph> then the topic ID should be <codeph>naming-conventions</codeph>
+                 and the file name should be <codeph>naming-conventions.dita</codeph>. - Do not
+                 include arbitrary strings to indicate the contents of the chapter, topic type,
+                 etc. - Do not include computer-generated text such as <codeph>topic-2</codeph>
+                 or <codeph>GUID-1234-5678-1234</codeph>. For more information on <xmlatt>id</xmlatt>
+                 atrributes, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html"
+                 format="html" scope="external">id</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">image-file-type-not-supported</entry>
+              <entry colname="col3" align="left">The value provided in <xmlatt>href="..."</xmlatt>
+                 specifies an unsupported file format (only <codeph>*.jpg</codeph>, <codeph>*.jpeg</codeph> or <codeph>*.png</codeph> are allowed).
+                 Change the format of the linked file.</entry>
+              <entry colname="col4" align="left">The validator ensures that only <codeph>*.jpg</codeph>, <codeph>*.jpeg</codeph> or <codeph>*.png</codeph> format files are used in online HTML documents. Convert the image format to the correct format.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">section-id-missing</entry>
+              <entry colname="col3" align="left">Always provide an <xmlatt>id</xmlatt>
+                 attribute in <xmlelement>section</xmlelement> elements.</entry>
+              <entry colname="col4" align="left">In order to assist with search engine
+                 optimization (SEO), all <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/section.html"
+                 format="html" scope="external">section</xref> elements must have an <xmlatt>id</xmlatt>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">table-id-missing</entry>
+              <entry colname="col3" align="left">Always provide an <xmlatt>id</xmlatt>
+                 attribute in <xmlelement>table</xmlelement> elements.</entry>
+              <entry colname="col4" align="left">In order to assist with search engine
+                 optimization (SEO), add an <xmlatt>id</xmlatt> to <xmlelement>table</xmlelement>
+                 elements. For more information on tables, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
+                 format="html" scope="external">table</xref>.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">topic-file-mismatch</entry>
+              <entry colname="col3" align="left">The value specified in id="{name}" does not
+                 match the file name: {file_name}. Make sure the <xmlatt>id</xmlatt> value and
+                 the file name are the same.</entry>
+              <entry colname="col4" align="left">In order to assist with search engine
+                 optimization (SEO) of content, the <xmlatt>id</xmlatt> for <xmlelement>topic</xmlelement>
+                 elements must be the same as the file name, which also ends up by the name of
+                 the HTML file. For more information on topics, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topic.html"
+                 format="html" scope="external">topic</xref>. For more information on <xmlatt>id</xmlatt>,
+                 see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/id.html"
+                 format="html" scope="external">id</xref></entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">xref-no-format</entry>
+              <entry colname="col3" align="left">
+                 Always provide a <xmlatt>format</xmlatt> attribute in
+                 <xmlelement>xref</xmlelement> elements, (for example, <xmlatt>format="dita"</xmlatt> or <xmlatt>format="html"</xmlatt>).</entry>
+              <entry colname="col4" align="left">Specify a value for the <xmlatt>format</xmlatt>
+                 attribute for <xmlelement>xref</xmlelement> elements. Examples of valid values include <codeph>dita</codeph>,<codeph>html</codeph>,
+                 and <codeph>pdf</codeph>. For more information on <xmlelement>xref</xmlelement>
+                 elements, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                 format="html" scope="external">xref</xref>.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section id="structure-validation">
+    <title>Structure Validation</title>
+      <table outputclass="align-middle">
+        <tgroup cols="4">
+          <colspec colname="col1" colnum="1" colwidth="6%"/>
+          <colspec colname="col2" colnum="2" colwidth="22%"/>
+          <colspec colname="col3" colnum="3" colwidth="35%"/>
+          <colspec colname="col4" colnum="4" colwidth="35%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Fix</entry>
+              <entry colname="col2" align="left">Message ID</entry>
+              <entry colname="col3" align="left">Message</entry>
+              <entry colname="col4" align="left">Corrective Action/Comment</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">chapter-href-missing</entry>
+              <entry colname="col3" align="left">Always provide an href attribute in
+                 <xmlelement>chapter</xmlelement> elements.</entry>
+              <entry colname="col4" align="left">When you add a <xmlelement>chapter</xmlelement>
+                 element to a <xmlatt>ditamap</xmlatt>, you must specify a <xmlatt>href="{file_name}"</xmlatt>
+                 key/value pair that defines the content that appears on the chapter page in the
+                 PDF (and on the chapter landing page in HTML). Alternatively, you can define
+                 the following two attributes: <xmlatt>navtitle="..." lockitle="yes"</xmlatt>.
+                 This approach has the effect of adding a title but not content on the chapter
+                 page/node. For more information on the <xmlelement>chapter</xmlelement>
+                 element, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/chapter.html"
+                 format="html" scope="external">chapter</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">coderef-href-ref-file-not-found</entry>
+              <entry colname="col3" align="left">The linked source file does not exist. Check the related folder for the missing file and make sure the file name is correct.</entry>
+              <entry colname="col4" align="left">The <xmlelement>coderef</xmlelement> element
+                 is generally used for importing a source file when the validator builds the
+                 document. When you get this error, the reference cannot be resolved. Note that
+                 DITA does not allow you to reference files outside the root folder of the
+                 document. By default, these files should be in the <xmlatt>source</xmlatt>
+                 folder under the document root folder. For more information on the <xmlelement>coderef</xmlelement>
+                 element, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/codeblock.html"
+                 format="html" scope="external">codeblock</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">colspec-colnum-not-unique</entry>
+              <entry colname="col3" align="left">The key/value pair <xmlatt>colnum="..."</xmlatt>
+                 is not unique. Make sure there are no duplicates.</entry>
+              <entry colname="col4" align="left">In order for the validator to render table
+                 content properly, these key/value pairs must be unique. For instance, the
+                 following codeblock illustrates well-formated DITA that complies with this
+                 requirement. <xmlelement>colspec colnum="1"/&gt;&lt;colspec colnum="2"/&gt;&lt;colspec colnum="3"/</xmlelement>
+                 For more information on the <xmlelement>table</xmlelement> element, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
+                 format="html" scope="external">table</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">conref-external-file-not-found</entry>
+              <entry colname="col3" align="left">The linked file does not exist. Check the related folder for the missing file and make sure the file name is correct.</entry>
+              <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
+                 for importing documentation segements reused across the document when the
+                 validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
+                 attribute, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                 format="html" scope="external">conref</xref>. When you get this error, the
+                 referenced file cannot be resolved. Note that DITA does not allow you to
+                 reference files outside the root folder of the document. By default, this kind
+                 of content should be in the <codeph>includes.dita</codeph> file.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">conref-external-id-mismatch</entry>
+              <entry colname="col3" align="left">The conref source <xmlelement>{name}</xmlelement>
+                 and the destination <xmlelement>{name}</xmlelement> are not the same type.
+                 Check to make sure the referenced elements are the same.</entry>
+              <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
+                 for importing documentation segements reused across the document when the
+                 validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
+                 attribute, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                 format="html" scope="external">conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
+                 in the source file specified in the <xmlatt>conref</xmlatt> attribute is an <xmlatt>id</xmlatt>
+                 for an element that is of a different type than the element with the <xmlatt>conref</xmlatt>
+                 attribute. DITA requires that <xmlatt>conref</xmlatt> attributes point at the
+                 same kind of element. For instance, <xmlelement>p conref="includes.dita#includes/submission-note"</xmlelement>
+                 needs to reference an element in the <codeph>includes.dita</codeph> file that
+                 is formatted as follows <xmlelement>p id="submission-note"&gt;CONTENT&lt;/p</xmlelement>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">conref-external-id-not-found</entry>
+              <entry colname="col3" align="left">The referenced <xmlatt>id</xmlatt> does not
+                 exist in the source file. Make sure the ID value specified is correct.</entry>
+              <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
+                 for importing documentation segements reused across the document when the
+                 validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
+                 attribute, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                 format="html" scope="external">conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
+                 in the source file specified in the <xmlatt>conref</xmlatt> attribute cannot be
+                 resolved. For instance, if you define the <xmlatt>conref</xmlatt> attribute as
+                 follows <xmlelement>p conref="includes.dita#includes/submission-note"</xmlelement>
+                 and you get this error, then the <codeph>includes.dita</codeph> file does not
+                 have a <xmlelement>p</xmlelement> whose <xmlatt>id</xmlatt> is set to <xmlatt>id="submission-note"</xmlatt>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">conref-external-path-not-found</entry>
+              <entry colname="col3" align="left">The referenced path does not exist. Make sure the path is correct.</entry>
+              <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
+                 for importing documentation segements reused across the document when the
+                 validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
+                 attribute, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                 format="html" scope="external">conref</xref>. When you get this error, the
+                 source file specified in the <xmlatt>conref</xmlatt> attribute cannot be
+                 resolved. For instance, if you define the <xmlatt>conref</xmlatt> attribute as
+                 follows <xmlelement>p conref="includes.dita#includes/submission-note"</xmlelement>
+                 and you get this error, then the validator cannot find the <codeph>includes.dita</codeph>
+                 file. Note that DITA does not allow you to reference files outside the root
+                 folder of the document.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">conref-external-path-mismatch</entry>
+              <entry colname="col3" align="left">The conref source <xmlelement>{name}</xmlelement> and the destination <xmlelement>{name}</xmlelement> are not the same type. Make sure the path is correct.</entry>
+              <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
+                 for importing documentation segements reused across the document when the
+                 validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
+                 attribute, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                 format="html" scope="external">conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
+                 in the source file specified in the <xmlatt>conref</xmlatt> attribute is an <xmlatt>id</xmlatt>
+                 for an element that is of a different type than the element with the <xmlatt>conref</xmlatt>
+                 attribute. DITA requires that <xmlatt>conref</xmlatt> attributes point at the
+                 same kind of element. For instance, <xmlelement>p conref="includes.dita#includes/submission-note"</xmlelement>
+                 needs to reference an element in the <codeph>includes.dita</codeph> file that
+                 is formatted as follows <xmlelement>p id="submission-note"&gt;CONTENT&lt;/p</xmlelement>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">conref-internal-id-not-found</entry>
+              <entry colname="col3" align="left">The referenced <xmlatt>id</xmlatt> does not
+                 exist in this file. Make sure the <xmlatt>id</xmlatt> value specified is correct.</entry>
+              <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
+                 for importing documentation segements reused across the document when the
+                 validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
+                 attribute, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                 format="html" scope="external">conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
+                 specified in the <xmlatt>conref</xmlatt> attribute cannot be resolved. For
+                 instance, if you define the <xmlatt>conref</xmlatt> attribute as follows
+                 <xmlelement>p conref="submission-note"</xmlelement> and you get this error,
+                 then the source file does not have a <xmlelement>p</xmlelement> whose
+                 <xmlatt>id</xmlatt> is set to <xmlatt>id="submission-note"</xmlatt>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">conref-internal-path-mismatch</entry>
+              <entry colname="col3" align="left">The conref source <xmlelement>{name}</xmlelement> and the destination <xmlelement>{name}</xmlelement> are not the same type. Make sure the path is correct.</entry>
+              <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
+                 for importing documentation segements reused across the document when the
+                 validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
+                 attribute, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                 format="html" scope="external">conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
+                 specified in the <xmlatt>conref</xmlatt> attribute is an ID for an element that
+                 is of a different type than the element with the <xmlatt>conref</xmlatt>
+                 attribute. DITA requires that <xmlatt>conref</xmlatt> attributes point at the
+                 same kind of element. For instance, <xmlelement>p conref="submission-note"</xmlelement>
+                 needs to reference an element that is formatted as follows <xmlelement>p
+                 id="submission-note"&gt;CONTENT&lt;/p</xmlelement>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">conref-internal-path-not-found</entry>
+              <entry colname="col3" align="left">The referenced path does not exist in this file. Make sure the path is correct.</entry>
+              <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
+                 for importing documentation segements reused across the document when the
+                 validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
+                 attribute, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                 format="html" scope="external">conref</xref>. When you get this error, the
+                 value specified in the <xmlatt>conref</xmlatt> attribute cannot be resolved.
+                 For instance, if you define the <xmlatt>conref</xmlatt> attribute as follows
+                 <xmlelement>p conref="&lt;file_name&gt;#submission-note"</xmlelement> and you
+                 get this error, then the validator cannot resolve the path.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">href-file-not-found</entry>
+              <entry colname="col3" align="left">The file specified in <xmlatt>href="..."</xmlatt>
+                 does not exist. Check the related folder for the missing file and make sure the
+                 file name is correct.</entry>
+              <entry colname="col4" align="left">The validator cannot find the file specified in the <xmlatt>href</xmlatt>
+                 attribute. Make sure the file is in the indicated path. Note that DITA does not
+                 allow you to reference files outside the root folder of the document.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">id-not-unique</entry>
+              <entry colname="col3" align="left">Found a duplicate ID with value , <xmlatt>id</xmlatt>
+                 values must be unique within a file. Change the <xmlatt>id</xmlatt> value.</entry>
+              <entry colname="col4" align="left">DITA requires that all <xmlatt>id</xmlatt>
+                 attributes within a file must be unique. Change the <xmlatt>id</xmlatt> value.
+                 For more information on <xmlatt>id</xmlatt> attributes, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html"
+                 format="html" scope="external">id</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">image-href-ref-file-not-found</entry>
+              <entry colname="col3" align="left">The linked image file does not exist. Check the graphics folder for the missing file and make sure the link and file name specified are correct.</entry>
+              <entry colname="col4" align="left">The validator cannot find the file specified in the <xmlatt>href</xmlatt>
+                 attribute. Check the path to ensure the file is there.</entry>
+            </row>
+            <row outputclass="table-secondary">
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left"><b>image-product-filtered-not-included</b></entry>
+              <entry colname="col3" align="left"><b>Found <xmlelement>image product="..."</xmlelement>.
+                 This results in an empty <xmlelement>fig</xmlelement> for other variants. Add
+                 additional <xmlatt>product</xmlatt> attributes for the missing ditaval filters.</b></entry>
+              <entry colname="col4" align="left"><b>Custom Rule</b>: When skinning a document
+                 for various customers it is necessary to filter the images used. By placing all
+                 images in a single conref’d file it is easier to ensure that all images will be
+                 present for all customers. see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
+                 format="html" scope="external">ditavals</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">list-all-li-filtered</entry>
+              <entry colname="col3" align="left">Found only <xmlelement>li product="..."</xmlelement>
+                 elements in <xmlelement>ul</xmlelement>. This results in an empty <xmlelement>ul</xmlelement>
+                 for other variants. Either add additional <xmlatt>product</xmlatt> attributes
+                 for the ditaval filters or add <xmlelement>ul product="..."</xmlelement> to
+                 the appropriate list elements.</entry>
+              <entry colname="col4" align="left">The specified variant creation attributes
+                 result in a variant with a list without list items. Specify an additional
+                 variant attribute to ensure the list has items in all variants or remove the
+                 list entirely by specifiying the appropriate attributes. For more information
+                 on creating variants, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
+                 format="html" scope="external">ditavals</xref>. For information on list items,
+                 see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/li.html"
+                 format="html" scope="external">li</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">table-all-rows-filtered</entry>
+              <entry colname="col3" align="left">Found only <xmlelement>row product="..."</xmlelement>
+                 elements in <xmlelement>tbody</xmlelement>. This results in an empty <xmlelement>tbody</xmlelement>
+                 for other variants. Either add additional product attributes for the missing
+                 variants or add <xmlelement>table product="..."</xmlelement> to the
+                 appropriate elements. The specified variant creation attributes result in a
+                 variant with a table without rows, which results in a broken PDF build.</entry>
+              <entry colname="col4" align="left">Specify an additional variant attribute to
+                 ensure the table has rows in all variants or remove the table entirely by
+                 specifiying the appropriate attributes. For more information on creating
+                 variants, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
+                 format="html" scope="external">ditavals</xref>. For more information on tables,
+                 see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
+                 format="html" scope="external">table</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">tgroup-cols-colspec-mismatch</entry>
+              <entry colname="col3" align="left">The number of {name} <xmlelement>colspec</xmlelement>
+                 elements defined do not match the parent <xmlelement>tgroup cols="..."</xmlelement>
+                 attribute. Make sure the number of <xmlelement>colspec</xmlelement> elements
+                 corresponds with the cols value.</entry>
+              <entry colname="col4" align="left">In order to generate PDFs correctly, the
+                 number of <xmlelement>colspec</xmlelement> elements must match the number in
+                 the <xmlelement>tgroup cols="..."</xmlelement> attribute. For more information
+                 on tables, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
+                 format="html" scope="external">table</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">tgroup-cols-entry-mismatch</entry>
+              <entry colname="col3" align="left">The number of {name} <xmlelement>entry</xmlelement>
+                 elements found do not match the parent <xmlelement>tgroup cols="..."</xmlelement>
+                 attribute. Make sure the number of <xmlelement>entry</xmlelement> elements
+                 corresponds with the cols value.</entry>
+              <entry colname="col4" align="left">In order to generate PDFs correctly, the
+                 number of <xmlelement>entry</xmlelement> elements in a <xmlelement>row</xmlelement>
+                 element must match the number in the <xmlelement>tgroup cols="..."</xmlelement>
+                 attribute. For more information on tables, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
+                 format="html" scope="external">table</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">topicref-href-missing</entry>
+              <entry colname="col3" align="left">Always provide an <xmlatt>href</xmlatt>
+                 attribute in <xmlelement>topicref</xmlelement> elements.</entry>
+              <entry colname="col4" align="left">DITA uses the <xmlatt>href</xmlatt> attribute
+                 to specify connections between <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"
+                 format="html" scope="external">topicref</xref> elements and a file. Add an <xmlatt>href</xmlatt>
+                 attribute to the element and specify the appropriate value. For more
+                 information on <xmlelement>topicref</xmlelement> elements, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"
+                 format="html" scope="external">topicref</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">xref-external-file-not-found</entry>
+              <entry colname="col3" align="left">The file specified in <xmlelement>xref href="..."</xmlelement>
+                 does not exist. Check the related folder for the missing file and make sure the
+                 link and file name specified are correct.</entry>
+              <entry colname="col4" align="left">When you get this error, the referenced file
+                 cannot be resolved. Note that DITA does not allow you to reference files
+                 outside the root folder of the document. Make sure the path exists. For more
+                 information on <xmlelement>xref</xmlelement> elements, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                 format="html" scope="external">xref</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">xref-external-id-not-found</entry>
+              <entry colname="col3" align="left">The referenced <xmlatt>id</xmlatt> in <xmlelement>xref href="..."</xmlelement>
+                 does not exist. Make sure the <xmlatt>id</xmlatt> value specified is correct.</entry>
+              <entry colname="col4" align="left">When you get this error, the validator cannot
+                 resolve the <xmlatt>id</xmlatt> in the target file. Note that DITA does not
+                 allow you to reference files outside the root folder of the document. Make sure
+                 the file exists and contains the <xmlatt>id</xmlatt>. For more information on <xmlelement>xref</xmlelement>
+                 elements, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                 format="html" scope="external">xref</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">xref-external-path-not-found</entry>
+              <entry colname="col3" align="left">The referenced path in <xmlelement>xref href="..."</xmlelement>
+                 does not exist. Make sure the path specified is correct.</entry>
+              <entry colname="col4" align="left">When you get this error, the validator cannot
+                 resolve the <xmlatt>id</xmlatt> in the target file. Note that DITA does not
+                 allow you to reference files outside the root folder of the document. Make sure
+                 the file exists and contains the <xmlatt>id</xmlatt>. For more information on <xmlelement>xref</xmlelement>
+                 elements, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                 format="html" scope="external">xref</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">xref-internal-id-not-found</entry>
+              <entry colname="col3" align="left">The referenced ID in <xmlelement>xref href="..."</xmlelement>
+                 does not exist. Make sure the <xmlatt>id</xmlatt> value specified is correct.</entry>
+              <entry colname="col4" align="left">When you get this error, the validator cannot
+                 resolve the <xmlatt>id</xmlatt> in the file. Make sure the file contains the <xmlatt>id</xmlatt>.
+                 For more information on <xmlelement>xref</xmlelement> elements, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                 format="html" scope="external">xref</xref>.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left"><b>NO</b></entry>
+              <entry colname="col2" align="left">xref-internal-path-not-found</entry>
+              <entry colname="col3" align="left">The referenced path in <xmlelement>xref href="..."</xmlelement>
+                 does not exist. Make sure the path is correct.</entry>
+              <entry colname="col4" align="left">When you get this error, the validator cannot
+                 resolve the provided path in the file. Make sure the file contains the path.
+                 For more information on <xmlelement>xref</xmlelement> elements, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                 format="html" scope="external">xref</xref>.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">xref-www-format-invalid</entry>
+              <entry colname="col3" align="left"><xmlelement>xref href="..." format="dita"</xmlelement>
+                 The specified value points to an external file and cannot have the attribute
+                 key/value pair format="dita". Change the format value as appropriate (for
+                 example, format="html").</entry>
+              <entry colname="col4" align="left">Specify a value for the <xmlatt>format</xmlatt>
+                 attribute for <xmlelement>xref</xmlelement> elements. Examples of valid values include <xmlatt>dita</xmlatt>,
+                 <xmlatt>html</xmlatt>, and <xmlatt>pdf</xmlatt>. For more information on <xmlelement>xref</xmlelement>
+                 elements, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                 format="html" scope="external">xref</xref>.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">xref-www-scope-invalid</entry>
+              <entry colname="col3" align="left"><xmlelement>xref href="..."</xmlelement> The
+                 specified value points to an external file. Specify the attribute key/value
+                 pair scope="external".</entry>
+              <entry colname="col4" align="left">The <xmlatt>href</xmlatt> attribute specifies
+                 a web page or similar target, which means the <xmlatt>scope</xmlatt> attribute
+                 must have the value <xmlatt>external</xmlatt>. Change the value as required.
+                 For more information on <xmlelement>xref</xmlelement> elements, see <xref
+                 href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                 format="html" scope="external">xref</xref>.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section id="deprecated-elements">
+      <title>Deprecated Elements</title>
+      <p>
+         According to the <xref
+         href="https://lists.oasis-open.org/archives/dita/201803/msg00024.html"
+         format="html" scope="external">DITA 2.0 proposal to remove deprecated markup</xref>
+         certain elements, attributes and values will cease to be supported under DITA
+         2.0. These structure rules are all currently set to <b>WARNING</b> level and
+         are auto-fixable.
+      </p>
+      <table outputclass="align-middle">
+        <tgroup cols="4">
+          <colspec colname="col1" colnum="1" colwidth="6%"/>
+          <colspec colname="col2" colnum="2" colwidth="22%"/>
+          <colspec colname="col3" colnum="3" colwidth="35%"/>
+          <colspec colname="col4" colnum="4" colwidth="35%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Fix</entry>
+              <entry colname="col2" align="left">Message ID</entry>
+              <entry colname="col3" align="left">Message</entry>
+              <entry colname="col4" align="left">Corrective Action/Comment</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">boolean-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlelement>boolean</xmlelement> element
+                 will no longer be supported in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Replace the <xmlelement>boolean</xmlelement>
+                 element with a <xmlelement>state</xmlelement> element.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">chunk-to-navigation-deprecated</entry>
+              <entry colname="col3" align="left"><xmlatt>chunk="to-navigation"</xmlatt> is not
+                 supported in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">image-alt-deprecated</entry>
+              <entry colname="col3" align="left"><xmlelement>image</xmlelement> elements will
+                 no longer support the <xmlatt>alt</xmlatt> attribute in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Replace the <xmlatt>alt</xmlatt> attribute
+                 with an <xmlelement>alt</xmlelement> sub-element.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">image-longdescref-deprecated</entry>
+              <entry colname="col3" align="left"><xmlelement>image</xmlelement> elements will
+                 no longer support the <xmlatt>longdescref</xmlatt> attribute in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Replace the <xmlatt>longdescref</xmlatt>
+                 attribute with an <xmlelement>longdescref</xmlelement> sub-element.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">indextermref-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlelement>boolean</xmlelement> element
+                 will no longer be supported in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the element</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">linklist-collection-type-tree-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlelement>linklist</xmlelement> element
+                 will no longer support <xmlatt>collection-type="tree"</xmlatt> in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Replace the value</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">linkpool-collection-type-tree-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlelement>linkpool</xmlelement> element
+                 will no longer support <xmlatt>collection-type="tree"</xmlatt> in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Replace the value</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">lq-type-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlelement>lq</xmlelement> element will
+                 no longer support the <xmlatt>type</xmlatt> attribute in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">map-title-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlelement>map</xmlelement> element will
+                 no longer support the <xmlatt>title</xmlatt> attribute in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Replace the <xmlatt>title</xmlatt> attribute
+                 with an <xmlelement>title</xmlelement> sub-element.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">navref-keyref-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlelement>navref</xmlelement> element
+                 will no longer support the <xmlatt>keyref</xmlatt> attribute in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">navtitle-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlatt>navtitle</xmlatt> attribute will
+                 no longer be supported in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Replace the <xmlatt>navtitle</xmlatt>
+                 attribute with an <xmlelement>navtitle</xmlelement> sub-element.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">print-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlatt>print</xmlatt> attribute will no
+                 longer be supported in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">query-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlatt>query</xmlatt> attribute will no
+                 longer be supported in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">refcols-deprecated</entry>
+              <entry colname="col3" align="left">The <xmlatt>refcols</xmlatt> attribute will
+                 no longer be supported in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">relcolspec-collection-type-deprecated</entry>
+              <entry colname="col3" align="left"><xmlelement>relcolspec</xmlelement> elements
+                 will no longer support the <xmlatt>collection-type</xmlatt> attribute in DITA
+                 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">reltable-collection-type-deprecated</entry>
+              <entry colname="col3" align="left"><xmlelement>reltable</xmlelement> elements
+                 will no longer support the <xmlatt>collection-type</xmlatt> attribute in DITA
+                 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">role-external-deprecated</entry>
+              <entry colname="col3" align="left"><xmlatt>role="external"</xmlatt> is not
+                 supported in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute or replace with
+                 <xmlatt>scope</xmlatt> and <xmlatt>format</xmlatt></entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">role-sample-deprecated</entry>
+              <entry colname="col3" align="left"><xmlatt>role="sample"</xmlatt> is not
+                 supported in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">topichead-locktitle-deprecated</entry>
+              <entry colname="col3" align="left"><xmlelement>topichead</xmlelement> elements
+                 will no longer support the <xmlatt>locktitle</xmlatt> attribute in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute.</entry>
+            </row>
+            <row outputclass="table-success">
+              <entry colname="col1" align="left"><b>YES</b></entry>
+              <entry colname="col2" align="left">topicgroup-locktitle-deprecated</entry>
+              <entry colname="col3" align="left"><xmlelement>topicgroup</xmlelement> elements
+                 will no longer support the <xmlatt>locktitle</xmlatt> attribute in DITA 2.0.</entry>
+              <entry colname="col4" align="left">Delete the attribute.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

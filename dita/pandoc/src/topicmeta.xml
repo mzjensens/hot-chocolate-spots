@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap>
+    <chapter format="pandoc" processing-role="normal" type="topic" href="markdown.md">
+        <topicmeta>
+            <shortdesc>This is where the shortdesc goes</shortdesc>
+            <metadata>
+                 <keywords>
+                    <keyword>Keyword1</keyword>
+                    <keyword>Keyword2</keyword>
+                </keywords>
+            </metadata>
+        </topicmeta>
+    </chapter>
+</bookmap>

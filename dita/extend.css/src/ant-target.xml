@@ -1,0 +1,6 @@
+<project name="com.example.extended.css">
+  <target name="example.css.copy">
+    <loadfile property="extra.css" srcFile="/path/to/css"/>
+    <echo append="true" message="${line.separator}${extra.css}" file="${extend.css.file}"/>
+  </target>
+</project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="usage">
+  <title>Usage</title>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm><xmlelement>bodydiv</xmlelement></indexterm>
+        <indexterm><xmlelement>section</xmlelement></indexterm>
+        <indexterm><xmlatt>outputclass</xmlatt></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p>
+       An HTML tabbed box is defined using a <xmlelement>bodydiv</xmlelement> element
+       with an <xmlatt>outputclass=tabs</xmlatt>. The default size is 400px high.
+       Three other sizes are defined:
+    </p>
+    <ul>
+      <li>
+         <option>small</option> - 200px
+      </li>
+      <li>
+         <option>medium</option> - 600px
+      </li>
+      <li>
+         <option>large</option> - 1000px
+      </li>
+    </ul>
+    <p>
+       For each tab, just place a <xmlelement>section</xmlelement> element with a <xmlelement>title</xmlelement>
+       within the <xmlelement>bodydiv</xmlelement> as shown:
+    </p>
+    <fig>
+      <title>Usage</title>
+      <codeblock scale="80" outputclass="language-xml"><coderef href="./src/usage.xml"/></codeblock>
+    </fig>
+    <p>
+       When running an HTML based transform, the section will be transformed into a
+       tabbed dialog. e.g.:
+    </p>
+    <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> html5 <parmname>--output</parmname> out <parmname>--input</parmname> document.ditamap
+    </codeblock>
+    <p>
+       To alter the CSS, amend the <filepath>resource/tabs.css</filepath> file which is
+       copied over as part of the DITA processing.
+    </p>
+  </body>
+</topic>

@@ -1,0 +1,4 @@
+<plugin id="com.example.prismjs-theme">
+  <require plugin="fox.jason.prismjs"/>
+  <feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
+</plugin>

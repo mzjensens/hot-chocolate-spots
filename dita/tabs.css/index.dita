@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="css-only-tabs-plug-in">
+  <title>CSS-only Tabs Plug-in</title>
+  <abstract>
+    <shortdesc>
+       This is a <xref href="https://www.dita-ot.org/plugins" format="html"
+       scope="external">DITA-OT Plug-in</xref> used to create CSS-only tabbed dialog
+       within DITA HTML output.
+    </shortdesc>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>CSS</indexterm>
+        <indexterm>tabbed dialog</indexterm>
+        <indexterm>plug-in</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body/>
+  <topic id="example">
+    <title outputclass="h3 mt-3">Example</title>
+    <body>
+      <fig id="sample-dita-input">
+        <title>Sample DITA Input</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/usage.xml"/></codeblock>
+      </fig>
+      <fig>
+        <title>CSS-only Tabbed Dialog</title>
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.tabs.css/tabbed.png" scope="external">
+          <alt/>
+        </image>
+      </fig>
+    </body>
+  </topic>
+</topic>

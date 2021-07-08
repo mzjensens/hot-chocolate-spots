@@ -1,0 +1,19 @@
+<title>Sample with YAML header</title>
+<prolog>
+  <author>Author One</author>
+  <author>Author Two</author>
+  <source>Source</source>
+  <publisher>Publisher</publisher>
+  <permissions view="Permissions"/>
+  <metadata>
+    <audience audience="Audience"/>
+    <category>Category</category>
+    <keywords>
+      <keyword>Keyword1</keyword>
+      <keyword>Keyword2</keyword>
+    </keywords>
+  </metadata>
+  <resourceid appid="Resourceid1"/>
+  <resourceid appid="Resourceid2"/>
+  <data name="workflow" value="review"/>
+</prolog>

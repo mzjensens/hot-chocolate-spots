@@ -1,0 +1,32 @@
+<project name="com.example.passthrough.dita">
+
+  <macrodef name="authorize-user">
+    <attribute name="token"/>
+    <attribute name="action"/>
+    <sequential>
+      <!-- do-something to authorize the action -->
+      <property if:true="${authorized}" name="pdf.watermark" value="@{value}"/>
+    </sequential>
+  </macrodef>
+
+  <target name="watermark.check">
+    <!-- Ensure watermark isn't preset on the command line -->
+    <dita-ot-fail if:set="pdf.watermark"/>
+    <condition property="auth.watermark.review">
+      <equals arg1="${auth.level}" arg2="review"/>
+    </condition>
+    <condition property="auth.watermark.final">
+        <equals arg1="${auth.level}" arg2="final"/>
+    </condition>
+    <condition property="auth.watermark.none">
+        <equals arg1="${auth.level}" arg2="none"/>
+    </condition>
+  </target>
+
+  <target name="watermark.auth">
+    <!-- Now set watermark if authorized to do so -->
+    <authorize-action if:true="${auth.watermark.review}" token="${auth.token}"  action="review" />
+    <authorize-action if:true="${auth.watermark.final}" token="${auth.token}"  action="final"/>
+    <authorize-action if:true="${auth.watermark.none}" token="${auth.token}"  action="none"/>
+  </target>
+</project>

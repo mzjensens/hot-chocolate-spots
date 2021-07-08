@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dita-fixer-customization">
+  <title>DITA Fixer Customization</title>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>ANT</indexterm>
+        <indexterm><xmlelement>macrodef</xmlelement></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body/>
+  <topic id="adding-a-new-fixable-rule">
+    <title>Adding a new fixable rule</title>
+    <body>
+      <p>
+         An editable macrofile can be found in <filepath>cfg/rulesset/fix-macros.xml</filepath>.
+         If a rule can be auto fixed, a macro should be added to the file in the
+         following format:
+      </p>
+      <codeblock>&lt;macrodef name="rowsep-invalid"&gt;
+    &lt;attribute name="file"/&gt;
+    &lt;attribute name="path"/&gt;
+    &lt;sequential&gt;
+        &lt;delete-attribute file="@{file}" path="@{path}" attr="rowsep"/&gt;
+    &lt;/sequential&gt;
+&lt;/macrodef&gt;</codeblock>
+      <p>
+         Where the <xmlatt>name</xmlatt> of the macro matches the rule <xmlatt>id</xmlatt>.
+         The <xmlatt>file</xmlatt> attribute supplies name of the file to be updated and the <xmlatt>path</xmlatt>
+         attribute supplies the XPath to the invalid element. The DITA file can be
+         updated using <xref href="http://www.oopsconsultancy.com/software/xmltask/"
+         format="html" scope="external">XMLTask</xref> which has been supplied as a
+         library. The following convenience functions are also available by default:
+      </p>
+      <ul>
+        <li>
+<xmlatt>delete-attribute</xmlatt>
+        </li>
+        <li>
+<xmlatt>delete-element</xmlatt>
+        </li>
+        <li>
+<xmlatt>get-attribute-value</xmlatt>
+        </li>
+        <li>
+<xmlatt>lower-case-attribute</xmlatt>
+        </li>
+        <li>
+<xmlatt>put-attribute-value</xmlatt>
+        </li>
+        <li>
+<xmlatt>replace-with-subelement</xmlatt>
+        </li>
+      </ul>
+    </body>
+  </topic>
+  <topic id="amending-a-fixable-rule">
+    <title>Amending a fixable rule</title>
+    <body>
+      <p>
+         The default functionality applied to fix a broken rule can be amended by
+         altering the macro. If a rule is inactive within the ruleset it will not be fixed.
+      </p>
+    </body>
+  </topic>
+</topic>

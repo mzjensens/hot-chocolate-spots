@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <file datatype="xml" original="/document.ditamap" source-language="en" target-language="es">
+    <header xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:dita="http://www.dita-ot.org">
+      <skl>
+        <external-file href="./skl/document.ditamap.skl" />
+      </skl>
+    </header>
+    <body xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:dita="http://www.dita-ot.org">
+        <trans-unit xmlns="" xmlns:dita="dita-ot.org" approved="no" id="42094" xml:space="preserve">
+          <source xml:lang="en">
+            Loves or pursues or desires to obtain pain of itself, because it
+            is pain, but occasionally circumstances occur in which toil and
+            pain can procure him some great pleasure. To take a trivial
+            example,  <x ctype="x-dita-b" id="d3e14">which of us ever undertakes
+            laborious physical exercise,</x> except to obtain some advantage from it?
+            But who has any right to find fault with a man who chooses to enjoy a pleasure
+            that has no annoying consequences, or one who avoids a pain that produces no
+            resultant pleasure?
+          </source>
+          <target xml:lang="la"/>
+        </trans-unit>
+        ... etc
+      </body>
+   </file>
+...etc

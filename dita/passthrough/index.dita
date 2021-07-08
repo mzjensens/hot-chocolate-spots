@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="passthrough-plugin">
+  <title>Passthrough Plugin</title>
+  <abstract>
+    <shortdesc>
+       This is an abstract base DITA-OT Plug-in to enable files to bypass DITA-OT
+       pre-processing and be copied directly over into the processing directory. It is
+       designed to be extended.
+    </shortdesc>
+    <p>
+       The plugin consists of a no-op file reader and an Antlib library. It offers two
+       extension-points for further processing.
+    </p>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>passthrough</indexterm>
+        <indexterm>plug-in</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body/>
+</topic>

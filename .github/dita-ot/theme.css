@@ -1,0 +1,8 @@
+/* Sample additional css override after apply a them.
+ This adds Bootstrap's own documentation example highlight */
+.bd-example {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -.75rem 0;
+    border: solid #dee2e6 1px;
+}

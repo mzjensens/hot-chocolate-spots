@@ -1,0 +1,12 @@
+..
+<table platform="pdfonly" frame="none" >
+    <!-- ignore-rule:table-id-missing -->
+    <tgroup cols="1">
+        <colspec colname="c1" colnum="1" colwidth="336pt"/>
+        <tbody>
+            <row>
+                <entry>&amp;#xA0;</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>

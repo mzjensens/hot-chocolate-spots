@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="usage">
+  <title>Usage</title>
+  <body/>
+  <topic id="validating-a-document-from-the-command-line">
+    <title>Validating a document from the Command line</title>
+    <body>
+      <note type="tip">
+         A test document can be found within the plug-in at
+         <codeph>PATH_TO_DITA_OT/plugins/com.here.validate.svrl/sample</codeph>
+      </note>
+      <section id="creating-an-svrl-file">
+      <title>Creating an SVRL file</title>
+        <p>
+           To create an SVRL file use the <option>svrl</option> transform with the
+           <parmname>--args.validate.mode</parmname>=<option>report</option> parameter.
+        </p>
+        <ul>
+          <li>
+            From a terminal prompt move to the directory holding the document to validate.
+          </li>
+          <li>
+            SVRL file creation (<option>svrl</option>) can be run like any other DITA-OT
+            transform:
+          </li>
+        </ul>
+        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>svrl</option> \
+     <parmname>--args.validate.mode</parmname>=<option>report</option> \
+     <parmname>--output</parmname> out \
+     <parmname>--input</parmname> document.ditamap</codeblock>
+        <p>
+           Once the command has run, an SVRL file is created.
+        </p>
+        <fig>
+          <title>SVRL Output</title>
+          <codeblock scale="80" outputclass="language-xml"><coderef href="./src/output.svrl"/></codeblock>
+        </fig>
+      </section>
+      <section id="echoing-results-to-the-command-line">
+        <title>Echoing results to the command line</title>
+        <p>
+           To echo results to the command line use the <option>svrl</option> transform
+           without specifying a <option>report</option>
+        </p>
+        <ul>
+          <li>
+             Document validation (<option>svrl</option>) can be run like any other DITA-OT
+             transform:
+          </li>
+        </ul>
+        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>svrl</option> \
+    <parmname>--input</parmname> document.ditamap</codeblock>
+        <p>
+           Once the command has run, all errors and warnings are echoed to the command line.
+        </p>
+        <fig>
+          <title>Command Line Output</title>
+          <codeblock scale="80" outputclass="language-none"><coderef href="./src/warning.txt"/></codeblock>
+        </fig>
+        <p>
+           Additionally, if an error occurs, the command will fail.
+        </p>
+        <fig>
+          <title>Command Line Output with Failure</title>
+          <codeblock scale="80" outputclass="language-none"><coderef href="./src/error.txt"/></codeblock>
+        </fig>
+        <p>
+           Optionally, the output can be highlighed using ANSI color codes by adding the
+           <parmname>args.validate.color</parmname> parameter.
+        </p>
+        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>svrl-echo</option> \
+    <parmname>--input</parmname> document.ditamap \
+    <parmname>--args.validate.color</parmname>=<option>true</option></codeblock>
+      </section>
+      <section id="fix-common-errors-automatically">
+        <title>Fix common errors automatically</title>
+        <p>
+           To run the auto-fix command from the command line use the <option>svrl</option>
+           transform with the <parmname>--args.validate.mode</parmname>=<option>fix-dita</option> parameter.
+        </p>
+        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>svrl</option> \
+    <parmname>--input</parmname> document.ditamap \
+    <parmname>--args.validate.mode</parmname>=<option>fix-dita</option></codeblock>
+        <p>
+           Once the command has run, the DITA files are updated and fixable errors and
+           warnings are no longer present.
+        </p>
+      </section>
+      <section id="parameter-reference">
+        <title>Parameter Reference</title>
+        <indexterm><parmname>args.validate.ignore.rules</parmname></indexterm>
+        <indexterm><parmname>args.validate.blacklist</parmname></indexterm>
+        <indexterm><parmname>args.validate.cachefile</parmname></indexterm>
+        <indexterm><parmname>args.validate.check.case</parmname></indexterm>
+        <indexterm><parmname>args.validate.color</parmname></indexterm>
+        <indexterm><parmname>args.validate.mode</parmname></indexterm>
+        <indexterm><parmname>svrl.customization.dir</parmname></indexterm>
+        <indexterm><parmname>svrl.ruleset.file</parmname></indexterm>
+        <indexterm><parmname>svrl.filter.file</parmname></indexterm>
+        <ul>
+          <li>
+             <parmname>args.validate.ignore.rules</parmname> - Comma separated list of rules
+             not to be enforced
+          </li>
+          <li>
+             <parmname>args.validate.blacklist</parmname> - Comma separated list of words not
+             to be present in the running text
+          </li>
+          <li>
+             <parmname>args.validate.cachefile</parmname> - Specifies the location of cache
+             file to be used. Validation will only run across altered files if this
+             parameter is present
+          </li>
+          <li>
+             <parmname>args.validate.check.case</parmname> - Comma separated list of words
+             which have a specified capitalization
+          </li>
+          <li>
+             <parmname>args.validate.color</parmname> - When set, errors and warnings are
+             Output highlighted using ANSI color codes
+          </li>
+          <li>
+             <parmname>args.validate.mode</parmname> - Validation reporting mode. The
+             following values are supported:
+            <ul>
+              <li>
+                 <option>strict</option> - Outputs both warnings and errors. Fails on errors and
+                 warnings.
+              </li>
+              <li>
+                 <option>default</option> - Outputs both warnings and errors. Fails on errors only
+              </li>
+              <li>
+                 <option>lax</option> - Ignores all warnings and outputs errors only. Fails on
+                 Errors only
+              </li>
+              <li>
+                 <option>report</option> - Creates an SVRL file
+              </li>
+              <li>
+                 <option>fix-dita</option> - Updates existing DITA files and automatically fixes
+                 as many errors as possible
+              </li>
+            </ul>
+          </li>
+          <li>
+             <parmname>svrl.customization.dir</parmname> - Specifies the customization directory
+          </li>
+          <li>
+             <parmname>svrl.ruleset.file</parmname> - Specifies severity of the rules to
+             apply. If this parameter is not present, default severity levels will be used.
+          </li>
+          <li>
+             <parmname>svrl.filter.file</parmname> - Specifies the location of the XSL file
+             used to filter the echo output. If this parameter is not present, the default
+             echo output format will be used.
+          </li>
+        </ul>
+      </section>
+    </body>
+  </topic>
+  <topic id="validating-a-document-using-ant">
+    <title>Validating a document using ANT</title>
+    <prolog>
+      <metadata>
+        <keywords>
+          <indexterm>ANT</indexterm>
+        </keywords>
+      </metadata>
+    </prolog>
+    <body>
+      <p>
+         An ANT build file is supplied in the same directory as the sample document. The
+         main target can be seen below:
+      </p>
+      <fig>
+          <title>ANT Target</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/ant-target.xml"/></codeblock>
+      </fig>
+    </body>
+  </topic>
+</topic>

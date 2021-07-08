@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="usage">
+  <title>Usage</title>
+  <body>
+    <section id="automatically-displaying-a-splash-screen-when-running-a-build-job">
+      <title outputclass="h3 mt-3">Automatically displaying a splash screen when running a build job</title>
+      <p>
+         The plugin is pre-configured to run as part of the <parmname>depend.preprocess.pre</parmname>
+         build step. Running any ordinary build job will display a random cat photo.
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>pdf</option> \
+    <parmname>--output</parmname> out \
+    <parmname>--input</parmname> document.ditamap</codeblock>
+    </section>
+    <section id="displaying-a-random-cat-photo">
+      <title outputclass="h3 mt-3">Displaying a random Cat Photo</title>
+      <p>
+         To display a random photo from the <xref href="https://thecatapi.com/"
+         format="html" scope="external">Cat API</xref>, use the <option>cats</option>
+         transform.
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>cats</option> \
+    <parmname>--input</parmname> document.ditamap</codeblock>
+    </section>
+    <section id="displaying-a-random-xkcd-comic-strip">
+      <title outputclass="h3 mt-3">Displaying a random XKCD Comic Strip</title>
+      <p>
+         To display a random XKCD comic strip from <xref href="https://xkcd.com/"
+         format="html" scope="external">xkcd.com</xref>, use the <option>xkcd</option>
+         transform.
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xkcd</option> \
+    <parmname>--input</parmname> document.ditamap</codeblock>
+    </section>
+  </body>
+</topic>

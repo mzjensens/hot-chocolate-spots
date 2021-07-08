@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="usage">
+  <title>Usage</title>
+  <body>
+    <p>
+       The plugin extends standard PDF processing:
+    </p>
+    <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>pdf</option> \
+     <parmname>--output</parmname> out \
+     <parmname>--input</parmname> document.ditamap \
+     <parmname>--pdf.watermark</parmname>=<option>draft|review|final</option>
+    </codeblock>
+    <p>
+       By default the output PDF will be watermarked as a <b>DRAFT</b>.
+    </p>
+  </body>
+  <topic id="parameter-reference">
+    <title>Parameter Reference</title>
+    <prolog>
+      <metadata>
+        <keywords>
+          <indexterm><parmname>pdf.watermark</parmname></indexterm>
+        </keywords>
+      </metadata>
+    </prolog>
+    <body>
+      <ul>
+        <li>
+           <parmname>pdf.watermark</parmname> - Decides which watermark to use:
+          <ul>
+            <li>
+               <option>draft</option> - Adds a watermark stating <b>DRAFT DOCUMENT</b>
+            </li>
+            <li>
+               <option>review</option> - Adds a watermark stating <i>Copy for review only</i>
+            </li>
+            <li>
+               <option>final</option> - Adds an nearly invisible <b>FINAL</b> watermark
+            </li>
+            <li>
+               <option>none</option> - Does not add a watermark
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </body>
+  </topic>
+  <topic id="extension-points">
+    <title>Extension points</title>
+    <prolog>
+      <metadata>
+        <keywords>
+          <indexterm>Extension points</indexterm>
+          <indexterm>ANT</indexterm>
+          <indexterm><parmname>watermark.pre</parmname></indexterm>
+        </keywords>
+      </metadata>
+    </prolog>
+    <body>
+      <p>
+         This plug-in is designed to be extended and offers an extension point:
+      </p>
+      <ul>
+        <li>
+           <parmname>watermark.pre</parmname> - Runs an additional ANT target before the
+           watermarking processing stage.
+        </li>
+      </ul>
+    </body>
+    <topic id="example">
+      <title>Example</title>
+      <body>
+        <p>
+           The following <codeph>plugin.xml</codeph> will enable the watermarking of PDF
+           files to depend on an authorization server.
+        </p>
+        <fig id="plugin.xml-configuration">
+          <title><codeph>plugin.xml</codeph> Configuration</title>
+          <codeblock scale="80" outputclass="language-xml"><coderef href="./src/plugin.xml"/></codeblock>
+        </fig>
+        <fig id="ant-build-file">
+          <title outputclass="h4 mt-3">ANT build file</title>
+          <codeblock scale="80" outputclass="language-xml"><coderef href="./src/ant-target.xml"/></codeblock>
+        </fig>
+        <p>
+           A working example can be found in the <xref
+           href="https://github.com/jason-fox/fox.jason.watermark.auth" format="html"
+           scope="external">Authorized Watermark DITA-OT plug-in</xref>.
+        </p>
+      </body>
+    </topic>
+  </topic>
+</topic>

@@ -1,0 +1,5 @@
+<plugin id="com.example.extended.css">
+  <feature extension="ant.import" file="build.xml"/>
+  <require plugin="fox.jason.extend.css"/>
+  <feature extension="extend.css.process" value="example.css.copy"/>
+</plugin>

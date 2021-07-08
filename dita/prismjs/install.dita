@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="install">
+  <title>Install</title>
+  <abstract>
+    <shortdesc>
+       This plug-in requires the presence of the <codeph>fox.jason.extend.css</codeph>
+       to function correctly. It also needs <xref href="https://nodejs.org/"
+       format="html" scope="external">Node.js</xref> running on  user's machine to
+       avoid deprecation errors.
+    </shortdesc>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>installing</indexterm>
+        <indexterm>Node.js</indexterm>
+        <indexterm><xmlelement>script</xmlelement></indexterm>
+        <indexterm><xmlelement>scriptdef</xmlelement></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p>
+       Run the plug-in installation commands:
+    </p>
+    <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
+<cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
+    </codeblock>
+    <p>
+       The <cmdname>dita</cmdname> command line tool requires no additional configuration.
+    </p>
+    <section id="installing-node.js">
+      <title outputclass="h3 mt-3">Installing Node.js</title>
+      <image deliveryTarget="html" scope="external" href="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" outputclass="float-start mt-1 me-3" height="55"/>
+      <p>
+         Due to the deprecation and removal of the Nashorn Engine in JDK11-14 <xref
+         href="https://openjdk.java.net/jeps/335" format="html" scope="external">JEP 335</xref>
+         any plug-in using JavaScript within <xmlelement>script</xmlelement> or <xmlelement>scriptdef</xmlelement>
+         ANT tasks will start throwing warnings with Java 11 onwards and above. From
+         Java 15 onwards, these plugins will no longer work.
+      </p>
+      <p>
+         The DITA-OT Prism-JS syntax highlighter relies heavily the Prism-JS JavaScript
+         library, and therefore has been updated to run using <xref
+         href="https://nodejs.org/" format="html" scope="external">Node.js</xref> where
+         present on a user’s machine. Node.js is a JavaScript runtime built on Chrome’s
+         V8 JavaScript engine.
+      </p>
+      <p>
+         To download a copy follow the instructions on the <xref
+         href="https://nodejs.org/en/download/" format="html" scope="external">Install Page</xref>.
+      </p>
+    </section>
+  </body>
+</topic>

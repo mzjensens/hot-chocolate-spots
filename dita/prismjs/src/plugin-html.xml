@@ -1,0 +1,6 @@
+<plugin id="com.example.prismjs-theme">
+  <feature extension="ant.import" file="theme.xml"/>
+  <require plugin="fox.jason.extend.css"/>
+  <require plugin="fox.jason.prismjs"/>
+  <feature extension="extend.css.process.pre" value="prismjs.override.css"/>
+</plugin>

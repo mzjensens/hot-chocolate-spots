@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="xliff-translate-plug-in">
+  <title>XLIFF Translate Plug-in</title>
+  <abstract>
+    <shortdesc>
+       DITA-OT Translate Plug-in is a plug-in to create, auto-translate and re-merge
+       XLIFF files, generating translated documentation in a targeted foreign
+       language. It can create and consume files using either XLIFF 1.2 or XLIFF 2.1
+       format.
+    </shortdesc>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>XLIFF</indexterm>
+        <indexterm>translation</indexterm>
+        <indexterm>plug-in</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body/>
+  <topic id="example">
+    <title outputclass="h3 mt-3">Example</title>
+    <body>
+      <p>
+         This plug-in consists of three DITA-OT transforms:
+      </p>
+      <ul>
+        <li>
+           The <option>xliff-create</option> transform creates XLIFF and skeleton files
+           from the <codeph>*.dita</codeph> files.
+        </li>
+        <li>
+           The <option>xliff-translate</option> transform populates the <xmlelement>target</xmlelement>
+           texts using an automatic translation service.
+        </li>
+        <li>
+           The <option>xliff-dita</option> transform recreates the DITA project using the
+           translated texts.
+        </li>
+      </ul>
+      <fig id="dita-file">
+        <title>DITA File</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/topic.xml"/></codeblock>
+      </fig>
+      <fig id="sample-xliff-file-with-latin-translation">
+        <title>Sample XLIFF File (with Latin Translation)</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/xliff-1.2.xml"/></codeblock>
+      </fig>
+      <fig id="dita-skeleton-file">
+        <title>DITA Skeleton File</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/skeleton.xml"/></codeblock>
+      </fig>
+    </body>
+  </topic>
+</topic>

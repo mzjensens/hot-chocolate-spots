@@ -1,0 +1,11 @@
+<project basedir="." default="unit-test">
+  <import file="../../bootstrap.xml"/>
+  <description>
+    Body text should be displayed in the standard font
+  </description>
+  <target name="unit-test">
+      <exec-html5/>
+      <get-html-article from="topics/body-text.html"/>
+      <compare-output suffix=".html"/>
+  </target>
+</project>

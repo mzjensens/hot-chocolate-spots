@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="usage">
+  <title>Usage</title>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm><xmlelement>topicref</xmlelement></indexterm>
+        <indexterm><xmlelement>map</xmlelement></indexterm>
+        <indexterm><xmlatt>format</xmlatt></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p>
+       To mark a file to be passed through for <term>Swagger</term> processing, label  the <xmlelement>topicref</xmlelement>
+       with <xmlatt>format="swagger"</xmlatt> within the <xmlelement>map</xmlelement>
+       as shown:
+    </p>
+    <fig>
+      <title>Usage</title>
+      <codeblock scale="80" outputclass="language-xml"><coderef href="./src/usage.xml"/></codeblock>
+    </fig>
+    <p>
+       The additional file will be converted to a <codeph>*.dita</codeph> file and will
+       be added to the build job without further processing. The title of the included <xmlelement>topic</xmlelement>
+       will be the same as root name of the file. Any underscores in the filename will
+       be replaced by spaces in title.
+    </p>
+  </body>
+</topic>

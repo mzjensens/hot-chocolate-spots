@@ -1,0 +1,17 @@
+<!-- Voices speaking in English -->
+<xsl:attribute-set name="__voice__en__male">
+    <xsl:attribute name="voice">en-US_MichaelVoice</xsl:attribute>
+</xsl:attribute-set>
+<xsl:attribute-set name="__voice__en__female">
+    <xsl:attribute name="voice">en-US_AllisonVoice</xsl:attribute>
+</xsl:attribute-set>
+<!-- Voices speaking in Regional English -->
+<xsl:attribute-set name="__voice__en-us__female">
+    <xsl:attribute name="voice">en-US_AllisonVoice</xsl:attribute>
+</xsl:attribute-set>
+<!--xsl:attribute-set name="__voice__en-us__female">
+    <xsl:attribute name="voice">en-US_LisaVoice</xsl:attribute>
+</xsl:attribute-set-->
+<xsl:attribute-set name="__voice__en-gb__female">
+    <xsl:attribute name="voice">en-GB_KateVoice</xsl:attribute>
+</xsl:attribute-set>

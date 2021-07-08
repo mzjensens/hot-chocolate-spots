@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap>
+  <title>DITA Bootstrap</title>
+  <frontmatter deliveryTarget="pdf">
+    <booklists>
+      <toc/>
+    </booklists>
+  </frontmatter>
+  <chapter navtitle="Introduction" format="dita" href="index.dita"/>
+  <chapter format="dita" type="topic" href="audiobook/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="audiobook/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="audiobook/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="extend.css/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="extend.css/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="extend.css/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="javadoc/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="javadoc/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="javadoc/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="pandoc/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="pandoc/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="pandoc/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="passthrough/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="passthrough/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="passthrough/usage.dita"/>
+    <topicref format="dita" type="topic" href="passthrough/api.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="postman/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="postman/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="postman/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="pretty-dita/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="pretty-dita/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="pretty-dita/usage.dita"/>
+    <topicref format="dita" type="topic" href="pretty-dita/format.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="prismjs/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="prismjs/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="prismjs/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="readthedocs/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="readthedocs/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="readthedocs/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="splash/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="splash/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="splash/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="swagger/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="swagger/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="swagger/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="tabs.css/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="tabs.css/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="tabs.css/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="translate.xliff/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="translate.xliff/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="translate.xliff/usage.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="unit-test/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="unit-test/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="unit-test/usage.dita"/>
+    <topicref format="dita" type="topic" href="unit-test/file-structure.dita"/>
+    <topicref format="dita" type="topic" href="unit-test/api.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="validate.svrl/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="validate.svrl/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="validate.svrl/usage.dita"/>
+    <topicref format="dita" type="topic" href="validate.svrl/customizing-the-validator.dita"/>
+    <topicref format="dita" type="topic" href="validate.svrl/customizing-the-dita-fixer.dita"/>
+    <topicref format="dita" type="topic" href="validate.svrl/error-messages.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="validate.svrl.text-rules/index.dita">
+    <topicref format="dita" type="topic" href="validate.svrl.text-rules/install.dita"/>
+    <topicref format="dita" type="topic" href="validate.svrl.text-rules/usage.dita"/>
+    <topicref format="dita" type="topic" href="validate.svrl.text-rules/configuration.dita"/>
+    <topicref format="dita" type="topic" href="validate.svrl.text-rules/error-messages.dita"/>
+  </chapter>
+  <chapter format="dita" type="topic" href="watermark/index.dita">
+    <topicref format="dita" type="topic" href="watermark/install.dita"/>
+    <topicref format="dita" type="topic" href="watermark/usage.dita"/>
+  </chapter>
+  <backmatter deliveryTarget="pdf">
+    <booklists>
+      <indexlist/>
+    </booklists>
+  </backmatter>
+</bookmap>

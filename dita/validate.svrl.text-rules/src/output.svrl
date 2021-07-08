@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<svrl:schematron-output>
+  <active-pattern role="dita" name="/incorrect-spelling.dita"/>
+  <fired-rule context="common" role="grammar"/>
+  <fired-rule context="default-lang" role="spelling"/>
+  <failed-assert role="error" location="/topic/body[1]/section[2]/p[1]">
+    <diagnostic-reference diagnostic="incorrect-spelling">
+      Line 17: p - [incorrect-spelling]
+      The word 'separate' is spelt incorrectly ('seperate') in the following text:
+
+      Seperate accommodation can be found within the main building...
+    </diagnostic-reference>
+  </failed-assert>
+  <fired-rule context="default-lang" role="grammar"/>
+  <fired-rule context="english" role="grammar"/>
+</svrl:schematron-output>

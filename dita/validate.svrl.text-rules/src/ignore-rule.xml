@@ -1,0 +1,7 @@
+<!--
+    This is an example of a spelling mistake
+-->
+<p>
+    <!-- ignore-rule:incorrect-spelling -->
+    I have deliberately misspelt the word accidentaly (sic) - it should be written with a double l.
+</p>

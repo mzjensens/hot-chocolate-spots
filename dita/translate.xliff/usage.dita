@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="usage">
+  <title>Usage</title>
+  <body>
+    <section id="xliff-1.2-invocation-from-the-command-line">
+      <title outputclass="h3 mt-3">XLIFF 1.2 Invocation from the command line</title>
+      <p>
+         1. to create an XLIFF 1.2 File and associated skeletons with run:
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-create</option> \
+     <parmname>--input</parmname> document.ditamap \
+     <parmname>--output</parmname> out \
+     <parmname>--xliff.version</parmname>=<option>1</option></codeblock>
+      <p>
+         A <codeph>translate.xlf</codeph> file will appear in the <codeph>out</codeph>
+         directory along with a series of skeleton files.
+      </p>
+      <fig>
+        <title>XLIFF 1.2 output</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/output-1.2.xliff"/></codeblock>
+      </fig>
+      <note>
+         if the <parmname>translate.cachefile</parmname> parameter is used, unchanged
+         text with previously approved translations will be copied over to the
+         <xmlelement>target</xmlelement> elements.
+      </note>
+      <p>
+         2. to populate an exisiting XLIFF 1.2 File with auto-translated text:
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-translate</option> \
+     <parmname>--input</parmname> translate.xlf \
+     <parmname>--translate.service</parmname>=<option>[bing|deepl|watson|yandex]</option> \
+     <parmname>--translate.apikey</parmname>=&lt;api-key&gt;
+     <parmname>--xliff.version</parmname>=<option>1</option></codeblock>
+      <p>
+         The XLIFF 1.2 File is auto-translated in place, with translated text as shown:
+      </p>
+      <note>
+         Only <xmlelement>trans-unit</xmlelement> elements which are <xmlatt>approved="no"</xmlatt>
+         will be auto-translated.
+      </note>
+      <fig>
+        <title>XLIFF 1.2 output with translations</title>
+      <codeblock scale="80" outputclass="language-xml"><coderef href="./src/translated-1.2.xliff"/></codeblock>
+    </fig>
+    </section>
+    <section id="xliff-2.1-invocation-from-the-command-line">
+      <title outputclass="h3 mt-3">XLIFF 2.1 Invocation from the command line</title>
+      <p>
+         3. to create an XLIFF 2.1 File and associated skeletons with run:
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-create</option> \
+     <parmname>--input</parmname> document.ditamap  \
+     <parmname>--output</parmname> out \
+     <parmname>--xliff.version</parmname>=<option>2</option></codeblock>
+      <p>
+         A <codeph>translate.xlf</codeph> file will appear in the <codeph>out</codeph>
+         directory along with a series of skeleton files.
+      </p>
+      <fig>
+        <title>XLIFF 2.1 output</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/output-2.1.xliff"/></codeblock>
+      </fig>
+      <p>
+         4. to populate an exisiting XLIFF 2.1 File with auto-translated text:
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-translate</option> \
+     <parmname>--input</parmname> translate.xlf --translate.service=[bing|deepl|watson|yandex] \
+     <parmname>--translate.apikey=&lt;api-key&gt;</parmname> \
+     <parmname>--xliff.version</parmname>=<option>2</option></codeblock>
+      <p>
+         The XLIFF 2.1 File is auto-translated in place, with translated text as shown:
+      </p>
+      <note>
+         Any <xmlelement>segement</xmlelement> elements which are <xmlatt>state="final"</xmlatt>
+         will not be re-translated.
+      </note>
+      <fig>
+        <title>XLIFF 2.1 output with translations</title>
+        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/translated-2.1.xliff"/></codeblock>
+      </fig>
+    </section>
+    <section id="populating-skeletons-from-the-command-line">
+      <title outputclass="h3 mt-3">Populating Skeletons from the command line</title>
+      <p>
+         5. recreate <codeph>*.dita</codeph> files using an XLIFF File and its
+         associated skeletons with run:
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-dita</option> \
+     <parmname>--input</parmname> translate.xlf \
+     <parmname>--output</parmname> out \
+     <parmname>--xliff.version</parmname>=<option>1|2</option></codeblock>
+      <p>
+         The translated <codeph>*.dita</codeph> files are generated into the
+         <codeph>out</codeph> directory.
+      </p>
+      <note>
+         Any machine translation is by definition imperfect. A typical translation
+         workflow would send the generated XLIFF files to the translation agency (known
+         also as "localisation service provider"), and receive back verified translated
+         content from the translation agency integrated into to the XLIFF. For XLIFF
+         1.2, each <xmlelement>trans-unit</xmlelement> should be marked <xmlatt>approved="yes"</xmlatt>
+         when the <xmlelement>target</xmlelement> element has been verified. Similarly
+         for XLIFF 2.1 each <xmlelement>segement</xmlelement> should be marked as <xmlatt>state="final"</xmlatt>.
+      </note>
+    </section>
+    <section id="parameter-reference">
+      <title outputclass="h3 mt-3">Parameter Reference</title>
+      <indexterm><parmname>translate.from</parmname></indexterm>
+      <indexterm><parmname>translate.to</parmname></indexterm>
+      <indexterm><parmname>translate.cachefile</parmname></indexterm>
+      <indexterm><parmname>translate.service</parmname></indexterm>
+      <indexterm><parmname>translate.authentication.url</parmname></indexterm>
+      <indexterm><parmname>translate.apikey</parmname></indexterm>
+      <indexterm><parmname>translate.url</parmname></indexterm>
+      <indexterm><parmname>xliff.version</parmname></indexterm>
+      <ul>
+        <li>
+           <parmname>translate.from</parmname> - Source language to use. Defaults to the
+           value in <codeph>configuration.properties</codeph>
+        </li>
+        <li>
+           <parmname>translate.to</parmname> - Target language. Defaults to the value in
+           <codeph>configuration.properties</codeph>
+        </li>
+        <li>
+           <parmname>translate.cachefile</parmname> - Specifies the location of a
+           previously translated XLIFF file to be used. If the <xmlatt>id</xmlatt> matches
+           to a previously translated text snippet in the cache file, the text will be
+           copied over and the snippet marked as <codeph>approved</codeph>.
+        </li>
+        <li>
+           <parmname>translate.service</parmname> - Decides which translation service to use:
+          <ul>
+            <li>
+               <option>bing</option> - Connects to the <b>Microsoft Azure</b> Translation service
+            </li>
+            <li>
+               <option>custom</option> - Sends the translate to an arbitrary URL using POST -
+               use this to connect to proxies for <xref
+               href="https://cloud.google.com/translate/" format="html" scope="external">Google Cloud Translate</xref>
+            </li>
+            <li>
+               <option>deepl</option> - Connects to the <b>DeepL API</b> Translation service
+            </li>
+            <li>
+               <option>dummy</option> - Avoids accessing a translation service, copies sources
+               to target langauge directly without amendment.
+            </li>
+            <li>
+               <option>watson</option> - Connects to the <b>IBM Cloud</b> Translation service
+            </li>
+            <li>
+               <option>yandex</option> - Connects to the <b>Yandex</b> Translation service
+            </li>
+          </ul>
+        </li>
+        <li>
+           <parmname>translate.authentication.url</parmname> - URL for creating an OAuth
+           token if needed for a service. Defaults to the value in <codeph>configuration.properties</codeph>.
+        </li>
+        <li>
+           <parmname>translate.apikey</parmname> - API Key for the Translation service.
+           Defaults to the value in <codeph>configuration.properties</codeph>
+        </li>
+        <li>
+           <parmname>translate.url</parmname> - URL for a Translation service. Defaults to
+           the value in <codeph>configuration.properties</codeph>
+        </li>
+        <li>
+           <parmname>xliff.version</parmname> - Decides which XLIFF format to use.
+           Defaults to the value in <codeph>configuration.properties</codeph>:
+          <ul>
+            <li>
+               <option>1</option> - XLIFF 1.2 format
+            </li>
+            <li>
+               <option>2</option> - XLIFF 2.1 format
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </body>
+</topic>

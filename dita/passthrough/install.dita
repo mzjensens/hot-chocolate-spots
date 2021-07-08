@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="install">
+  <title>Install</title>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>installing</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p>
+       Run the plug-in installation commands:
+    </p>
+    <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/doctales/org.doctales.xmltask/archive/master.zip
+<cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.passthrough/archive/master.zip</codeblock>
+    <p>
+       The <cmdname>dita</cmdname> command line tool requires no additional configuration.
+    </p>
+  </body>
+</topic>

@@ -1,0 +1,6 @@
+[WARN]   [/out/temp/dita/topics/comment-fixme.dita]
+ Line 15: section[id="bad"] - [comment-fixme]
+Found 'FIXME' comments within the &lt;section&gt; element - fix as requested and delete the comment.
+
+FIXME This comment requires action
+Found 0 Errors 1 Warnings

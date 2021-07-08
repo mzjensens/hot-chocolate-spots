@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="unit-testing-ant-tasks">
+  <title>Unit Testing ANT Tasks</title>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>ANT</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p>
+       The following ANT tasks are available from the DITA-OT Unit Test Framework:
+    </p>
+    <section id="compare-output">
+      <title outputclass="h4 mt-3">Compare-Output</title>
+      <p>
+         Fail the test if the test output file does not match the expectation file.
+      </p>
+      <table>
+        <tgroup cols="3">
+          <colspec colname="col1" colnum="1" colwidth="9%"/>
+          <colspec colname="col2" colnum="2" colwidth="63%"/>
+          <colspec colname="col3" colnum="3" colwidth="27%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Attribute</entry>
+              <entry colname="col2" align="left">Description</entry>
+              <entry colname="col3" align="left">Required</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left">expectation</entry>
+              <entry colname="col2" align="left">Location of the file that the output should match</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>expected.fo</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">os</entry>
+              <entry colname="col2" align="left">Only make the comparison if the current operating system is of a given type</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>any</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">result</entry>
+              <entry colname="col2" align="left">Location of the file output by the test</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>out/fragment.fo</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">suffix</entry>
+              <entry colname="col2" align="left">File suffix used by the test expectation</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>.fo</codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <codeblock scale="80" outputclass="language-xml">&lt;compare-output/&gt;</codeblock>
+      <p>
+         compares the file <codeph>out/fragment.fo</codeph> with <codeph>expected.fo</codeph>
+         and fails if they do not match.
+      </p>
+      <codeblock scale="80" outputclass="language-xml">&lt;compare-output suffix=".html"/&gt;</codeblock>
+      <p>
+         compares the file <codeph>out/fragment.html</codeph> with <codeph>expected.html</codeph>
+         and fails if they do not match.
+      </p>
+      <codeblock scale="80" outputclass="language-xml">&lt;compare-output suffix=".svrl" expectation="expected.svrl.win" os="windows"/&gt;</codeblock>
+      <p>
+         if running on a Windows system, compares the file <codeph>out/fragment.svrl</codeph>
+         with <codeph>expected.svrl.win</codeph> and fails if they do not match.
+      </p>
+      <p>
+         if running on a UNIX system, no comparison is made.
+      </p>
+    </section>
+    <section id="contains-text">
+      <title outputclass="h4 mt-3">Contains-Text</title>
+      <p>
+         Fail the test if the log from the test does not contain the given string.
+      </p>
+      <table>
+        <tgroup cols="3">
+          <colspec colname="col1" colnum="1" colwidth="7%"/>
+          <colspec colname="col2" colnum="2" colwidth="63%"/>
+          <colspec colname="col3" colnum="3" colwidth="29%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Attribute</entry>
+              <entry colname="col2" align="left">Description</entry>
+              <entry colname="col3" align="left">Required</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left">actual</entry>
+              <entry colname="col2" align="left">The text actually output by the test</entry>
+              <entry colname="col3" align="left">No; defaults to output from DITA-OT</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">expected</entry>
+              <entry colname="col2" align="left">The expected fragment of text</entry>
+              <entry colname="col3" align="left">Yes</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">os</entry>
+              <entry colname="col2" align="left">Only make the comparison if the current operating system is of a given type</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>any</codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <codeblock scale="80" outputclass="language-xml">&lt;contains-text expected="Lorem Ipsum"/&gt;</codeblock>
+      <p>
+         compares the output of DITA-OT and fails if the text "Lorem Ipsum" cannot be found.
+      </p>
+      <codeblock scale="80" outputclass="language-xml">&lt;contains-text expected="This is running on Windows" os="windows"/&gt;</codeblock>
+      <p>
+         if running on a Windows system, compares the output of DITA-OT and fails if the
+         text "This is running on Windows" cannot be found.
+      </p>
+      <p>
+         if running on a UNIX system, no comparison is made.
+      </p>
+    </section>
+    <section id="exec-html5">
+      <title outputclass="h4 mt-3">Exec-HTML5</title>
+      <p>
+         Execute the HTML5 DITA-OT transform in verbose mode The test will fail if the
+         result was not as expected or took too long.
+      </p>
+      <table>
+        <tgroup cols="3">
+          <colspec colname="col1" colnum="1" colwidth="7%"/>
+          <colspec colname="col2" colnum="2" colwidth="46%"/>
+          <colspec colname="col3" colnum="3" colwidth="47%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Attribute</entry>
+              <entry colname="col2" align="left">Description</entry>
+              <entry colname="col3" align="left">Required</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left">ditamap</entry>
+                 <entry colname="col2" align="left">The DITA <xmlelement>map</xmlelement> file
+                 specifying which topics and other resources to use to create a document
+              </entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>document.ditamap</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">expectedresult</entry>
+              <entry colname="col2" align="left">The expected result when invoking the transform</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>0</codeph> = success
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">maxwait</entry>
+              <entry colname="col2" align="left">The maximum time to create a document</entry>
+              <entry colname="col3" align="left">No; defaults to 100 seconds</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">propertyfile</entry>
+              <entry colname="col2" align="left">The name of a file holding additional properties</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>test.properties</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">transtype</entry>
+              <entry colname="col2" align="left">The transtype to invoke when creating the document</entry>
+                 <entry colname="col3" align="left">No; this can be <codeph>html5</codeph> or
+                 any DITA-OT transform that extends <codeph>base-html</codeph>; defaults to <codeph>html5</codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <codeblock scale="80" outputclass="language-xml">&lt;exec-html5 transtype="custom-html"/&gt;</codeblock>
+      <p>
+         runs DITA-OT using the <codeph>custom-html</codeph> HTML transtype. the output
+         will be placed in the <codeph>/out/html</codeph> directory.
+      </p>
+    </section>
+    <section id="exec-pdf">
+      <title outputclass="h4 mt-3">Exec-PDF</title>
+      <p>
+         Execute the PDF DITA-OT transform in verbose mode.
+      </p>
+      <table>
+        <tgroup cols="3">
+          <colspec colname="col1" colnum="1" colwidth="7%"/>
+          <colspec colname="col2" colnum="2" colwidth="47%"/>
+          <colspec colname="col3" colnum="3" colwidth="45%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Attribute</entry>
+              <entry colname="col2" align="left">Description</entry>
+              <entry colname="col3" align="left">Required</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left">ditamap</entry>
+                 <entry colname="col2" align="left">The DITA <xmlelement>map</xmlelement> file
+                 specifying which topics and other resources to use to create a document
+              </entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>document.ditamap</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">expectedresult</entry>
+              <entry colname="col2" align="left">The expected result when invoking the transform</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>0</codeph> = success
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">maxwait</entry>
+              <entry colname="col2" align="left">The maximum time to create a document</entry>
+              <entry colname="col3" align="left">No; defaults to 100 seconds</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">propertyfile</entry>
+              <entry colname="col2" align="left">The name of a file holding additional properties</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>test.properties</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">transtype</entry>
+              <entry colname="col2" align="left">The transtype to invoke when creating the document</entry>
+                 <entry colname="col3" align="left">No; this can be <codeph>pdf2</codeph> or any
+                 DITA-OT transform that extends <codeph>pdf2</codeph>; defaults to <codeph>pdf2</codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <codeblock scale="80" outputclass="language-xml">&lt;exec-pdf transtype="custom-pdf"/&gt;</codeblock>
+      <p>
+         runs DITA-OT using the <codeph>custom-pdf</codeph> PDF transtype. <codeph>topic.fo</codeph>
+         and <codeph>document.pdf</codeph> will be placed in the <codeph>/out</codeph>
+         directory.
+      </p>
+    </section>
+    <section id="exec-svrl">
+      <title outputclass="h4 mt-3">Exec-SVRL</title>
+      <p>
+         Execute the HERE Validator SVRL DITA-OT transform in verbose mode. The test will
+         fail if the result was not as expected or took too long.
+      </p>
+      <table>
+        <tgroup cols="3">
+          <colspec colname="col1" colnum="1" colwidth="7%"/>
+          <colspec colname="col2" colnum="2" colwidth="47%"/>
+          <colspec colname="col3" colnum="3" colwidth="45%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Attribute</entry>
+              <entry colname="col2" align="left">Description</entry>
+              <entry colname="col3" align="left">Required</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left">ditamap</entry>
+                 <entry colname="col2" align="left">The DITA <xmlelement>map</xmlelement> file
+                 specifying which topics and other resources to use to create a document
+              </entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>document.ditamap</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">expectedresult</entry>
+              <entry colname="col2" align="left">The expected result when invoking the transform</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>0</codeph> = success
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">maxwait</entry>
+              <entry colname="col2" align="left">The maximum time to create a document</entry>
+              <entry colname="col3" align="left">No; defaults to 100 seconds</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">propertyfile</entry>
+              <entry colname="col2" align="left">The name of a file holding additional properties</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>test.properties</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">transtype</entry>
+              <entry colname="col2" align="left">The transtype to invoke when creating the document</entry>
+                 <entry colname="col3" align="left">No; this can be <codeph>svrl</codeph> or any
+                 DITA-OT transform that extends <codeph>svrl</codeph>; defaults to <codeph>svrl</codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <codeblock scale="80" outputclass="language-xml">&lt;exec-svrl transtype="text-rules"/&gt;</codeblock>
+      <p>
+         runs DITA-OT using the <codeph>text-rules</codeph> SVRL transtype.
+      </p>
+      <codeblock scale="80" outputclass="language-xml">&lt;exec-svrl transtype="svrl-echo" expectedresult="1"/&gt;</codeblock>
+      <p>
+         runs DITA-OT using the <codeph>svrl-echo</codeph> SVRL transtype - the
+         invocation is expected to fail with validation errors.
+      </p>
+    </section>
+    <section id="exec-transtype">
+      <title outputclass="h4 mt-3">Exec-Transtype</title>
+      <p>
+         Execute an arbitrary DITA-OT transform in verbose mode. The test will fail if
+         the result was not as expected or took too long.
+      </p>
+      <table>
+        <tgroup cols="3">
+          <colspec colname="col1" colnum="1" colwidth="7%"/>
+          <colspec colname="col2" colnum="2" colwidth="47%"/>
+          <colspec colname="col3" colnum="3" colwidth="45%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Attribute</entry>
+              <entry colname="col2" align="left">Description</entry>
+              <entry colname="col3" align="left">Required</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left">ditamap</entry>
+                 <entry colname="col2" align="left">The DITA <xmlelement>map</xmlelement> file
+                 specifying which topics and other resources to use to create a document
+              </entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>document.ditamap</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">expectedresult</entry>
+              <entry colname="col2" align="left">The expected result when invoking the transform</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>0</codeph> = success
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">maxwait</entry>
+              <entry colname="col2" align="left">The maximum time to create a document</entry>
+              <entry colname="col3" align="left">No; defaults to 100 seconds</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">propertyfile</entry>
+              <entry colname="col2" align="left">The name of a file holding additional properties</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>test.properties</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">transtype</entry>
+              <entry colname="col2" align="left">The transtype to invoke when creating the document</entry>
+                 <entry colname="col3" align="left">No; this can be <codeph>svrl</codeph> or any
+                 DITA-OT transform that extends <codeph>svrl</codeph>; defaults to <codeph>svrl</codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <codeblock scale="80" outputclass="language-xml">&lt;exec-svrl transtype="custom"/&gt;</codeblock>
+      <p>
+         runs DITA-OT using the <codeph>custom</codeph> transtype.
+      </p>
+      <codeblock scale="80" outputclass="language-xml">&lt;exec-svrl transtype="custom" expectedresult="1"/&gt;</codeblock>
+      <p>
+         runs DITA-OT using the <codeph>custom</codeph> SVRL transtype - the invocation
+         is expected to fail.
+      </p>
+    </section>
+    <section id="get-html-article">
+      <title outputclass="h4 mt-3">Get-HTML-Article</title>
+      <p>
+         Loads a given HTML file and extracts the first <xmlelement>article</xmlelement>
+         element (which corresponds to a DITA topic) for further examination.
+      </p>
+      <table>
+        <tgroup cols="3">
+          <colspec colname="col1" colnum="1" colwidth="8%"/>
+          <colspec colname="col2" colnum="2" colwidth="59%"/>
+          <colspec colname="col3" colnum="3" colwidth="32%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Attribute</entry>
+              <entry colname="col2" align="left">Description</entry>
+              <entry colname="col3" align="left">Required</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left">dir</entry>
+              <entry colname="col2" align="left">Location of the files output by the test</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>out/html</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">from</entry>
+              <entry colname="col2" align="left">the name of the file to extract an HTML fragment from</entry>
+              <entry colname="col3" align="left">Yes</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">to</entry>
+              <entry colname="col2" align="left">Location of the output file holding the fragment of HTML to test</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>out/fragment.html</codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <codeblock scale="80" outputclass="language-xml">&lt;get-html-article from="topics/body-text.html"/&gt;</codeblock>
+      <p>
+         creates a file called <codeph>fragment.html</codeph> holding the <xmlelement>article</xmlelement>
+         element from the <codeph>topics/body-text.html</codeph> file.
+      </p>
+    </section>
+    <section id="get-pdf-article">
+      <title outputclass="h4 mt-3">Get-PDF-Article</title>
+      <p>
+         Loads a given <codeph>topic.fo</codeph> file and extracts the last <codeph>fo.flow</codeph>
+         element (which corresponds to a DITA topic) for further examination. Also
+         remove colors, fonts and excess attributes.
+      </p>
+      <table>
+        <tgroup cols="3">
+          <colspec colname="col1" colnum="1" colwidth="8%"/>
+          <colspec colname="col2" colnum="2" colwidth="60%"/>
+          <colspec colname="col3" colnum="3" colwidth="31%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Attribute</entry>
+              <entry colname="col2" align="left">Description</entry>
+              <entry colname="col3" align="left">Required</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left">from</entry>
+              <entry colname="col2" align="left">Location of the file to extract an HTML fragment from</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>out/topic.fo</codeph>
+              </entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">to</entry>
+              <entry colname="col2" align="left">Location of the output file holding the fragment of FOP to test</entry>
+                 <entry colname="col3" align="left">No; defaults to <codeph>out/fragment.fo</codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <codeblock scale="80" outputclass="language-xml">&lt;get-pdf-article/&gt;</codeblock>
+      <p>
+         creates a file called <codeph>fragment.fo</codeph> holding the final <xmlelement>fo.flow</xmlelement>
+         element from the <codeph>topics.fo</codeph> file.
+      </p>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pandoc-plug-in">
+  <title>Pandoc Plug-in</title>
+  <abstract>
+    <shortdesc>
+       This is a DITA-OT Plug-in to used extend the available input formats for
+       DITA-OT. Non DITA input sources can be pre-processed using <xref
+       href="https://pandoc.org/" format="html" scope="external">Pandoc</xref> to
+       create create valid DITA source. Files written in multiple input formats can be
+       directly added to a DITA <xmlelement>map</xmlelement> and processed as if they
+       had been written in DITA.
+    </shortdesc>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Pandoc</indexterm>
+        <indexterm>plug-in</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body/>
+  <topic id="background">
+    <title outputclass="h3 mt-3">Background</title>
+    <body>
+      <image deliveryTarget="html" scope="external" href="https://jason-fox.github.io/fox.jason.passthrough.pandoc/pandoc-300x194.png" outputclass="float-start me-3" height="55"/>
+      <p>
+         <term>Pandoc</term> is a Haskell library for converting from one markup format to
+         another, and a command-line tool that uses this library. It can convert from
+         the following formats:
+      </p>
+      <ul>
+        <li>
+           <b>Markdown:</b><codeph>commonmark</codeph> (<xref href="http://commonmark.org"
+           format="html" scope="external">CommonMark</xref> Markdown) ,<codeph>gfm</codeph>
+           (<xref href="https://help.github.com/articles/github-flavored-markdown/"
+           format="html" scope="external">GitHub-Flavored Markdown</xref>) ,<codeph>markdown</codeph>
+           (<xref href="https://pandoc.org/MANUAL.html#pandocs-markdown" scope="external"
+           format="html">Pandoc’s Markdown</xref>) ,<codeph>markdown_mmd</codeph> (<xref
+           href="http://fletcherpenney.net/multimarkdown/" format="html" scope="external">MultiMarkdown</xref>)
+           ,<codeph>markdown_phpextra</codeph> (<xref
+           href="https://michelf.ca/projects/php-markdown/extra/" format="html"
+           scope="external">PHP Markdown Extra</xref>) ,<codeph>markdown_strict</codeph>
+           (original unextended <xref href="http://daringfireball.net/projects/markdown/"
+           format="html" scope="external">Markdown</xref>)
+        </li>
+        <li>
+           <b>Wiki Formats:</b><codeph>dokuwiki</codeph> (<xref
+           href="https://www.dokuwiki.org/dokuwiki" format="html" scope="external">DokuWiki markup</xref>)
+           ,<codeph>mediawiki</codeph> (<xref
+           href="https://www.mediawiki.org/wiki/help:formatting" format="html"
+           scope="external">MediaWiki markup</xref>) ,<codeph>muse</codeph> (<xref
+           href="https://amusewiki.org/library/manual" format="html" scope="external">Muse</xref>)
+           ,<codeph>tikiwiki</codeph> (<xref
+           href="https://doc.tiki.org/wiki-syntax-text#the-markup-language-wiki-syntax"
+           format="html" scope="external">TikiWiki markup</xref>) ,<codeph>twiki</codeph>
+           (<xref href="http://twiki.org/cgi-bin/view/twiki/textformattingrules"
+           format="html" scope="external">TWiki markup</xref>) ,<codeph>vimwiki</codeph>
+           (<xref href="https://vimwiki.github.io" format="html" scope="external">Vimwiki</xref>)
+        </li>
+        <li>
+           <b>Other Formats:</b><codeph>creole</codeph> (<xref
+           href="http://www.wikicreole.org/wiki/creole1.0" format="html" scope="external">Creole 1.0</xref>)
+           ,<codeph>docbook</codeph> (<xref href="http://docbook.org" format="html" scope="external">DocBook</xref>)
+           ,<codeph>docx</codeph> (<xref
+           href="https://en.wikipedia.org/wiki/office-open-xml" format="html" scope="external">Word docx</xref>)
+           ,<codeph>epub</codeph> (<xref href="http://idpf.org/epub" format="html" scope="external">EPUB</xref>)
+           ,<codeph>fb2</codeph> (<xref
+           href="http://www.fictionbook.org/index.php/eng:xml-schema-fictionbook-2.1"
+           format="html" scope="external">FictionBook2</xref> e-book) ,<codeph>haddock</codeph>
+           (<xref href="https://www.haskell.org/haddock/doc/html/ch03s08.html"
+           format="html" scope="external">Haddock markup</xref>) ,<codeph>html</codeph>
+           (<xref href="http://www.w3.org/html/" format="html" scope="external">HTML</xref>)
+           ,<codeph>ipynb</codeph> (<xref
+           href="https://nbformat.readthedocs.io/en/latest/" format="html" scope="external">Jupyter notebook</xref>)
+           ,<codeph>jats</codeph> (<xref href="https://jats.nlm.nih.gov" format="html" scope="external">JATS</xref>
+           XML) ,<codeph>json</codeph> (JSON version of native AST) ,<codeph>latex</codeph>
+           (<xref href="http://latex-project.org" format="html" scope="external">LaTeX</xref>)
+           ,<codeph>man</codeph> (<xref
+           href="http://man7.org/linux/man-pages/man7/groff-man.7.html" format="html"
+           scope="external">roff man</xref>) ,<codeph>native</codeph> (native Haskell) ,<codeph>odt</codeph>
+           (<xref href="http://en.wikipedia.org/wiki/opendocument" format="html" scope="external">ODT</xref>)
+           ,<codeph>opml</codeph> (<xref href="http://dev.opml.org/spec2.html"
+           format="html" scope="external">OPML</xref>) ,<codeph>org</codeph> (<xref
+           href="http://orgmode.org" format="html" scope="external">Emacs Org mode</xref>) ,<codeph>rst</codeph>
+           (<xref href="http://docutils.sourceforge.net/docs/ref/rst/introduction.html"
+           format="html" scope="external">reStructuredText</xref>) ,<codeph>t2t</codeph>
+           (<xref href="http://txt2tags.org" format="html" scope="external">txt2tags</xref>)
+           ,<codeph>textile</codeph> (<xref href="http://redcloth.org/textile"
+           format="html" scope="external">Textile</xref>)
+        </li>
+      </ul>
+      <p>
+       More information about <term>Pandoc</term> can be found at 
+       <xref href="https://pandoc.org/" format="html" scope="external">pandoc.org</xref>.
+      </p>
+      <p>
+         This plug-in contains a Lua template which extends the output formats supported by 
+         <term>Pandoc</term> to include DITA. The output consists of a single DITA topic for 
+         each input file added to the ditamap.
+      </p>
+      <p>
+         Unlike the standard <xref href="https://github.com/jelovirt/org.lwdita"
+         format="html" scope="external">Markdown Plug-in</xref>, this plug-in does not
+         fail if the <xmlelement>h1...h6</xmlelement> headers are incorrectly incremented.
+         This is because the Lua template has been designed to calculate that headers are
+         incrementing at most one level at a time - the downside of this is that the
+         output maybe unexpected.
+      </p>
+      <note>
+         Note that because Pandoc’s intermediate representation of a document is less
+         expressive than many of the formats it converts between, one should not expect
+         perfect conversions between every format and every other. Pandoc attempts to
+         preserve the structural elements of a document, but not formatting details such
+         as margin size. And some document elements, such as complex tables, may not fit
+         into Pandoc’s simple document model. While conversions from Pandoc’s Markdown
+         to all formats aspire to be perfect, conversions from formats more expressive
+         than Pandoc’s Markdown can be expected to be lossy.
+      </note>
+    </body>
+  </topic>
+</topic>

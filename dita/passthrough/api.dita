@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ant-task">
+  <title>ANT Task</title>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>ANT</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p>
+       The following ANT task is available from the DITA-OT Pass Through plug-in:
+    </p>
+  </body>
+  <topic id="passthrough-iterate">
+    <title>Passthrough-Iterate</title>
+    <body>
+      <section id="description">
+        <title outputclass="h3 mt-3">Description</title>
+        <p>
+           Post process all files of a given format using the macro supplied.
+        </p>
+      </section>
+      <section id="parameters">
+        <title outputclass="h3 mt-3">Parameters</title>
+        <table>
+          <tgroup cols="3">
+            <colspec colname="col1" colnum="1"/>
+            <colspec colname="col2" colnum="2"/>
+            <colspec colname="col3" colnum="3"/>
+            <thead>
+              <row>
+                <entry colname="col1" align="left">Attribute</entry>
+                <entry colname="col2" align="left">Description</entry>
+                <entry colname="col3" align="left">Required</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="col1" align="left">format</entry>
+                   <entry colname="col2" align="left">The <xmlatt>format</xmlatt> attribute used
+                   with the DITA <xmlelement>map</xmlelement>
+                </entry>
+                <entry colname="col3" align="left">Yes</entry>
+              </row>
+              <row>
+                <entry colname="col1" align="left">macro</entry>
+                   <entry colname="col2" align="left">The name of the <xmlelement>macrodef</xmlelement>
+                   to run
+                </entry>
+                <entry colname="col3" align="left">Yes</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+      <section id="example">
+        <title outputclass="h3 mt-3">Example</title>
+        <codeblock scale="80" outputclass="language-xml"> &lt;passthrough-iterate format="NEW_FORMAT" macro="do-something"/&gt;</codeblock>
+        <p>
+           Files marked as <xmlatt>format="NEW_FORMAT"</xmlatt> should be processed by the <codeph>macrodef</codeph>
+           called <codeph>do-something</codeph>. The macro must offer an interface with <codeph>src</codeph>,
+           <codeph>dest</codeph>, <codeph>title</codeph> and <codeph>metadata</codeph>
+           attributes. All attributes will be pre-supplied by DITA-OT.
+        </p>
+        <table>
+          <tgroup cols="3">
+            <colspec colname="col1" colnum="1"/>
+            <colspec colname="col2" colnum="2"/>
+            <colspec colname="col3" colnum="3"/>
+            <thead>
+              <row>
+                <entry colname="col1" align="left">Attribute</entry>
+                <entry colname="col2" align="left">Description</entry>
+                <entry colname="col3" align="left">Required</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry colname="col1" align="left">src</entry>
+                <entry colname="col2" align="left">The source file which holds the raw input format</entry>
+                <entry colname="col3" align="left">Yes</entry>
+              </row>
+              <row>
+                <entry colname="col1" align="left">dest</entry>
+                <entry colname="col2" align="left">The destination file for the processed DITA</entry>
+                <entry colname="col3" align="left">Yes</entry>
+              </row>
+              <row>
+                <entry colname="col1" align="left">title</entry>
+                <entry colname="col2" align="left">The title to use for the DITA topic</entry>
+                <entry colname="col3" align="left">Yes</entry>
+              </row>
+              <row>
+                <entry colname="col1" align="left">metadata</entry>
+                <entry colname="col2" align="left">Any additional topic metadata to process (in XML format)</entry>
+                <entry colname="col3" align="left">Yes</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+        <codeblock scale="80" outputclass="language-xml">&lt;macrodef name="do-something"&gt;
+    &lt;attribute name="src" /&gt;
+    &lt;attribute name="dest" /&gt;
+    &lt;attribute name="title" /&gt;
+    &lt;attribute name="metadata" /&gt;
+    &lt;sequential&gt;
+        &lt;!-- Further processing --&gt;
+    &lt;/sequential&gt;
+&lt;/macrodef&gt;</codeblock>
+      </section>
+    </body>
+  </topic>
+</topic>

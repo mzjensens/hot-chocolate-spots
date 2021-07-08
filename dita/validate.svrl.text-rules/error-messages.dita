@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="error-messages">
+  <title>Error Messages</title>
+  <body>
+    <section id="sample-document">
+      <title outputclass="h3 mt-3">Sample Document</title>
+      <p>
+         A sample document can be found within the plug-in which can used to test plug-in
+         rules. The document covers both positive and negative test cases. The sample
+         document contains valid DITA which can be built as an HTML or as a PDF document
+         - please use the <option>html</option> or <option>pdf</option> transform to
+         read the contents or examine the <codeph>*.dita</codeph> files directly.
+      </p>
+      <p>
+         A complete list of rules covered by the plug-in can be found below. The final <xmlelement>chapters</xmlelement>
+         of the sample document contain a set of test DITA <xmlelement>topics</xmlelement>,
+         each demonstrating a broken validation rule.
+      </p>
+      <p>
+         The <xmlelement>topic</xmlelement> files are sorted as follows:
+      </p>
+      <ul>
+        <li>
+           The base validation DITA-OT plugin (<codeph>com.here.validate.svrl</codeph>) -
+           this <xmlelement>chapter</xmlelement> contains two common textual validation
+           rules.
+        </li>
+        <li>
+           The text-rules DITA-OT plugin (<codeph>com.here.validate.svrl.text-rules</codeph>)
+           - This <xmlelement>chapter</xmlelement> contains a set of English language
+           spelling and grammar rules.
+        </li>
+      </ul>
+    </section>
+    <section id="spell-checker-error-messages">
+      <title outputclass="h3 mt-3">Spell-checker Error Messages</title>
+      <p>
+         The following table list the spell-checker error messages by message ID.
+      </p>
+      <table outputclass="align-middle">
+        <tgroup cols="3">
+          <colspec colname="col1" colnum="1" colwidth="23%"/>
+          <colspec colname="col2" colnum="2" colwidth="36%"/>
+          <colspec colname="col3" colnum="3" colwidth="39%"/>
+          <thead>
+            <row>
+              <entry colname="col1" align="left">Message ID</entry>
+              <entry colname="col2" align="left">Message</entry>
+              <entry colname="col3" align="left">Corrective Action/Comment</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="col1" align="left">a-followed-by-vowel</entry>
+              <entry colname="col2" align="left">In the following text, change  to  where appropriate:</entry>
+              <entry colname="col3" align="left">In English, the general guideline is that the indefinite article in front of count nouns that begin with a vowel sound should be .</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">an-followed-by-consonant</entry>
+              <entry colname="col2" align="left">In the following text, change  to  where appropriate:</entry>
+              <entry colname="col3" align="left">In English, the general guideline is that the indefinite article in front of count nouns that begin with a consonant sound should be .</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">blacklisted-word</entry>
+              <entry colname="col2" align="left">The word  is not allowed in the following text:</entry>
+              <entry colname="col3" align="left">The indicated word has been banned from use. Rewrite the phrase using alternatives.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">duplicated-punctuation</entry>
+              <entry colname="col2" align="left">The punctuation mark  is duplicated in the following text:</entry>
+              <entry colname="col3" align="left">The indicated punctuation mark is duplicated. Delete the duplicated punctuation mark.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">duplicated-words</entry>
+              <entry colname="col2" align="left">The word  is duplicated in the following text:</entry>
+              <entry colname="col3" align="left">The indicated word is duplicated. Delete the duplicated word..</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">incorrect-capitalization</entry>
+              <entry colname="col2" align="left">The word  is incorrectly capitalized in the following text:</entry>
+              <entry colname="col3" align="left">The indicated word is not capitalized correctly. Fix the capitalization.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">incorrect-grammar</entry>
+              <entry colname="col2" align="left">The phrase  is grammatically incorrect in the following text:</entry>
+              <entry colname="col3" align="left">The indicated phrase does not make sense. Rewrite the phrase using the correct grammar.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">incorrect-punctuation</entry>
+              <entry colname="col2" align="left">The punctuation mark  has been used incorrectly in the following text:</entry>
+              <entry colname="col3" align="left">The indicated punctuation mark is non-standard. Replace with a corrected punctuation mark.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">incorrect-spelling</entry>
+              <entry colname="col2" align="left">The word  is a spelling mistake in the following text:</entry>
+              <entry colname="col3" align="left">The indicated word is not spelled correctly. Fix the spelling. It is assumed that documentation follows US English spelling conventions.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">latin-abbreviation</entry>
+              <entry colname="col2" align="left">The accronym i.e or e.g has been used in the following text:</entry>
+              <entry colname="col3" align="left">Latin accronyms are difficult to understand. Consider rewriting the phrase using alternatives, such as "for example"</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">sentence-capitalization</entry>
+              <entry colname="col2" align="left">The run on sentence in the following text does not start with a capital letter</entry>
+              <entry colname="col3" align="left">The indicated sentence is not punctuated correctly. Fix the punctuation.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">split-inifinitive</entry>
+              <entry colname="col2" align="left">The phrase  is written using a split-infinitive in the following text:</entry>
+              <entry colname="col3" align="left">The indicated sentence includes a split-infinitive, which is considered poor grammatical style - consider rephrasing the sentence.</entry>
+            </row>
+            <row>
+              <entry colname="col1" align="left">where-not-were</entry>
+              <entry colname="col2" align="left">The word  has been used to start a subordinate clause in the following text:</entry>
+              <entry colname="col3" align="left">The indicated sentence does not make sense. Rewrite the phrase using the correct grammar.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

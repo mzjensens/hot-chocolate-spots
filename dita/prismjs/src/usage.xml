@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="examples">
+  <title>Examples</title>
+  <body  outputclass="language-markup">
+
+  <p>The Prism source, highlighted with Prism:</p>
+  <codeblock outputclass="language-javascript">
+    <coderef href="../src/prism.js"/>
+  </codeblock>
+
+  <p>This page’s CSS code, highlighted with Prism:</p>
+  <codeblock outputclass="language-css">
+    <coderef href="../src/style.css"/>
+  </codeblock>
+
+  <p>This page’s HTML, highlighted with Prism:</p>
+  <codeblock outputclass="language-html">
+    <coderef href="../src/index.html"/>
+  </codeblock>
+
+  <p>This page’s logo (SVG), highlighted with Prism:</p>
+  <codeblock outputclass="language-markup">
+    <coderef href="../src/logo.svg"/>
+  </codeblock>
+  </body>
+</topic>

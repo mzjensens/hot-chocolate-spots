@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pretty-dita-plug-in">
+  <title>DITA Prettifier Plug-in</title>
+  <abstract>
+    <shortdesc>
+       This is a DITA prettifier DITA-OT Plug-in which formats DITA XML in an
+       aesthetically pleasing manner. <xmlelement>topic</xmlelement> elements, <xmlelement>section</xmlelement>
+       elements, <xmlelement>p</xmlelement> elements etc are regularly indented so the
+       raw DITA XML files can be scanned by humans:
+    </shortdesc>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>DITA prettifier</indexterm>
+        <indexterm>plug-in</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body/>
+  <topic id="example">
+    <title outputclass="h3 mt-3">Example</title>
+    <body>
+      <p>
+         A typical DITA file can contain long lines, missing carriage returns and
+         un-aligned elements:
+      </p>
+      <fig id="unformatted-dita">
+        <title>Unformatted DITA</title>
+        <codeblock scale="60" outputclass="language-xml"><coderef href="./src/unformatted.xml"/></codeblock>
+      </fig>
+      <p>
+         After running the <option>pretty-dita</option> transform, the same file will
+         have all its elements aligned, each block element on a new line and text should
+         not overrun the side of a typical view screen (approx 120 characters).
+      </p>
+      <fig id="formatted-dita">
+        <title outputclass="h4">Formatted DITA</title>
+        <codeblock scale="60" outputclass="language-xml"><coderef href="./src/formatted.xml"/></codeblock>
+      </fig>
+    </body>
+  </topic>
+</topic>

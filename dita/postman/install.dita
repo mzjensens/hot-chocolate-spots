@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="install">
+  <title>Install</title>
+  <abstract>
+    <shortdesc>
+       This plug-in needs <xref href="https://pandoc.org/" format="html" scope="external">Pandoc</xref>
+       running on  user's machine  to function correctly. It also requires the
+       presence of the <xref href="http://www.oopsconsultancy.com/software/xmltask/"
+       format="html" scope="external">xmltask</xref> jar to edit XML files as part of
+       the ANT build. It therefore requires a series of commands to install the
+       relevant plug-in dependencies and configure Pandoc.
+    </shortdesc>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>installing</indexterm>
+        <indexterm>Pandoc</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p>
+       Run the plug-in installation commands:
+    </p>
+    <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/doctales/org.doctales.xmltask/archive/master.zip
+<cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
+<cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.passthrough/archive/master.zip
+<cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.passthrough.pandoc/archive/master.zip
+<cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.passthrough.swagger/archive/master.zip
+<cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.passthrough.postman/archive/master.zip</codeblock>
+    <p>
+       The <cmdname>dita</cmdname> command line tool requires no additional configuration.
+    </p>
+    <section id="installing-pandoc">
+      <title>Installing Pandoc</title>
+      <p>
+         To download a copy follow the instructions on the <xref
+         href="https://github.com/jgm/pandoc/blob/master/install.md" format="html"
+         scope="external">Install page</xref>
+      </p>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="usage">
+  <title>Usage</title>
+  <body>
+    <note type="tip">
+      <p>
+         A series of test suites can be found within the plug-in at
+         <codeph>PATH_TO_DITA_OT/plugins/fox.jason.unit-test/sample</codeph>.
+      </p>
+    </note>
+    <section id="obtaining-a-unit-test-report">
+      <title outputclass="h4 mt-3">Obtaining a unit test report</title>
+      <p>
+         To run, use the <option>unit-test</option> transform.
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>unit-test</option> \
+     <parmname>--output</parmname> out \
+     <parmname>--input</parmname> PATH_TO_UNIT_TESTS</codeblock>
+      <p>
+         Once the command has run, a test report file is created. Additionally, if any
+         error occurs, the command will fail.
+      </p>
+      <p>
+         <b>Sample Test Report</b> This is the test report from the example tests found
+         within the plug-in <codeph>sample</codeph> directory. Nine tests are run over
+         two test suites (PDF and HTML processing) - a third test suite has been disabled.
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/results.png" scope="external">
+          <alt/>
+        </image>
+      </p>
+      <ul>
+        <li>
+           If the <parmname>--input</parmname> input directory is a test suite, all tests
+           within the suite will be run.
+        </li>
+        <li>
+           If the <parmname>--input</parmname> input directory is not a test suite, all
+           test suites directly beneath that directory will be run.
+        </li>
+      </ul>
+    </section>
+    <section id="xslt-coverage-report">
+      <title outputclass="h4 mt-3">XSLT Coverage Report</title>
+      <p>
+         To run a XSLT Coverage Report, each DITA-OT Plug-In must be <b>instrumented</b>
+         - this annotates the XSLT templates within the plugin to be able to generate
+         coverage information. A copy of each <codeph>*.xsl</codeph> file is also saved
+         with the <codeph>*.orig</codeph> suffix.
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xsl-instrument</option> \
+     <parmname>--input</parmname> PATH_TO_PLUG_IN</codeblock>
+      <p>
+         To revert back to the original files just run the de-instrument transform as shown:
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xsl-deinstrument</option> \
+     <parmname>--input</parmname> PATH_TO_PLUG_IN</codeblock>
+      <p>
+         Once a Plug-In has been <b>instrumented</b> the test suite should contain a
+         <codeph>template-coverage.xml</codeph> file which holds a list of all template
+         decision points. To obtain coverage information, use the <option>unit-test</option>
+         transform as stated previously:
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>unit-test</option> \
+     <parmname>--input</parmname> PATH_TO_UNIT_TESTS</codeblock>
+      <ul>
+        <li>
+           If the <parmname>--input</parmname> input directory is a test suite, XSL
+           coverage for that test suite will be reported.
+        </li>
+        <li>
+           If the <parmname>--input</parmname> input directory is not a test suite, XSL
+           coverage for all test suites directly beneath that directory will be reported.
+        </li>
+      </ul>
+      <p>
+         Once the command has run, both a test report file and an XSL coverage report
+         file are created. Additionally, if any error occurs, the command will fail.
+      </p>
+      <p>
+         It is also possible to run XSL coverage over a single test. An individual test
+         can be run directly from the command line by running the default target within
+         that test. This can be followed by direct invocation of the coverage report.
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>ant</cmdname> <parmname>-f</parmname> PATH_TO_PLUGIN/test/TEST_NAME/build.xml
+<cmdname>dita</cmdname> <parmname>--format</parmname> <option>xsl-report</option> \
+     <parmname>--input</parmname> PATH_TO_PLUGIN</codeblock>
+    </section>
+    <section id="sample-xsl-report">
+      <title outputclass="h4 mt-3">Sample XSL Report</title>
+      <p>
+         The XSL coverage report will show a schematic of all template decision points,
+         with covered lines displayed in green, and uncovered lines displayed in red.
+      </p>
+      <fig>
+        <title>XSL coverage</title>
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/xsl-coverage.png" scope="external">
+          <alt/>
+        </image>
+      </fig>
+    </section>
+    <section id="token-coverage-report">
+      <title outputclass="h4 mt-3">Token Coverage Report</title>
+      <p>
+         This is a quicker alternative report to XSLT instrumentation and code coverage,
+         but it requires the developer to create the token <codeph>coverage.xml</codeph>
+         file manually. Each test suite should contain a <codeph>coverage.xml</codeph>
+         file which holds a series of tokens representing all potential output values.
+         To obtain coverage information, use the <option>token-report</option> transform.
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>token-report</option> \
+     <parmname>--input</parmname> PATH_TO_UNIT_TESTS</codeblock>
+      <p>
+         Once the command has run, a coverage report is created.
+      </p>
+    </section>
+    <section id="sample-token-report">
+      <title outputclass="h4 mt-3">Sample Token Report</title>
+      <p>
+         This is the token report from the example tests found within the plug-in
+         <codeph>sample</codeph> directory.
+      </p>
+      <ul>
+        <li>
+           Coverage for the Spell-checker is looking to ensure that all rules have been
+           run. Uncovered rules are highlighted in RED.
+        </li>
+        <li>
+           Coverage for HTML processing is looking for the presence of <xmlelement>codeph</xmlelement>,
+           <xmlelement>codeblock</xmlelement> and <xmlelement>p</xmlelement> tags being
+           rendered in the tests.
+        </li>
+      </ul>
+      <fig>
+        <title>Token report</title>
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/coverage.png" scope="external">
+          <alt/>
+        </image>
+      </fig>
+      <ul>
+        <li>
+           If the <parmname>--input</parmname> input directory is a test suite, coverage
+           for that test suite will be reported.
+        </li>
+        <li>
+           If the <parmname>--input</parmname> input directory is not a test suite,
+           coverage for all test suites directly beneath that directory will be reported.
+        </li>
+      </ul>
+    </section>
+    <section id="obtaining-ant-script-profile-information">
+      <title outputclass="h4 mt-3">Obtaining ANT script profile information</title>
+      <p>
+         <b>Antro</b> is a hierarchical and line-level profiler for Ant build scripts. It
+         can be run to check which ANT scripts have been invoked and how long they took.
+      </p>
+      <p>
+         To obtain profile information, use the <option>antro</option> transform and
+         supply an additional test transtype.
+      </p>
+      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>antro</option> <parmname>--test.transform</parmname>=TRANSFORM_TO_PROFILE \
+     <parmname>--input</parmname> document.ditamap</codeblock>
+      <p>
+         A profiler JSON file will be generated.
+      </p>
+    </section>
+    <section id="viewing-profiler-information">
+      <title outputclass="h4 mt-3">Viewing profiler information</title>
+      <p>
+         To run the UI for the Antro profiler, use the <option>antro-ui</option>
+         transform. The <parmname>--input</parmname> parameter is mandatory for all
+         DITA-OT plug-ins, and should point to a real file, but is not used for this
+         transform.
+      </p>
+      <codeblock><cmdname>dita</cmdname> <parmname>--format</parmname> <option>antro-ui</option> \
+     <parmname>--input</parmname> document.ditamap</codeblock>
+      <p>
+         The Antro UI is the displayed, load the profiler json file from to display a bar
+         graph showing how long each ANT target took:
+      </p>
+      <p>
+         <b>Sample Antro Display</b> The Profiler was run against the <option>pdf</option>
+         transform, FOP processing took 16s
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/profiler-bar.png" scope="external">
+          <alt/>
+        </image>
+      </p>
+      <p>
+         You can drill down to an individual line to see if it has been invoked and how
+         long it took:
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/profiler.png" scope="external">
+          <alt/>
+        </image>
+      </p>
+    </section>
+    <section id="parameter-reference">
+      <title outputclass="h4 mt-3">Parameter Reference</title>
+      <indexterm><parmname>test.colorize</parmname></indexterm>
+      <indexterm><parmname>test.copy</parmname></indexterm>
+      <indexterm><parmname>test.transtype</parmname></indexterm>
+      <indexterm><parmname>test.propertyfile</parmname></indexterm>
+      <ul>
+        <li>
+           <parmname>test.colorize</parmname> - When set, successes and failures are output
+           highlighted using ANSI color codes
+        </li>
+        <li>
+           <parmname>test.copy</parmname> - Specifies whether regenerated expecations
+           should be copied. Default is <option>false</option>
+        </li>
+        <li>
+           <parmname>test.transtype</parmname> - The real transtype to run the antro
+           profiler against
+        </li>
+        <li>
+           <parmname>test.propertyfile</parmname> - A properties file to use when running
+           the unit tests or antro profiler
+        </li>
+      </ul>
+    </section>
+  </body>
+  <topic id="integration-with-github-actions.">
+    <title>Integration with GitHub Actions.</title>
+    <prolog>
+      <metadata>
+        <keywords>
+          <indexterm>GitHub Actions</indexterm>
+          <indexterm>coverage</indexterm>
+          <indexterm>unit-testing</indexterm>
+          <indexterm>continuous integration</indexterm>
+        </keywords>
+      </metadata>
+    </prolog>
+    <body>
+      <image deliveryTarget="html" scope="external" href="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" outputclass="float-start mt-1 me-3" height="55"/>
+      <p>
+         <term>GitHub Actions</term> are a CI/CD environment integrated directly with GitHub.
+         More information about how to set up GitHub Actions can be found on the <xref
+         href="https://docs.github.com/en/free-pro-team@latest/actions" format="html"
+         scope="external">GitHub website</xref>.
+      </p>
+      <fig>
+        <title>GitHub Actions</title>
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/github-actions.png" scope="external">
+          <alt/>
+        </image>
+      </fig>
+      <p>
+         A GitHub Action has been created to automate your <xref
+         href="https://github.com/jason-fox/dita-unit-test-action" format="html"
+         scope="external">DITA-OT Plugin testing</xref>. To add automated CI/CD testing
+         of your DITA-OT plug-ins, place your tests under a <codeph>test</codeph>
+         directory under the root of the repository along with the <codeph>ci.yml</codeph>
+         in the <filepath>.github/workflows</filepath> directory.
+      </p>
+      <codeblock scale="80" outputclass="language-yaml">name: CI
+'on':
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  unit-test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Run DITA-OT Unit Test
+        uses: jason-fox/dita-unit-test-action@master
+        with:
+          plugin: 'com.oxygenxml.editlink'</codeblock>
+      <ul>
+        <li>
+           <parmname>plugin</parmname> - <b>Required</b> The name of the DITA-OT plugin to
+           install and test.
+        </li>
+        <li>
+           <parmname>setup-script</parmname> - The name of an optional bash script to run
+           to install any dependencies prior to run the test. Defaults to <codeph>test-setup.sh</codeph>
+           if not supplied.
+        </li>
+        <li>
+           <parmname>prerequisites</parmname> - Comma separated list of additional DITA-OT
+           plugins to install prior to installing the plugin under test.
+        </li>
+      </ul>
+    </body>
+  </topic>
+  <topic id="integration-with-travis-ci">
+    <title>Integration with Travis CI</title>
+    <prolog>
+      <metadata>
+        <keywords>
+          <indexterm>Travis CI</indexterm>
+          <indexterm>coverage</indexterm>
+          <indexterm>unit-testing</indexterm>
+          <indexterm>continuous integration</indexterm>
+        </keywords>
+      </metadata>
+    </prolog>
+    <body>
+      <image deliveryTarget="html" scope="external" href="https://www.libtom.net/images/TravisCI-Full-Color-45e242791b7752b745a7ae53f265acd4.png" outputclass="float-start mt-1 me-3" height="55"/>
+      <p>
+         <term>Travis CI</term> is a hosted, distributed continuous integration service used to
+         build and test software projects hosted at GitHub. More information about how
+         to set up travis integration can be found on the <xref
+         href="https://docs.travis-ci.com/" format="html" scope="external">travis website</xref>.
+      </p>
+      <fig>
+        <title>Travis</title>
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/travis.png" scope="external">
+          <alt/>
+        </image>
+      </fig>
+      <p>
+         For automated testing of DITA-OT plug-ins, place your tests under a <codeph>test</codeph>
+         directory under the root of the repository along with the <codeph>.travis.yml</codeph>
+         in the root itself.
+      </p>
+      <p>
+         For example to test against DITA-OT 3.1 and DITA-OT 2.5.4, use the following
+         <codeph>.travis.yml</codeph>:
+      </p>
+      <codeblock scale="80" outputclass="language-yml">language: java
+jdk:
+    - oraclejdk8
+env:
+    - DITA_OT=3.1
+    - DITA_OT=2.5.4
+before_script:
+    - <cmdname>zip</cmdname> <parmname>-r</parmname> PLUGIN-NAME.zip . <parmname>-x</parmname> *.zip* *.git/* *temp/* *out/*
+    - <cmdname>curl</cmdname> <parmname>-LO</parmname> https://github.com/dita-ot/dita-ot/releases/download/$DITA_OT/dita-ot-$DITA_OT.zip
+    - <cmdname>unzip</cmdname> <parmname>-q</parmname> dita-ot-$DITA_OT.zip
+    - <cmdname>mv</cmdname> dita-ot*/ dita-ot/
+    - <cmdname>chmod</cmdname> <parmname>+x</parmname> dita-ot/bin/dita
+    - <cmdname>dita-ot/bin/dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.unit-test/archive/master.zip
+    - <cmdname>dita-ot/bin/dita</cmdname> <parmname>install</parmname> PLUGIN-NAME.zip
+script:
+    - <cmdname>dita-ot/bin/dita</cmdname> <parmname>--input</parmname> dita-ot/plugins/PLUGIN-NAME <parmname>--format</parmname> <option>unit-test</option> <parmname>-v</parmname></codeblock>
+      <p>
+         This will do the following:
+      </p>
+      <ul>
+        <li>
+           Zip up the files in the plugin under test
+        </li>
+        <li>
+           install the specified DITA-OT version
+        </li>
+        <li>
+           install the unit-testing framework (repeat this for other dependencies)
+        </li>
+        <li>
+           install the plugin under test
+        </li>
+        <li>
+           Run the tests
+        </li>
+      </ul>
+      <p>
+         Unit tests will be run whenever a commit occurs.
+      </p>
+      <p>
+         The output will appear within the log as follows:
+      </p>
+      <codeblock scale="80" outputclass="language-none">[UNIT002I][INFO] Running tests for 'PLUGIN-NAME'
+  [antunit] Build File: /tmp/temp20180420185923919/unit-test/fixtures/PLUGIN-NAME/fixture.xml
+  [antunit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 31.063 sec
+  [antunit] Target: test:    Expect that ...  took 7.202 sec
+  [antunit] Target: test:    Expect that ...  took 17.596 sec
+...etc
+
+[SUCCESS] All tests have passed
+dita2unit-test:
+clean-temp:
+The command "dita-ot/bin/dita --input dita-ot/plugins/PLUGIN-NAME -f unit-test -v" exited with 0.</codeblock>
+    </body>
+  </topic>
+  <topic id="integration-with-coveralls">
+    <title>Integration with Coveralls</title>
+    <prolog>
+      <metadata>
+        <keywords>
+          <indexterm>Coveralls</indexterm>
+          <indexterm>coverage</indexterm>
+          <indexterm>continuous integration</indexterm>
+        </keywords>
+      </metadata>
+    </prolog>
+    <body>
+      <image deliveryTarget="html" scope="external" href="https://www.libtom.net/images/coveralls-bd6b762f7cf724a89de199133db5868f.png" outputclass="float-start mt-1 me-3" height="55"/>
+      <p>
+         <term>Coveralls</term> is a web service to help you track your code coverage over
+         time, and ensure that all your new code is fully covered. More information
+         about how to set up coveralls-travis integration can be found on the <xref
+         href="https://docs.coveralls.io/" format="html" scope="external">travis website</xref>.
+      </p>
+      <fig>
+        <title>Coveralls</title>
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/coveralls.png" scope="external">
+          <alt/>
+        </image>
+      </fig>
+      <p>
+         If a plug-in has been instrumented (using the <option>xsl-instrument</option>
+         transform) and unit tests are run, a cobertura style <codeph>coverage.xml</codeph>
+         file will be created along with the test results and a coverage report. This
+         can be forwared to Coveralls using the standard maven plug-in as shown:
+      </p>
+      <codeblock scale="80" outputclass="language-yaml">language: java
+jdk:
+    - oraclejdk8
+env:
+    - DITA_OT=3.1
+    - DITA_OT=2.5.4
+before_script:
+    - <cmdname>zip</cmdname> <parmname>-r</parmname> PLUGIN-NAME.zip . <parmname>-x</parmname> *.zip* *.git/* *temp/* *out/*
+    - <cmdname>curl</cmdname> <parmname>-LO</parmname> https://github.com/dita-ot/dita-ot/releases/download/$DITA_OT/dita-ot-$DITA_OT.zip
+    - <cmdname>unzip</cmdname> <parmname>-q</parmname> dita-ot-$DITA_OT.zip
+    - <cmdname>chmod</cmdname> <parmname>+x</parmname> dita-ot-$DITA_OT/bin/dita
+    - <cmdname>dita-ot-$DITA_OT/bin/dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.unit-test/archive/master.zip
+    - <cmdname>dita-ot-$DITA_OT/bin/dita</cmdname> <parmname>install</parmname> PLUGIN-NAME.zip
+    - <cmdname>dita-ot-$DITA_OT/bin/dita</cmdname> <parmname>--input</parmname> dita-ot-$DITA_OT/plugins/PLUGIN-NAME -f <option>xsl-instrument</option>
+script:
+    - <cmdname>dita-ot-$DITA_OT/bin/dita</cmdname> <parmname>--input</parmname> dita-ot-$DITA_OT/plugins/PLUGIN-NAME -f <option>unit-test</option> <parmname>--output</parmname> . <parmname>-v</parmname>
+after_success:
+    - <cmdname>cp</cmdname> dita-ot-$DITA_OT/plugins/fox.jason.unit-test/resource/pom.xml pom.xml
+    - <cmdname>mvn</cmdname> clean org.eluder.coveralls:coveralls-maven-plugin:report</codeblock>
+    </body>
+  </topic>
+</topic>
