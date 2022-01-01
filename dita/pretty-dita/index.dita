@@ -36,7 +36,7 @@
          not overrun the side of a typical view screen (approx 120 characters).
       </p>
       <fig id="formatted-dita">
-        <title outputclass="h4">Formatted DITA</title>
+        <title>Formatted DITA</title>
         <codeblock scale="60" outputclass="language-xml"><coderef href="./src/formatted.xml"/></codeblock>
       </fig>
     </body>

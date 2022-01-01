@@ -64,7 +64,7 @@
     <parmname>--output</parmname> out</codeblock>
       <fig>
         <title>PDF Output</title>
-        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.prismjs/prism-pdf.png" scope="external"/>
+        <image href="https://jason-fox.github.io/fox.jason.prismjs/prism-pdf.png" scope="external"/>
       </fig>
 
       <ul>
@@ -78,7 +78,7 @@
 
       <fig>
         <title>HTML Output</title>
-        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.prismjs/prism-html.png" scope="external"/>
+        <image href="https://jason-fox.github.io/fox.jason.prismjs/prism-html.png" scope="external"/>
       </fig>
 
     </section>

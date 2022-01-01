@@ -21,7 +21,7 @@ jobs:
             nodejs -v
           plugins: |
             https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
-            https://github.com/jason-fox/dita-bootstrap/archive/feature/attrs.zip
+            https://github.com/infotexture/dita-bootstrap/archive/develop.zip
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
           project: .github/dita-ot/html.xml
       - name: Deploy HTML 🚀
@@ -30,3 +30,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: out/html # The folder the action should deploy.
+      - name: Build PDF 🖨️
+        uses: dita-ot/dita-ot-action@master
+        with:
+          install: |
+            apt-get update -q
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get install -qy --no-install-recommends nodejs
+            nodejs -v
+          plugins: |
+            https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
+            https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
+          project: .github/dita-ot/pdf.xml
+      - name: Upload PDF 📚
+        uses: actions/upload-artifact@v2
+        with:
+          name: dita-artifact
+          path: 'out/pdf'

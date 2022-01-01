@@ -3,7 +3,7 @@
 <topic id="usage">
   <title>Usage</title>
   <body>
-    <section id="xliff-1.2-invocation-from-the-command-line">
+    <section id="xliff-1-2-invocation-from-the-command-line">
       <title outputclass="h3 mt-3">XLIFF 1.2 Invocation from the command line</title>
       <p>
          1. to create an XLIFF 1.2 File and associated skeletons with run:
@@ -45,7 +45,7 @@
       <codeblock scale="80" outputclass="language-xml"><coderef href="./src/translated-1.2.xliff"/></codeblock>
     </fig>
     </section>
-    <section id="xliff-2.1-invocation-from-the-command-line">
+    <section id="xliff-2-1-invocation-from-the-command-line">
       <title outputclass="h3 mt-3">XLIFF 2.1 Invocation from the command line</title>
       <p>
          3. to create an XLIFF 2.1 File and associated skeletons with run:

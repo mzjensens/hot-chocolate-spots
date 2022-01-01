@@ -23,18 +23,18 @@
   <topic id="examples">
     <title outputclass="h3 mt-3">Examples</title>
     <body>
-      <section id="sample-mkdocs.yaml-file">
-        <title outputclass="h4">Sample MkDocs.yaml File</title>
+      <fig>
+        <title>Sample MkDocs.yaml File</title>
         <codeblock scale="80" outputclass="yaml"><coderef href="./src/mkdocs.yml"/></codeblock>
-        <p>
-           Additionally it is possible to use the plug-in to create a DITA <xmlelement>bookmap</xmlelement>
-           file from an existing <codeph>mkdocs.yaml</codeph> file.
-        </p>
-      </section>
-      <section id="sample-ditamap">
-        <title outputclass="h4">Sample Ditamap</title>
+      </fig>
+      <p>
+         Additionally it is possible to use the plug-in to create a DITA <xmlelement>bookmap</xmlelement>
+         file from an existing <codeph>mkdocs.yaml</codeph> file.
+      </p>
+      <fig>
+        <title>Sample Ditamap</title>
         <codeblock scale="80" outputclass="language-xml"><coderef href="./src/document.ditamap"/></codeblock>
-      </section>
+      </fig>
       <section id="limitations">
         <title>Limitations</title>
         <p>

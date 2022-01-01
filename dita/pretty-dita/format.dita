@@ -140,26 +140,19 @@
       </ul>
       <p>
          The opening tag of a <xmlelement>codeblock</xmlelement> is indented normally,
-         the text within a <xmlelement>codeblock</xmlelement> (if any) is not indented
+         the text within a <xmlelement>codeblock</xmlelement> (if any) is not offset by any additional indentation
       </p>
-      <codeblock scale="80" outputclass="language-xml">&lt;topic id="basic-usage"&gt;
+      <codeblock scale="80" outputclass="language-markup">&lt;topic id="basic-usage"&gt;
     &lt;title&gt;Basic usage&lt;/title&gt;
-    &lt;body outputclass="language-markup"&gt;
+    &lt;body outputclass="language-java"&gt;
         &lt;p&gt;
-          You will need to include the &lt;codeph&gt;prism.css&lt;/codeph&gt; and &lt;codeph&gt;prism.js&lt;/codeph&gt;
-          files you downloaded in your page. Example:
+          Hello World in Java
         &lt;/p&gt;
-        &lt;codeblock&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  ...
-  &amp;lt;link href="themes/prism.css" rel="stylesheet" /&amp;gt;
-  &amp;gt;&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-  ...
-  &amp;lt;script src="prism.js"&amp;gt;&amp;lt;/script&amp;gt;
-  &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;&lt;/codeblock&gt;
+        &lt;codeblock&gt;public class java {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}&lt;/codeblock&gt;
         ...etc</codeblock>
       <p>
          <xmlelement>codeblock</xmlelement> elements containing <xmlelement>coderef</xmlelement>

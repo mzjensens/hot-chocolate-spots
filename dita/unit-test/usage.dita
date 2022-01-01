@@ -25,9 +25,12 @@
          <b>Sample Test Report</b> This is the test report from the example tests found
          within the plug-in <codeph>sample</codeph> directory. Nine tests are run over
          two test suites (PDF and HTML processing) - a third test suite has been disabled.
-        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/results.png" scope="external">
-          <alt/>
-        </image>
+        <fig id="unformatted-dita">
+            <title>Test Report</title>
+            <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/results.png" scope="external">
+                <alt/>
+            </image>
+        </fig>
       </p>
       <ul>
         <li>
@@ -181,17 +184,23 @@
       <p>
          <b>Sample Antro Display</b> The Profiler was run against the <option>pdf</option>
          transform, FOP processing took 16s
-        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/profiler-bar.png" scope="external">
-          <alt/>
-        </image>
       </p>
+      <fig>
+        <title>Antro</title>
+        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/profiler-bar.png" scope="external">
+            <alt/>
+        </image>
+      </fig>
       <p>
          You can drill down to an individual line to see if it has been invoked and how
          long it took:
+      </p>
+      <fig>
+        <title>Antro Details</title>
         <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/profiler.png" scope="external">
           <alt/>
         </image>
-      </p>
+      </fig>
     </section>
     <section id="parameter-reference">
       <title outputclass="h4 mt-3">Parameter Reference</title>
