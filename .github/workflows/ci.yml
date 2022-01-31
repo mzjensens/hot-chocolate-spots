@@ -23,6 +23,7 @@ jobs:
             https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
             https://github.com/infotexture/dita-bootstrap/archive/develop.zip
             https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
+            https://github.com/jason-fox/fox.jason.favicon/archive/master.zip
           project: .github/dita-ot/html.xml
       - name: Deploy HTML 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1

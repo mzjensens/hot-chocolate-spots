@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="favicon-plugin">
+  <title>Favicon Plugin</title>
+  <abstract>
+    <shortdesc>
+       This is a DITA-OT Plug-in used to add a favicon to DITA HTML output.
+    </shortdesc>
+    <p>
+
+      A favicon is a file containing a small brand image icon, associated with a particular website or 
+      web page.  A web designer can create such an icon and  upload it to a website, and graphical web
+      browsers can then make use of it by displaying the icon on the associated browser tab.
+    </p>
+    <fig>
+      <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.favicon/favicon.png" scope="external">
+        <alt/>
+      </image>
+    </fig>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>favicon</indexterm>
+        <indexterm>plug-in</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body/>
+</topic>

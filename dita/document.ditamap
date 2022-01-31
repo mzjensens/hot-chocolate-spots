@@ -16,6 +16,10 @@
     <topicref navtitle="Install" format="dita" type="topic" href="extend.css/install.dita"/>
     <topicref navtitle="Usage" format="dita" type="topic" href="extend.css/usage.dita"/>
   </chapter>
+  <chapter format="dita" type="topic" href="favicon/index.dita">
+    <topicref navtitle="Install" format="dita" type="topic" href="favicon/install.dita"/>
+    <topicref navtitle="Usage" format="dita" type="topic" href="favicon/usage.dita"/>
+  </chapter>
   <chapter format="dita" type="topic" href="javadoc/index.dita">
     <topicref navtitle="Install" format="dita" type="topic" href="javadoc/install.dita"/>
     <topicref navtitle="Usage" format="dita" type="topic" href="javadoc/usage.dita"/>
