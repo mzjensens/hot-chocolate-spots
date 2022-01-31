@@ -16,21 +16,15 @@
   <body>
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>[html5|xhtml]</option> \
   <parmname>--input</parmname> document.ditamap \
-  <parmname>--args.faviconpath</parmname>=<option>DESTINATION_PATH_OF_FAVICON</option>  \
-  <parmname>--args.faviconroot</parmname>=<option>SOURCE_PATH_OF_FAVICON</option></codeblock> 
-
+  <parmname>--args.faviconpath</parmname>=<filepath>DESTINATION_PATH_OF_FAVICON</filepath>  \
+  <parmname>--args.faviconroot</parmname>=<filepath>SOURCE_PATH_OF_FAVICON</filepath></codeblock>
       <p>
          To refer to an exisiting file hosted on a server, use a URL as the 
          <parmname>--args.faviconpath</parmname> parameter
       </p>
       <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>[html5|xhtml]</option> \
   <parmname>--input</parmname> document.ditamap \
-  <parmname>--args.faviconpath</parmname>=<option>ttps://example.com/static/assets</option></codeblock> 
-
-
-
-
-
+  <parmname>--args.faviconpath</parmname>=<filepath>https://example.com/static/assets</filepath></codeblock> 
     <section id="parameter-reference">
       <title outputclass="h3 mt-3">Parameter Reference</title>
       <indexterm><parmname>args.favicon</parmname></indexterm>
@@ -48,9 +42,15 @@
            <parmname>args.faviconpath</parmname> - Specifies the destination directory to which the 
            favicon file is copied (relative to the output directory). Corresponds to the XSLT parameter 
            <codeph>FAVICONPATH</codeph>. DITA-OT will copy the file to this location.
+
+           <note type="tip">If <parmname>args.faviconpath</parmname> is not set, the favicon file will be
+            copied to the root level of the output folder. To move the <parmname>favicon</parmname> file 
+            to an output subfolder named <filepath>/static/assets</filepath>, set <parmname>
+            args.faviconpath</parmname> to <filepath>/static/assets</filepath>.</note>
         </li>
         <li>
            <parmname>args.faviconroot</parmname> - specifies the source directory that contains the favicon file. DITA-OT will copy the file from this location. Defaults to the image found within the plugin itself.
+           <note type="important"> Enter the absolute path to the parent directory of the favicon file specified with <parmname>args.favicon</parmname>.</note>
         </li>
       </ul>
     </section>
