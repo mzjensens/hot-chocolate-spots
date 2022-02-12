@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="extension-points">
+    <title>Extension points</title>
+    <prolog>
+        <metadata>
+            <keywords>
+                <indexterm>Extension points</indexterm>
+                <indexterm>ANT</indexterm>
+                   <indexterm><parmname>passthrough.pre</parmname>
+                </indexterm>
+                   <indexterm><parmname>passthrough.process</parmname>
+                </indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <body>
+        <p>
+           This plug-in is designed to be extended and offers two extension points:
+        </p>
+        <ul>
+            <li>
+                <p>
+                   <parmname>passthrough.pre</parmname> - Runs an additional ANT target before the
+                   passthrough pre-processing stage.
+                </p>
+            </li>
+            <li>
+                <p>
+                   <parmname>passthrough.process</parmname> - Runs an additional ANT target as part
+                   of the passthrough processing stage.
+                </p>
+            </li>
+        </ul>
+    </body>
+    <topic id="example" conref="./example.dita#example">
+        <title/>
+        <body/>
+    </topic>
+</topic>

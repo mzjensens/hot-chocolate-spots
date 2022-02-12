@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ignoring-rules">
+    <title>Ignoring Rules</title>
+    <body>
+        <section id="removing-validator-rules-globally">
+            <title>Removing validator rules globally</title>
+            <p>
+               Rules can be made inactive by altering the severity (see above). Alternatively a
+               rule can be commented out in the XSL.
+            </p>
+            <p>
+               To completely remove rules which do not apply to your document set, you can
+               create a customized DITA-OT plug-in which extends the base validator. See the
+               <xref href="https://github.com/jason-fox/com.here.validate.svrl.overrides"
+               format="html" scope="external">Extended DITA Validator</xref> as an example of
+               how to do this.
+            </p>
+        </section>
+        <section id="ignoring-a-validator-rule-throughout-a-document">
+            <title>Ignoring a validator rule throughout a document</title>
+            <p>
+               Individual rules can be ignored by adding the <parmname>args.validate.ignore.rules</parmname>
+               parameter to the command line. The value of the parameter should be a
+               comma-delimited list of each <codeph>rule-id</codeph> to ignore.
+            </p>
+            <p>
+               For example to ignore the <codeph>table-id-missing</codeph> validation rule
+               within a document you would run:
+            </p>
+            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> -f <option>svrl-echo</option><parmname>--input</parmname> <filepath>document.ditamap</filepath> -D<parmname>args.validate.ignore.rules</parmname>=table-id-missing</codeblock>
+        </section>
+        <section id="ignoring-a-specific-instance-of-a-validator-rule">
+            <title>Ignoring a specific instance of a validator rule</title>
+            <p>
+               Specific instances of a rule can be ignored by adding a comment within the <codeph>*.dita</codeph>
+               file. The comment should start with <codeph>ignore-rule</codeph>, and needs to
+               be added at the location where the error is flagged.
+            </p>
+            <codeblock scale="80" outputclass="language-xml"><coderef href="./src/ignore-rule1.xml"/></codeblock>
+            <p>
+               Some rules such as <b>FIXME</b> and <b>TODO</b> in the running text need to be
+               double escaped as shown below:
+            </p>
+            <ul>
+                <li>
+                   Add a comment line with the text <codeph>ignore-rule:running-text-*</codeph> to
+                   ignore the issue flagged in the text below (no FIXMEs allowed in the running text)
+                </li>
+                <li>
+                   Add the <codeph>comment-*</codeph> to the list of ignored rules to ignore the
+                   fact that the comment itself fails an additional rule (no FIXMEs allowed in
+                   the comments)
+                </li>
+            </ul>
+            <codeblock scale="80" outputclass="language-xml"><coderef href="./src/ignore-rule2.xml"/></codeblock>
+        </section>
+        <section id="ignoring-all-warnings-within-a-block">
+            <title>Ignoring all warnings within a block</title>
+            <p>
+               A block of DITA can be excluded from firing all rules at <b>WARNING</b> level by
+               adding the comment <codeph>ignore-all-warnings</codeph> to the block. This is
+               especially useful to avoid false positive TODO warnings for text which is in
+               Spanish.
+            </p>
+            <codeblock scale="80" outputclass="language-xml"><coderef href="./src/spanish.xml"/></codeblock>
+        </section>
+        <section id="ignoring-all-errors-within-a-block">
+            <title>Ignoring all errors within a block</title>
+            <p>
+               A block of DITA can be excluded from firing all rules at <b>ERROR</b> level by
+               adding the comment <codeph>ignore-all-errors</codeph> to the block. This is
+               useful to avoid issues with generated DITA files which are parsable DITA, but
+               which may not satisfy in-house validation style rules.
+            </p>
+            <codeblock scale="80" outputclass="language-xml"><coderef href="./src/generated-topic.xml"/></codeblock>
+            <p>
+               Rules set at <b>FATAL</b> level cannot be ignored.
+            </p>
+        </section>
+    </body>
+</topic>

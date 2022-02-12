@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="github-actions">
+    <title>Integration with GitHub Actions.</title>
+    <prolog>
+        <metadata>
+            <keywords>
+                <indexterm>GitHub Actions</indexterm>
+                <indexterm>coverage</indexterm>
+                <indexterm>unit-testing</indexterm>
+                <indexterm>continuous integration</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <body>
+        <image deliveryTarget="html" scope="external" href="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" outputclass="float-start mt-1 me-3" height="55"/>
+        <p>
+           <term>GitHub Actions</term> are a CI/CD environment integrated directly with
+           GitHub. More information about how to set up GitHub Actions can be found on the
+           <xref href="https://docs.github.com/en/free-pro-team@latest/actions"
+           format="html" scope="external">GitHub website</xref>.
+        </p>
+        <fig>
+            <title>GitHub Actions</title>
+            <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.unit-test/github-actions.png" scope="external">
+                <alt/>
+            </image>
+        </fig>
+        <p>
+           A GitHub Action has been created to automate your <xref
+           href="https://github.com/jason-fox/dita-unit-test-action" format="html"
+           scope="external">DITA-OT Plugin testing</xref>. To add automated CI/CD testing
+           of your DITA-OT plug-ins, place your tests under a <codeph>test</codeph>
+           directory under the root of the repository along with the <codeph>ci.yml</codeph>
+           in the <filepath>.github/workflows</filepath> directory.
+        </p>
+        <codeblock scale="80" outputclass="language-yaml">name: CI
+'on':
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  unit-test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Run DITA-OT Unit Test
+        uses: jason-fox/dita-unit-test-action@master
+        with:
+          plugin: 'com.oxygenxml.editlink'</codeblock>
+        <ul>
+            <li>
+               <parmname>plugin</parmname> - <b>Required</b> The name of the DITA-OT plugin to
+               install and test.
+            </li>
+            <li>
+               <parmname>setup-script</parmname> - The name of an optional bash script to run
+               to install any dependencies prior to run the test. Defaults to <codeph>test-setup.sh</codeph>
+               if not supplied.
+            </li>
+            <li>
+               <parmname>prerequisites</parmname> - Comma separated list of additional DITA-OT
+               plugins to install prior to installing the plugin under test.
+            </li>
+        </ul>
+    </body>
+</topic>

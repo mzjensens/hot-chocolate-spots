@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="annotation">
+    <title>Annotating files</title>
+    <body>
+        <p>
+           The examples below use Markdown as a passthrough format, other formats need to
+           provide equivalent annotations to obtain full functionality. Where possible,
+           annotation aligns with the <xref
+           href="https://www.dita-ot.org/dev/topics/markdown-dita-syntax-reference.html"
+           format="html" scope="external">Markdown DITA syntax reference</xref> based on
+           <xref href="http://commonmark.org/" format="html" scope="external">CommonMark</xref>.
+           The chapter <xmlelement>title</xmlelement> is taken from the first header
+           found. Thereafter the document is processed as expected:
+        </p>
+        <fig>
+            <title>Markdown</title>
+            <codeblock scale="80" outputclass="language-markdown"># Chapter title
+
+The abstract (if any) goes here...
+
+## Topic 1
+
+Body of topic 1 goes here.
+
+## Topic 2
+
+Body of topic 2 goes here.
+...etc</codeblock>
+        </fig>
+        <p>
+           Ideally input files should only contain a single <codeph>#</codeph> header.
+        </p>
+        <p>
+           Pandoc <xref href="http://pandoc.org/manual.html#extension-header-attributes"
+           format="html" scope="external">header_attributes</xref> can be used to define <xmlatt>id</xmlatt>
+           or <xmlatt>outputclass</xmlatt> attributes:
+        </p>
+        <fig>
+            <title>ID and outputclass</title>
+            <codeblock scale="80" outputclass="language-markdown"># Topic title {#carrot .juice}</codeblock>
+        </fig>
+        <p>
+           The following class values in <xref
+           href="http://pandoc.org/manual.html#extension-header-attributes" format="html"
+           scope="external">header_attributes</xref> have a special meaning on header levels.
+        </p>
+        <ul>
+            <li>
+<codeph>section</codeph>
+            </li>
+            <li>
+<codeph>example</codeph>
+            </li>
+        </ul>
+        <p>
+           They are used to generate <xmlelement>section</xmlelement> and
+           <xmlelement>example</xmlelement> elements:
+        </p>
+        <fig>
+            <title>Sections</title>
+            <codeblock scale="80" outputclass="language-markdown"># Topic title
+
+## Section title {.section}
+## Example title {.example}</codeblock>
+        </fig>
+        <section id="metadata">
+            <title>Metadata</title>
+            <p>
+<xref href="http://www.yaml.org/" format="html" scope="external">YAML</xref>
+   metadata block as defined in Pandoc pandoc_metadata_block can be used to specify
+   different metadata elements. The supported elements are:
+            </p>
+            <ul>
+                <li>
+<codeph>author</codeph>
+                </li>
+                <li>
+<codeph>source</codeph>
+                </li>
+                <li>
+<codeph>publisher</codeph>
+                </li>
+                <li>
+<codeph>permissions</codeph>
+                </li>
+                <li>
+<codeph>audience</codeph>
+                </li>
+                <li>
+<codeph>category</codeph>
+                </li>
+                <li>
+<codeph>keyword</codeph>
+                </li>
+                <li>
+<codeph>resourceid</codeph>
+                </li>
+                <li>
+<codeph>shortdesc</codeph>
+                </li>
+            </ul>
+            <p>
+               Unrecognized keys are output using data element.
+            </p>
+            <fig>
+                <title>Markdown with Metadata</title>
+                <codeblock scale="80" outputclass="language-yaml"><coderef href="./src/topicmeta.yaml"/></codeblock>
+            </fig>
+            <fig>
+                <title>Sample output with YAML header</title>
+                <codeblock scale="80" outputclass="language-xml"><coderef href="./src/prolog.xml"/></codeblock>
+            </fig>
+            <p>
+               Ditamap <xmlelement>topicmeta</xmlelement> processing is also supported.
+            </p>
+            <fig>
+                <title>Ditamap TopicMeta for Pandoc Files</title>
+                <codeblock scale="80" outputclass="language-xml"><coderef href="./src/topicmeta.xml"/></codeblock>
+            </fig>
+            <p>
+               This allows for topic metadata to be added to files for formats other than Markdown.
+            </p>
+        </section>
+    </body>
+</topic>

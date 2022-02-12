@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="example">
+    <title>Example</title>
+    <body>
+        <p>
+           The following <codeph>plugin.xml</codeph> will enable the post-processing of
+           all files marked as <codeph>format=NEW_FORMAT</codeph>.
+        </p>
+        <fig id="plugin.xml-configuration">
+           <title><codeph>plugin.xml</codeph> Configuration
+            </title>
+            <codeblock scale="80" outputclass="language-xml">&lt;plugin id="com.example.passthrough.dita"&gt;
+  &lt;feature extension="passthrough.process" value="run-processing"/&gt;
+  &lt;feature extension="dita.parser"&gt;
+    &lt;parser format="NEW_FORMAT" class="fox.jason.passthrough.parser.FileReader"/&gt;
+  &lt;/feature&gt;
+&lt;/plugin&gt;</codeblock>
+        </fig>
+        <fig id="ant-build-file">
+            <title>ANT build file</title>
+            <codeblock scale="80" outputclass="language-xml">&lt;project name="com.example.passthrough.dita"&gt;
+
+  &lt;macrodef name="do-something"&gt;
+    &lt;attribute name="src" /&gt;
+    &lt;attribute name="dest" /&gt;
+    &lt;attribute name="title" /&gt;
+    &lt;attribute name="metadata" /&gt;
+    &lt;sequential&gt;
+      &lt;!-- Further processing --&gt;
+    &lt;/sequential&gt;
+  &lt;/macrodef&gt;
+
+  &lt;target name="run-processing"&gt;
+    &lt;passthrough-iterate format="NEW_FORMAT" macro="do-something"/&gt;
+  &lt;/target&gt;
+&lt;/project&gt;</codeblock>
+        </fig>
+        <p>
+           A working example can be found in the <xref
+           href="https://github.com/jason-fox/fox.jason.pandoc" format="html"
+           scope="external">DITA-OT Pandoc plug-in</xref> repository.
+        </p>
+    </body>
+</topic>

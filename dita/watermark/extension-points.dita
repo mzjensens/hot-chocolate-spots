@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="extension-points">
+    <title>Extension points</title>
+    <body>
+        <p>
+           This plug-in is designed to be extended and offers an extension point:
+        </p>
+        <ul>
+            <li>
+               <parmname>watermark.pre</parmname> - Runs an additional ANT target before the
+               watermarking processing stage.
+            </li>
+        </ul>
+        <section id="example">
+            <title outputclass="h4 text-secondary">Example</title>
+            <p>
+               The following <codeph>plugin.xml</codeph> will enable the watermarking of PDF
+               files to depend on an authorization server.
+            </p>
+            <fig id="plugin.xml-configuration">
+               <title><codeph>plugin.xml</codeph> Configuration
+                </title>
+                <codeblock scale="80" outputclass="language-xml"><coderef href="./src/plugin.xml"/></codeblock>
+            </fig>
+            <fig id="ant-build-file">
+                <title>ANT build file</title>
+                <codeblock scale="80" outputclass="language-xml"><coderef href="./src/ant-target.xml"/></codeblock>
+            </fig>
+            <p>
+               A working example can be found in the <xref
+               href="https://github.com/jason-fox/fox.jason.watermark.auth" format="html"
+               scope="external">Authorized Watermark DITA-OT plug-in</xref>.
+            </p>
+        </section>
+    </body>
+</topic>

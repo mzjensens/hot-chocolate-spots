@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ffmpeg">
+    <title>Installing the FFMpeg tool</title>
+    <body>
+        <image deliveryTarget="html" scope="external" href="https://tecadmin.net/wp-content/uploads/2013/11/ffmpeg-logo-370x250.png" outputclass="float-start mt-1 me-3" height="55"/>
+        <p>
+           <term>FFmpeg</term> is a free software project consisting of a software suite of
+           libraries and programs for handling video, audio, and other multimedia files
+           and streams. FFmpeg is published under the GNU Lesser General Public License
+           2.1+ or GNU General Public License 2+ (depending on which options are enabled).
+        </p>
+        <p>
+           To download a copy follow the instructions on the <xref
+           href="https://ffmpeg.org/download.html" format="html" scope="external">Download page</xref>.
+        </p>
+    </body>
+</topic>

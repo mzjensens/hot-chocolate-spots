@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="postman-plug-in">
-  <title>Postman Plug-in</title>
-  <abstract>
-    <shortdesc>
-       This is a DITA-OT Plug-in used to auto-create valid DITA-based REST API
-       documentation. The documentation can be generated directly from a <xref
-       href="https://www.getpostman.com/" format="html" scope="external">Postman Collection</xref>
-       file and processed as if it had been written in DITA.
-    </shortdesc>
-  </abstract>
-  <prolog>
-    <metadata>
-      <keywords>
-        <indexterm>Postman</indexterm>
-        <indexterm>plug-in</indexterm>
-      </keywords>
-    </metadata>
-  </prolog>
-  <body/>
-  <topic id="background">
-    <title outputclass="h3 mt-3">Background</title>
-    <body>
-      <image deliveryTarget="html" scope="external" href="https://assets.getpostman.com/common-share/postman-logo-horizontal-orange.svg" outputclass="float-start mt-1 me-3" height="55"/>
-      <p>
-        <term>Postman</term> is a software development tool which a developer can use to 
-        build, publish, document, design, monitor, test and debug their REST APIs. More information 
-        about <term>Postman</term> can be found at <xref href="https://www.postman.com/" format="html" scope="external">postman.com</xref>.
-      </p>
-      <p>
-         This plugin processes a Postman collection to Pandoc markdown, and the converts
-         the markdown to DITA using the <xref href="../pandoc/index.dita" format="dita">Pandoc DITA-OT Plugin</xref> allowing the generation of PDF API documentation.
-      </p>
-      <fig id="sample-postman">
-        <title>Sample Postman</title>
-        <codeblock scale="80" outputclass="json">{
+    <title>Postman Plug-in</title>
+    <abstract>
+        <shortdesc>
+           This is a DITA-OT Plug-in used to auto-create valid DITA-based REST API
+           documentation. The documentation can be generated directly from a <xref
+           href="https://www.getpostman.com/" format="html" scope="external">Postman Collection</xref>
+           file and processed as if it had been written in DITA.
+        </shortdesc>
+        <p>
+        </p>
+    </abstract>
+    <prolog>
+        <metadata>
+            <keywords>
+                <indexterm>Postman</indexterm>
+                <indexterm>plug-in</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <body/>
+    <topic id="background">
+        <title>Background</title>
+        <body>
+            <image deliveryTarget="html" scope="external" href="https://assets.getpostman.com/common-share/postman-logo-horizontal-orange.svg" outputclass="float-start mt-1 me-3" height="55"/>
+            <p>
+               <term>Postman</term> is a software development tool which a developer can use to
+               build, publish, document, design, monitor, test and debug their REST APIs. More
+               information about <term>Postman</term> can be found at <xref
+               href="https://www.postman.com/" format="html" scope="external">postman.com</xref>.
+            </p>
+            <p>
+               This plugin processes a Postman collection to Pandoc markdown, and the converts
+               the markdown to DITA using the <xref href="../pandoc/index.dita"
+               format="dita">Pandoc DITA-OT Plugin</xref> allowing the generation of PDF API
+               documentation.
+            </p>
+            <fig id="sample-postman">
+                <title>Sample Postman</title>
+                <codeblock scale="80" outputclass="json">{
   "name": "Obtain Entity Data by id",
   "request": {
     "method": "GET", "header": [],
@@ -61,13 +66,21 @@
   },
   "response": []
 }</codeblock>
-      </fig>
-      <fig id="sample-dita-output">
-        <title>Postman PDF Output</title>
-        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.passthrough.postman/request-formatted.png" scope="external">
-          <alt/>
-        </image>
-      </fig>
-    </body>
-  </topic>
+            </fig>
+            <fig id="sample-dita-output">
+                <title>Postman PDF Output</title>
+                <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.passthrough.postman/request-formatted.png" scope="external">
+                    <alt/>
+                </image>
+            </fig>
+        </body>
+    </topic>
+    <topic id="install" conref="./install.dita#install">
+        <title/>
+        <body/>
+    </topic>
+    <topic id="usage" conref="./usage.dita#usage">
+        <title/>
+        <body/>
+    </topic>
 </topic>

@@ -1,154 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="configuration">
-  <title>Configuration</title>
-  <body>
-    <section id="internationalization">
-      <title outputclass="h3 mt-3">Internationalization</title>
-      <p>
-         The spelling and grammar checker currently supports three languages:
-      </p>
-      <ul>
-        <li>
-           <option>en</option> - English
-        </li>
-        <li>
-           <option>de</option> - German
-        </li>
-        <li>
-           <option>fr</option> - French
-        </li>
-      </ul>
-      <p>
-         The language checked is based on the <codeph>default.language</codeph> setting
-         of the DITA Open toolkit. This can be modified in the
-         <filepath>lib/configuration.properties</filepath> file.
-      </p>
-      <p>
-         Please note that error messages have <b>not</b> been internationalized into
-         French and currently all error messages will be displayed in English.
-      </p>
-      <p>
-         Sample lists of duplicated and mis-spelt words are available in all three
-         languages. Grammar and punctuation lists have only been supplied for <option>en</option>.
-      </p>
-      <p>
-         Additional languages can be added by creating a new language folder and files
-         under <filepath>cfg/dictionary</filepath>.
-      </p>
-    </section>
-    <section id="adding-new-mis-spellings-to-the-plug-in">
-      <title outputclass="h3 mt-3">Adding new mis-spellings to the plug-in</title>
-      <p>
-         The list of misspelt words to check when spell-checking can be altered by
-         amending entries in the xml files under <filepath>cfg/dictionary</filepath>.
-         The plug-in recognizes four types of errors:
-      </p>
-      <ul>
-        <li>
-           <codeph>duplicates.xml</codeph> - Duplicated words.
-        </li>
-        <li>
-           <codeph>grammar.xml</codeph> - Grammar errors (includes a ban on the use of contractions
-           in formal text )
-        </li>
-        <li>
-           <codeph>punctuation.xml</codeph> - Punctuation marks (includes a ban on smart quotes).
-        </li>
-        <li>
-           <codeph>spelling.xml</codeph> - Spelling mistakes
-        </li>
-      </ul>
-      <p>
-         Each entry takes the form of a pair:
-      </p>
-      <codeblock scale="80" outputclass="language-xml"><coderef href="./src/entry.xml"/></codeblock>
-    </section>
-    <section id="altering-the-severity-of-a-validator-rule">
-      <title outputclass="h3 mt-3">Altering the severity of a validator rule</title>
-      <p>
-         The severity of a validator rule can be altered by amending entries in the
-         <filepath>cfg/ruleset/default.xml</filepath> file The plug-in supports four
-         severity levels:
-      </p>
-      <ul>
-        <li>
-           <b>FATAL</b> - Fatal rules will fail validation and cannot be overridden.
-        </li>
-        <li>
-           <b>ERROR</b> - Error rules will fail validation. Errors can be overridden as
-           described above.
-        </li>
-        <li>
-           <b>WARNING</b> - Warning rules will display a warning on validation, but do not
-           fail the validation. Warnings can also be individually overridden.
-        </li>
-        <li>
-           <b>INACTIVE</b> - Inactive rules are not applied.
-        </li>
-      </ul>
-      <p>
-         A custom ruleset file can be passed into the plug-in using the
-         <codeph>text-rules.ruleset.file</codeph> parameter.
-      </p>
-      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> text-rules-echo <parmname>--input</parmname> document.ditamap --text-rules.ruleset.file=PATH_TO_CUSTOM/ruleset.xml</codeblock>
-    </section>
-  </body>
-  <topic id="ignoring-validator-rules">
-    <title outputclass="h3 mt-3">Ignoring Validator Rules</title>
+    <title>Configuration</title>
     <body>
-      <section id="removing-a-rule-globally">
-        <title outputclass="h4 mt-3">Removing a rule globally</title>
-        <p>
-           Rules can be made inactive by altering the severity (see above). Alternatively a
-           rule can be commented out in the XSL configuration file.
-        </p>
-      </section>
-      <section id="ignoring-a-rule-throughout-a-document">
-        <title outputclass="h4 mt-3">Ignoring a rule throughout a document</title>
-        <p>
-           Individual rules can be ignored by passing the <codeph>args.validate.ignore.rules</codeph>
-           parameter to the command line. The value of the parameter should be a
-           comma-delimited list of each <codeph>rule-id</codeph> to ignore.
-        </p>
-        <p>
-           For example to ignore the <codeph>latin-abbreviation</codeph> validation rule
-           within a document you would run:
-        </p>
-        <codeblock scale="80" outputclass="language-bash">PATH_TO_DITA_OT/dita -f text-rules-echo <parmname>--input</parmname> document.ditamap \
-    <parmname>--args.validate.ignore.rules</parmname>=latin-abbreviation</codeblock>
-      </section>
-      <section id="ignoring-a-specific-instance-of-a-rule">
-        <title outputclass="h4 mt-3">Ignoring a specific instance of a rule</title>
-        <p>
-           Specific instances of a rule can be ignored by adding a comment within the <codeph>*.dita</codeph>
-           file. The comment should start with <codeph>ignore-rule</codeph> and needs to
-           be added at the location where the error is flagged.
-        </p>
-        <codeblock scale="80" outputclass="language-xml"><coderef href="./src/ignore-rule.xml"/></codeblock>
-      </section>
-      <section id="ignoring-all-warningserrors-within-a-block-of-text">
-        <title outputclass="h4 mt-3">Ignoring all warnings/errors within a block of text</title>
-        <ul>
-          <li>
+        <section id="internationalization">
+            <title outputclass="h4 text-secondary">Internationalization</title>
             <p>
-               A block of DITA can be excluded from firing all rules at <b>WARNING</b> level by
-               adding the comment <codeph>ignore-all-warnings</codeph> to the block.
+               The spelling and grammar checker currently supports three languages:
             </p>
-          </li>
-          <li>
+            <ul>
+                <li>
+                   <option>en</option> - English
+                </li>
+                <li>
+                   <option>de</option> - German
+                </li>
+                <li>
+                   <option>fr</option> - French
+                </li>
+            </ul>
             <p>
-               A block of DITA can be excluded from firing all rules at <b>ERROR</b> level by
-               adding the comment <codeph>ignore-all-errors</codeph> to the block.
+               The language checked is based on the <codeph>default.language</codeph> setting
+               of the DITA Open toolkit. This can be modified in the
+               <filepath>lib/configuration.properties</filepath> file.
             </p>
-          </li>
-          <li>
             <p>
-               Rules set at <b>FATAL</b> level cannot be ignored.
+               Please note that error messages have <b>not</b> been internationalized into
+               French and currently all error messages will be displayed in English.
             </p>
-          </li>
-        </ul>
-      </section>
+            <p>
+               Sample lists of duplicated and mis-spelt words are available in all three
+               languages. Grammar and punctuation lists have only been supplied for <option>en</option>.
+            </p>
+            <p>
+               Additional languages can be added by creating a new language folder and files
+               under <filepath>cfg/dictionary</filepath>.
+            </p>
+        </section>
+        <section id="adding-new-mis-spellings-to-the-plug-in">
+            <title outputclass="h4 text-secondary">Adding new mis-spellings to the plug-in</title>
+            <p>
+               The list of misspelt words to check when spell-checking can be altered by
+               amending entries in the xml files under <filepath>cfg/dictionary</filepath>.
+               The plug-in recognizes four types of errors:
+            </p>
+            <ul>
+                <li>
+                   <codeph>duplicates.xml</codeph> - Duplicated words.
+                </li>
+                <li>
+                   <codeph>grammar.xml</codeph> - Grammar errors (includes a ban on the use of
+                   contractions in formal text )
+                </li>
+                <li>
+                   <codeph>punctuation.xml</codeph> - Punctuation marks (includes a ban on smart
+                   quotes).
+                </li>
+                <li>
+                   <codeph>spelling.xml</codeph> - Spelling mistakes
+                </li>
+            </ul>
+            <p>
+               Each entry takes the form of a pair:
+            </p>
+            <codeblock scale="80" outputclass="language-xml"><coderef href="./src/entry.xml"/></codeblock>
+        </section>
+        <section id="altering-the-severity-of-a-validator-rule">
+            <title outputclass="h4 text-secondary">Altering the severity of a validator rule</title>
+            <p>
+               The severity of a validator rule can be altered by amending entries in the
+               <filepath>cfg/ruleset/default.xml</filepath> file The plug-in supports four
+               severity levels:
+            </p>
+            <ul>
+                <li>
+                   <b>FATAL</b> - Fatal rules will fail validation and cannot be overridden.
+                </li>
+                <li>
+                   <b>ERROR</b> - Error rules will fail validation. Errors can be overridden as
+                   described above.
+                </li>
+                <li>
+                   <b>WARNING</b> - Warning rules will display a warning on validation, but do not
+                   fail the validation. Warnings can also be individually overridden.
+                </li>
+                <li>
+                   <b>INACTIVE</b> - Inactive rules are not applied.
+                </li>
+            </ul>
+            <p>
+               A custom ruleset file can be passed into the plug-in using the
+               <codeph>text-rules.ruleset.file</codeph> parameter.
+            </p>
+            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> text-rules-echo <parmname>--input</parmname> <filepath>document.ditamap</filepath> --text-rules.ruleset.file=PATH_TO_CUSTOM/ruleset.xml</codeblock>
+        </section>
     </body>
-  </topic>
+    <topic id="ignoring-rules" conref="./ignoring-rules.dita#ignoring-rules">
+        <title/>
+        <body/>
+    </topic>
 </topic>

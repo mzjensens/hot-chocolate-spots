@@ -1,52 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="swagger-plug-in">
-  <title>Swagger Plug-in</title>
-  <abstract>
-    <shortdesc>
-       This is a DITA-OT Plug-in used to auto-create valid DITA-based REST API
-       documentation. The documentation can be generated directly from a <xref
-       href="https://github.com/swagger-api" format="html" scope="external">
-       <term>Swagger</term></xref> file and processed as if it had been written in DITA.
-    </shortdesc>
-  </abstract>
-  <prolog>
-    <metadata>
-      <keywords>
-        <indexterm>Swagger</indexterm>
-        <indexterm>plug-in</indexterm>
-      </keywords>
-    </metadata>
-  </prolog>
-  <body/>
-  <topic id="background">
-    <title outputclass="h3 mt-3">Background</title>
-    <body>
-      <image deliveryTarget="html" scope="external" href="https://swagger.io/swagger/media/assets/images/swagger_logo.svg" outputclass="float-start mt-1 me-3" height="55"/>
-      <p>
-        <term>Swagger</term> is an open-source software framework backed by a 
-        large ecosystem of tools that helps developers design, build, document, and consume 
-        RESTful Web services. While most users identify Swagger by the Swagger UI tool, the 
-        Swagger toolset includes support for automated documentation, code generation, and 
-        test-case generation. More information about <term>Swagger</term> can be found at 
-        <xref href="https://swagger.io/" format="html" scope="external">swagger.io</xref>.
-      </p>
-      <p>
-         <xref href="https://github.com/swagger2markup/swagger2markup" format="html"
-         scope="external">Swagger2Markup</xref> converts a Swagger JSON or YAML file
-         into one or more AsciiDoc or GitHub Flavored Markdown documents which can be
-         combined with hand-written documentation. The Swagger source file can be
-         located locally or remotely via HTTP. Swagger2Markup supports the Swagger 1.2
-         and 2.0 specification. Internally it uses the official swagger-parser and my
-         markup-document-builder.
-      </p>
-      <p>
-         This plugin processes the Swagger file to Pandoc markdown, and the converts the
-         markdown to DITA using the <xref href="../pandoc/index.dita" format="dita">Pandoc DITA-OT Plugin</xref>
-      </p>
-      <fig id="sample-swagger">
-        <title>Sample Swagger</title>
-        <codeblock scale="80" outputclass="language-json">  "paths": {
+    <title>Swagger Plug-in</title>
+    <abstract>
+        <shortdesc>
+           This is a DITA-OT Plug-in used to auto-create valid DITA-based REST API
+           documentation. The documentation can be generated directly from a <xref
+           href="https://github.com/swagger-api" format="html" scope="external"><term>Swagger</term></xref>
+           file and processed as if it had been written in DITA.
+        </shortdesc>
+        <p>
+        </p>
+    </abstract>
+    <prolog>
+        <metadata>
+            <keywords>
+                <indexterm>Swagger</indexterm>
+                <indexterm>plug-in</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <body/>
+    <topic id="background">
+        <title>Background</title>
+        <body>
+            <image deliveryTarget="html" scope="external" href="https://swagger.io/swagger/media/assets/images/swagger_logo.svg" outputclass="float-start mt-1 me-3" height="55"/>
+            <p>
+               <term>Swagger</term> is an open-source software framework backed by a large
+               ecosystem of tools that helps developers design, build, document, and consume
+               RESTful Web services. While most users identify Swagger by the Swagger UI tool,
+               the Swagger toolset includes support for automated documentation, code
+               generation, and test-case generation. More information about
+               <term>Swagger</term> can be found at <xref href="https://swagger.io/" format="html" scope="external">swagger.io</xref>.
+            </p>
+            <p>
+               <xref href="https://github.com/swagger2markup/swagger2markup" format="html"
+               scope="external">Swagger2Markup</xref> converts a Swagger JSON or YAML file
+               into one or more AsciiDoc or GitHub Flavored Markdown documents which can be
+               combined with hand-written documentation. The Swagger source file can be
+               located locally or remotely via HTTP. Swagger2Markup supports the Swagger 1.2
+               and 2.0 specification. Internally it uses the official swagger-parser and my
+               markup-document-builder.
+            </p>
+            <p>
+               This plugin processes the Swagger file to Pandoc markdown, and the converts the
+               markdown to DITA using the <xref href="../pandoc/index.dita" format="dita">Pandoc DITA-OT Plugin</xref>
+            </p>
+            <fig id="sample-swagger">
+                <title>Sample Swagger</title>
+                <codeblock scale="80" outputclass="language-json">  "paths": {
     "/pet": {
       "put": {
         "tags": [ "pet" ],
@@ -74,14 +76,21 @@
         ]
       }
     },</codeblock>
-      </fig>
-      
-      <fig>
-        <title>Swagger PDF Output</title>
-        <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.passthrough.swagger/request-formatted.png" scope="external">
-          <alt/>
-        </image>
-      </fig>
-  </body>
-  </topic>
+            </fig>
+            <fig>
+                <title>Swagger PDF Output</title>
+                <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.passthrough.swagger/request-formatted.png" scope="external">
+                    <alt/>
+                </image>
+            </fig>
+        </body>
+    </topic>
+    <topic id="install" conref="./install.dita#install">
+        <title/>
+        <body/>
+    </topic>
+    <topic id="usage" conref="./usage.dita#usage">
+        <title/>
+        <body/>
+    </topic>
 </topic>

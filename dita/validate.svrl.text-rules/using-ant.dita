@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="using-ant">
+    <title>Using ANT</title>
+    <prolog>
+        <metadata>
+            <keywords>
+                <indexterm>ANT</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <body>
+        <p>
+           An ANT build file is supplied in the same directory as the sample document. The
+           main target can be seen below:
+        </p>
+        <fig>
+            <title>ANT Target</title>
+            <codeblock scale="80" outputclass="language-xml"><coderef href="./src/ant-target.xml"/></codeblock>
+        </fig>
+    </body>
+</topic>

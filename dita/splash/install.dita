@@ -1,39 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="install">
-  <title>Install</title>
-  <abstract>
-    <shortdesc>
-       This is a standalone plug-in without dependencies which can be installed from
-       the command line.
-    </shortdesc>
-    <p>
-       The splash screen plug-in relies on the use of ANT to obtain and display the
-       splash screen image. ANT 1.9+ is recommended. Older versions of the <xmlelement>get</xmlelement>
-       task may fail or timeout when requesting HTTPS images.
-    </p>
-  </abstract>
-  <prolog>
-    <metadata>
-      <keywords>
-        <indexterm>installing</indexterm>
-      </keywords>
-    </metadata>
-  </prolog>
-  <body>
-    <p>
-       Run the plug-in installation commands:
-    </p>
-    <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.splash/archive/master.zip
-    </codeblock>
-    <p>
-       The <cmdname>dita</cmdname> command line tool requires no additional configuration.
-    </p>
-    <p>
-       To switch to displaying XKCD images, amend the <codeph>pom.xml</codeph> within
-       the plug-in directly and  replace the line <xmlelement>feature
-       extension="depend.preprocess.pre" value="cats.splash"/</xmlelement> with
-       <xmlelement>feature extension="depend.preprocess.pre" value="xkcd.splash"/</xmlelement>.
-    </p>
-  </body>
+    <title>Install</title>
+    <abstract>
+        <shortdesc>
+           This is a standalone plug-in without dependencies which can be installed from
+           the command line.
+        </shortdesc>
+        <p>
+           The splash screen plug-in relies on the use of ANT to obtain and display the
+           splash screen image. ANT 1.9+ is recommended. Older versions of the <xmlelement>get</xmlelement>
+           task may fail or timeout when requesting HTTPS images.
+        </p>
+    </abstract>
+    <prolog>
+        <metadata>
+            <keywords>
+                <indexterm>installing</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <body>
+        <p>
+           Run the plug-in installation commands:
+        </p>
+        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.splash/archive/master.zip</codeblock>
+        <p>
+           The <cmdname>dita</cmdname> command line tool requires no additional configuration.
+        </p>
+        <p>
+           To switch to displaying XKCD images, amend the <codeph>pom.xml</codeph> within
+           the plug-in directly and  replace the line <xmlelement>feature
+           extension="depend.preprocess.pre" value="cats.splash"/</xmlelement> with
+           <xmlelement>feature extension="depend.preprocess.pre" value="xkcd.splash"/</xmlelement>.
+        </p>
+    </body>
 </topic>

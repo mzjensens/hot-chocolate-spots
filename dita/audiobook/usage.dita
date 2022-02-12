@@ -1,521 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="usage">
-  <title>Usage</title>
-  <prolog>
-    <metadata>
-      <keywords>
-        <indexterm>IBM Cloud Services</indexterm>
-        <indexterm>Microsoft Azure</indexterm>
-        <indexterm>MP3</indexterm>
-        <indexterm>SSML</indexterm>
-        <indexterm>MPEG-4</indexterm>
-      </keywords>
-    </metadata>
-  </prolog>
-  <body>
-    <section id="obtaining-a-series-of-ssml-files">
-      <title outputclass="h3 mt-3">Obtaining a series of SSML Files</title>
-      <p>
-         To run the SSML transformation, set the <parmname>transtype</parmname> parameter to <option>ssml</option>,
-         or pass the <parmname>--format</parmname>=<option>ssml</option> option to the <cmdname>dita</cmdname>
-         command line.
-      </p>
-      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>ssml</option> \
+    <title>Usage</title>
+    <prolog>
+        <metadata>
+            <keywords>
+                <indexterm>IBM Cloud Services</indexterm>
+                <indexterm>Microsoft Azure</indexterm>
+                <indexterm>MP3</indexterm>
+                <indexterm>SSML</indexterm>
+                <indexterm>MPEG-4</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <body>
+        <section id="obtaining-a-series-of-ssml-files">
+            <title outputclass="h4 text-secondary">Obtaining a series of SSML Files</title>
+            <p>
+               To run the SSML transformation, set the <parmname>transtype</parmname> parameter to <option>ssml</option>,
+               or pass the <parmname>--format</parmname>=<option>ssml</option> option to the <cmdname>dita</cmdname>
+               command line.
+            </p>
+            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>ssml</option> \
     <parmname>--output</parmname> out \
     <parmname>--input</parmname> PATH_TO_DITAMAP</codeblock>
-      <p>
-         Once the command has run, a <codeph>list.txt</codeph> and a series of <codeph>*.ssml</codeph>
-         files will be available in the output directory.
-      </p>
-    </section>
-    <section id="obtaining-a-series-of-mp3-files">
-      <title outputclass="h3 mt-3">Obtaining a series of MP3 Files</title>
-      <p>
-         To run the MP3 transformation, set the <parmname>transtype</parmname> parameter to <option>mp3</option>,
-         or pass the <parmname>--format</parmname>=<option>mp3</option> option to the <cmdname>dita</cmdname>
-         command line.
-      </p>
-      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>mp3</option> \
+            <p>
+               Once the command has run, a <codeph>list.txt</codeph> and a series of <codeph>*.ssml</codeph>
+               files will be available in the output directory.
+            </p>
+        </section>
+        <section id="obtaining-a-series-of-mp3-files">
+            <title outputclass="h4 text-secondary">Obtaining a series of MP3 Files</title>
+            <p>
+               To run the MP3 transformation, set the <parmname>transtype</parmname> parameter to <option>mp3</option>,
+               or pass the <parmname>--format</parmname>=<option>mp3</option> option to the <cmdname>dita</cmdname>
+               command line.
+            </p>
+            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>mp3</option> \
     <parmname>--output</parmname> out \
     <parmname>--input</parmname> PATH_TO_DITAMAP \
     <parmname>--ssml.service</parmname>=<option>[bing|watson]</option></codeblock>
-      <p>
-         Once the command has run, a <codeph>list.txt</codeph> and a series of <codeph>*.mp3</codeph>
-         files will be available in the output directory.
-      </p>
-    </section>
-    <section id="creating-an-audiobook">
-      <title outputclass="h3 mt-3">Creating an audiobook</title>
-      <p>
-         To run the audiobook transformation, set the <parmname>transtype</parmname>
-         parameter to <option>audiobook</option>, or pass the <parmname>--format</parmname>=<option>audiobook</option>
-         option to the <cmdname>dita</cmdname> command line.
-      </p>
-      <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>audiobook</option> \
+            <p>
+               Once the command has run, a <codeph>list.txt</codeph> and a series of <codeph>*.mp3</codeph>
+               files will be available in the output directory.
+            </p>
+        </section>
+        <section id="creating-an-audiobook">
+            <title outputclass="h4 text-secondary">Creating an audiobook</title>
+            <p>
+               To run the audiobook transformation, set the <parmname>transtype</parmname>
+               parameter to <option>audiobook</option>, or pass the <parmname>--format</parmname>=<option>audiobook</option>
+               option to the <cmdname>dita</cmdname> command line.
+            </p>
+            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>audiobook</option> \
     <parmname>--output</parmname> out \
     <parmname>--input</parmname> PATH_TO_DITAMAP \
     <parmname>--ssml.service</parmname>=<option>[bing|watson]</option></codeblock>
-      <p>
-         Once the command has run, an <codeph>*.m4b</codeph> file will be created in the
-         output directory.
-      </p>
-    </section>
-    <section id="parameter-reference">
-      <title outputclass="h3 mt-3">Parameter Reference</title>
-      <indexterm><parmname>ssml.service</parmname></indexterm>
-      <indexterm><parmname>ssml.gender</parmname></indexterm>
-      <indexterm><parmname>ssml.authentication.url</parmname></indexterm>
-      <indexterm><parmname>ssml.output.format</parmname></indexterm>
-      <indexterm><parmname>ssml.apikey</parmname></indexterm>
-      <indexterm><parmname>ssml.url</parmname></indexterm>
-      <indexterm><parmname>mp3.cachefile</parmname></indexterm>
-      <indexterm><parmname>mp3.cover.art.add</parmname></indexterm>
-      <indexterm><parmname>mp3.cover.art.image</parmname></indexterm>
-      <indexterm><parmname>audiobook.format</parmname></indexterm>
-      <ul>
-        <li>
-           <parmname>ssml.service</parmname> - Decides which translation service to use:
-          <ul>
-            <li>
-               <option>dummy</option> - Avoids accessing a Speech-to-Text service, uses a dummy
-               MP3 file for all outputs
-            </li>
-            <li>
-               <option>custom</option> - Sends the SSML to an arbitrary URL using POST - use
-               this to connect to proxies for Amazon <xref
-               href="https://docs.aws.amazon.com/polly/" format="html" scope="external">Polly</xref>
-               or Google Cloud <xref href="https://cloud.google.com/text-to-speech/"
-               format="html" scope="external">Text-to-Speech</xref>
-            </li>
-            <li>
-               <option>watson</option> - Connects to the IBM Cloud Speech-to-Text service
-            </li>
-            <li>
-               <option>bing</option> - Connects to the Microsoft Speech-to-Text service
-            </li>
-          </ul>
-        </li>
-        <li>
-           <parmname>ssml.gender</parmname> - Prefered Voice Gender:
-          <ul>
-            <li>
-               <option>male</option> - Use a male voice for text-to-speech where available.
-            </li>
-            <li>
-               <option>female</option> - Use a female voice for text-to-speech where available.
-            </li>
-          </ul>
-        </li>
-        <li>
-           <parmname>ssml.authentication.url</parmname> - URL for creating an OAuth token
-           if needed for a service. Defaults to the value in <codeph>configuration.properties</codeph>
-        </li>
-        <li>
-           <parmname>ssml.output.format</parmname> - Output format override for a
-           Speech-to-Text service. Defaults to the value in <codeph>configuration.properties</codeph>
-        </li>
-        <li>
-           <parmname>ssml.apikey</parmname> - API Key for the Speech-to-Text service.
-           Defaults to the value in <codeph>configuration.properties</codeph>
-        </li>
-        <li>
-           <parmname>ssml.url</parmname> - URL for a Speech-to-Text service. Defaults to
-           the value in <codeph>configuration.properties</codeph>
-        </li>
-        <li>
-           <parmname>mp3.cachefile</parmname> - Specifies the location of a cache file to
-           be used. If the SSML file matches to a previously generated mp3 file in the
-           cache the mp3 file will be copied over and the Speech-to-Text service will not
-           be called.
-        </li>
-        <li>
-           <parmname>mp3.cover.art.add</parmname> - Specifies whether or not cover art is
-           to be added to an album (default <option>no</option>)
-        </li>
-        <li>
-           <parmname>mp3.cover.art.image</parmname> - Specifies the cover art to be used
-           for an album, the default will use the image plug-in alter the file <filepath>cfg/coverart.png</filepath>
-        </li>
-        <li>
-           <parmname>audiobook.format</parmname> - mp4 output format (with or without DRM):
-          <ul>
-            <li>
-               <option>m4a</option> - audio file created in the MPEG-4 format (default)
-            </li>
-            <li>
-               <option>m4b</option> - audio file created in the MPEG-4 format with DRM
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-  </body>
-  <topic id="selecting-a-voice-to-use">
-    <title outputclass="h3 mt-3">Selecting a voice to use</title>
-    <body>
-      <p>
-         When running the <option>mp3</option> or <option>audiobook</option> transforms, the <b>male voice</b>
-         corresponding to the <xmlatt>xml:lang</xmlatt> attribute of the root topic will
-         be chosen to render the speech. Use the <parmname>--ssml.gender</parmname>=<option>female</option>
-         parameter to switch to a female voice. If no voice of the preferred gender can
-         be found, the default will be used.
-      </p>
-      <p>
-         A list of available voices can be found within following files:
-      </p>
-      <ul>
-        <li>
-<filepath>cfg/attrs/bing.voice-attr.xsl</filepath>
-        </li>
-        <li>
-<filepath>cfg/attrs/watson.voice-attr.xsl</filepath>
-        </li>
-      </ul>
-      <p>
-         Each listing shows the default male and female voices for a language, plus any
-         regional variants which are available:
-      </p>
-      <codeblock scale="80" outputclass="language-xml"><coderef href="./src/voices.xml"/></codeblock>
-      <p>
-         As you can see the <codeph>en-US_AllisonVoice</codeph> is currently the
-         preferred female voice for all documents marked up as
-         <xmlatt>xml:lang="en"</xmlatt> and <xmlatt>xml:lang="en-US"</xmlatt>.
-      </p>
-      <ul>
-        <li>
-           to alter the <codeph>en</codeph> preferences, replace the text within the
-           <xmlelement>xsl:attribute name="voice"</xmlelement> element with the preferred
-           voice.
-        </li>
-        <li>
-           to alter the <codeph>en-us</codeph> preferences, comment out the existing
-           selection and uncomment the new preferred voice.
-        </li>
-      </ul>
+            <p>
+               Once the command has run, an <codeph>*.m4b</codeph> file will be created in the
+               output directory.
+            </p>
+        </section>
+        <section id="parameter-reference">
+            <title outputclass="h4 text-secondary">Parameter Reference</title>
+               <indexterm><parmname>ssml.service</parmname>
+            </indexterm>
+               <indexterm><parmname>ssml.gender</parmname>
+            </indexterm>
+               <indexterm><parmname>ssml.authentication.url</parmname>
+            </indexterm>
+               <indexterm><parmname>ssml.output.format</parmname>
+            </indexterm>
+               <indexterm><parmname>ssml.apikey</parmname>
+            </indexterm>
+               <indexterm><parmname>ssml.url</parmname>
+            </indexterm>
+               <indexterm><parmname>mp3.cachefile</parmname>
+            </indexterm>
+               <indexterm><parmname>mp3.cover.art.add</parmname>
+            </indexterm>
+               <indexterm><parmname>mp3.cover.art.image</parmname>
+            </indexterm>
+               <indexterm><parmname>audiobook.format</parmname>
+            </indexterm>
+            <ul>
+                <li>
+                   <parmname>ssml.service</parmname> - Decides which translation service to use:
+                    <ul>
+                        <li>
+                           <option>dummy</option> - Avoids accessing a Speech-to-Text service, uses a dummy
+                           MP3 file for all outputs
+                        </li>
+                        <li>
+                           <option>custom</option> - Sends the SSML to an arbitrary URL using POST - use
+                           this to connect to proxies for Amazon <xref
+                           href="https://docs.aws.amazon.com/polly/" format="html" scope="external">Polly</xref>
+                           or Google Cloud <xref href="https://cloud.google.com/text-to-speech/"
+                           format="html" scope="external">Text-to-Speech</xref>
+                        </li>
+                        <li>
+                           <option>watson</option> - Connects to the IBM Cloud Speech-to-Text service
+                        </li>
+                        <li>
+                           <option>bing</option> - Connects to the Microsoft Speech-to-Text service
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                   <parmname>ssml.gender</parmname> - Prefered Voice Gender:
+                    <ul>
+                        <li>
+                           <option>male</option> - Use a male voice for text-to-speech where available.
+                        </li>
+                        <li>
+                           <option>female</option> - Use a female voice for text-to-speech where available.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                   <parmname>ssml.authentication.url</parmname> - URL for creating an OAuth token
+                   if needed for a service. Defaults to the value in <codeph>configuration.properties</codeph>
+                </li>
+                <li>
+                   <parmname>ssml.output.format</parmname> - Output format override for a
+                   Speech-to-Text service. Defaults to the value in <codeph>configuration.properties</codeph>
+                </li>
+                <li>
+                   <parmname>ssml.apikey</parmname> - API Key for the Speech-to-Text service.
+                   Defaults to the value in <codeph>configuration.properties</codeph>
+                </li>
+                <li>
+                   <parmname>ssml.url</parmname> - URL for a Speech-to-Text service. Defaults to
+                   the value in <codeph>configuration.properties</codeph>
+                </li>
+                <li>
+                   <parmname>mp3.cachefile</parmname> - Specifies the location of a cache file to
+                   be used. If the SSML file matches to a previously generated mp3 file in the
+                   cache the mp3 file will be copied over and the Speech-to-Text service will not
+                   be called.
+                </li>
+                <li>
+                   <parmname>mp3.cover.art.add</parmname> - Specifies whether or not cover art is
+                   to be added to an album (default <option>no</option>)
+                </li>
+                <li>
+                   <parmname>mp3.cover.art.image</parmname> - Specifies the cover art to be used
+                   for an album, the default will use the image plug-in alter the file <filepath>cfg/coverart.png</filepath>
+                </li>
+                <li>
+                   <parmname>audiobook.format</parmname> - mp4 output format (with or without DRM):
+                    <ul>
+                        <li>
+                           <option>m4a</option> - audio file created in the MPEG-4 format (default)
+                        </li>
+                        <li>
+                           <option>m4b</option> - audio file created in the MPEG-4 format with DRM
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
     </body>
-  </topic>
-  <topic id="marking-up-ssml-tags.">
-    <title outputclass="h3 mt-3">Marking up SSML tags.</title>
-    <body>
-      <p>
-         Some DITA tags such as <xmlelement>p</xmlelement> and <xmlelement>b</xmlelement>
-         translate directly to SSML, however there is rich vocabulary of audio effects
-         which are missing from the vanilla DITA specification. These can be
-         accommodated using the <xmlatt>props</xmlatt> attribute added to <xmlelement>ph</xmlelement>
-         tag. Examples are given below. The listing is mainly based on the <xref
-         href="https://www.ibm.com/support/knowledgecenter/ssmqsv-6.1.1/com.ibm.voicetools.ssml.doc/tts-ssml.pdf"
-         format="html" scope="external">IBM Text to Speech Programming Guide</xref>,
-         however the DITA plug-in is not service specific so some additional tags can be
-         used. Obviously common substitutions should be replaced with <xmlelement>keyword</xmlelement>
-         elements for consistency of reuse.
-      </p>
-      <note>
-        <p>
-           Not all tags and attributes will be supported by every provider.
-        </p>
-      </note>
-      <p>
-         The <codeph>say-as</codeph> tag allows the author to indicate information on the
-         type of text contained within the tag and to help specify the level of detail
-         for rendering the text. The required attribute for this tag is <codeph>interpret-as</codeph>
-         . There are two optional attributes, <codeph>format</codeph> and <codeph>detail</codeph>,
-         which are only used with particular values within the <codeph>interpret-as</codeph>
-         attribute. These optional attributes are illustrated within the entries for
-         their associated values.
-      </p>
-      <ul>
-        <li>
-           <codeph>letters</codeph>: This value spells out the characters in a given word
-           within the enclosed tag.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(letters)"&gt;Hello&lt;/ph&gt;</codeblock>
-      <ul>
-        <li>
-           <codeph>digits</codeph>: This value spells out the digits in a given number
-           within the enclosed tag.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(digits)"&gt;123456&lt;/ph&gt;</codeblock>
-      <ul>
-        <li>
-           <codeph>vxml:digits</codeph>: This value performs the same function as the
-           digits value.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(vxml:digits)"&gt;123456&lt;/ph&gt;</codeblock>
-      <ul>
-        <li>
-           <codeph>date</codeph> This value will speak the date within the enclosed tag,
-           using the format given in the associated <codeph>format</codeph> attribute. The <codeph>format</codeph>
-           attribute is required for use with the date value of <codeph>interpret-as</codeph>,
-           but if <codeph>format</codeph> is not present, the engine will still attempt to
-           pronounce the date.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(date) format(mdy)"&gt;12/17/2005&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(date) format(ymd)"&gt;2005/12/17&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(date) format(dmy)"&gt;17/12/2005&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(date) format(ydm)"&gt;2005/17/12&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(date) format(my)"&gt;12/2005&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(date) format(md)"&gt;12/17&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(date) format(ym)"&gt;2005/12&lt;/ph&gt;</codeblock>
-      <ul>
-        <li>
-           <codeph>ordinal</codeph> - This value will speak the ordinal value for the given
-           digit within the enclosed tag.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(ordinal)"&gt;2&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(ordinal)"&gt;1&lt;/ph&gt;</codeblock>
-      <ul>
-        <li>
-           <codeph>cardinal</codeph> - This value will speak the cardinal number
-           corresponding to the Roman numeral within the enclosed tag.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">Super Bowl &lt;ph props="say-as interpret-as(cardinal)"&gt;XXXIX&lt;/ph&gt;</codeblock>
-      <ul>
-        <li>
-           <codeph>number</codeph> - This value is an alternative to using the values given
-           above. Using the <codeph>format</codeph> attribute to determine how the number
-           is to be interpreted, you can enter one series of number and have it pronounced
-           several different ways, as in the example. The example also includes two
-           different ways of pronouncing a series of numbers as a telephone number. To
-           have the series pronounced with the punctuation included, you must add the
-           <codeph>detail</codeph> attribute.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(number)"&gt;123456&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(number) format(ordinal)"&gt;123456&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(number) format(cardinal)"&gt;123456&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(number) format(telephone)"&gt;555-555-5555&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(number) format(telephone) detail(punctuation)"&gt;555-555-5555&lt;/ph&gt;</codeblock>
-      <ul>
-        <li>
-           <codeph>vxml:boolean</codeph> - This value will speak <codeph>yes</codeph> or <codeph>no</codeph>
-           depending on the value given within the enclosed tag.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(vxml:boolean)"&gt;true&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(vxml:boolean)"&gt;false&lt;/ph&gt;</codeblock>
-      <ul>
-        <li>
-           <codeph>vxml:date</codeph> - This value works like the date value, except that
-           the format is predefined as <codeph>YYYYMMDD</codeph>. When a value is not
-           known, or you do not wish it to be displayed, a question mark is used to
-           replace that value, as shown in the example.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(vxml:date)"&gt;20050720&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(vxml:date)"&gt;????0720&lt;/ph&gt;
-&lt;ph props="say-as interpret-as(vxml:date)"&gt;200507??&lt;/ph&gt;</codeblock>
-      <ul>
-        <li>
-           <codeph>vxml:currency</codeph> - This value is used to control the synthesis of
-           monetary quantities. The string must be written in the <codeph>UUUmm.nn</codeph>
-           format, where <codeph>UUU</codeph> is the three character currency indicator
-           specified by ISO standard 4217, and <codeph>mm.nn</codeph> is the amount.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(vxml:currency)"&gt;USD45.30&lt;/ph&gt;</codeblock>
-      <p>
-         If there are more than two decimal places in the number within the enclosed tag,
-         the amount will be synthesized as a decimal number followed by the currency
-         indicator. If the three character currency indicator is not present, the number
-         will be synthesized as a decimal only, with no pronunciation of currency type.
-      </p>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(vxml:currency)"&gt;USD45.329&lt;/ph&gt;</codeblock>
-      <ul>
-        <li>
-           <codeph>vxml:phone</codeph> - This value will speak a phone number with both
-           digits and punctuation, similar to the <codeph>number</codeph> value used with
-           <codeph>format(telephone)</codeph>.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="say-as interpret-as(vxml:phone)"&gt;555-555-5555&lt;/ph&gt;</codeblock>
-      <p>
-         The SSML phoneme tag enables users to provide a phonetic pronunciation for the
-         enclosed text. This tag has two attributes:
-      </p>
-      <ul>
-        <li>
-          <p>
-             <codeph>alphabet</codeph> - This attribute specifies the phonology used. The
-             supported alphabets to designate are <codeph>ipa</codeph> for the International
-             Phonetic Alphabet, and <codeph>ibm</codeph> for the SPR representation.
-          </p>
-        </li>
-        <li>
-          <p>
-             <codeph>ph</codeph> - This attribute specifies the pronunciation. It is a
-             required attribute. This example shows how a pronunciation for "tomato" is
-             specified using the IPA phonology, where the symbols are given using Unicode:
-          </p>
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="phoneme alphabet(ipa) ph(t&amp;#x259;mei&amp;#x27E;ou&amp;#x325;)"&gt;tomato&lt;/ph&gt;</codeblock>
-      <p>
-         This example shows how a pronunciation for "tomato" is specified using the SPR
-         phonology:
-      </p>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="phoneme alphabet(ibm) ph(.0tx.1me.0fo)"&gt;tomato&lt;/ph&gt;</codeblock>
-      <p>
-         This tag is used to indicate that the text included in the alias attribute is to
-         replace the text enclosed within the tag when speech is synthesized. The only
-         attribute for this tag is the <codeph>alias</codeph> attribute, and it is required.
-      </p>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="sub alias(International Business Machines)"&gt;IBM&lt;/ph&gt;</codeblock>
-      <p>
-         This tag is used when a change in voice is required. Although all attributes
-         listed are optional, without any attributes defined an error will result. The
-         optional attributes are:
-      </p>
-      <ul>
-        <li>
-           <codeph>age</codeph> Accepted values are positive integers between the ages of
-           14 and 60 for both male and female.
-        </li>
-        <li>
-           <codeph>gender</codeph> Accepted values are <codeph>male</codeph> and
-           <codeph>female</codeph>.
-        </li>
-        <li>
-           <codeph>name</codeph> Accepted values are the installed voices’ names.
-        </li>
-        <li>
-           <codeph>variant</codeph> Accepted values are positive integers.
-        </li>
-      </ul>
-      <p>
-         Examples:
-      </p>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="voice age(60)"&gt;Sixty year-old's voice.&lt;/ph&gt;
-&lt;ph props="voice gender(female)"&gt;This is a female voice.&lt;/ph&gt;
-&lt;ph props="voice name(Allison)"&gt;Use the IBM TTS voice named Allison.&lt;/ph&gt;
-&lt;ph props="voice name(Allison, Andrew, Tyler)"&gt;Use the first available IBM TTS voice named in the given list.&lt;/ph&gt;</codeblock>
-      <p>
-         The <xmlelement>emphasis</xmlelement> element equests that the contained text be
-         spoken with emphasis (also referred to as prominence or stress).
-      </p>
-      <ul>
-        <li>
-           <codeph>level</codeph>: the optional level attribute indicates the strength of
-           emphasis to be applied. Defined values are <codeph>strong</codeph>, <codeph>moderate</codeph>,
-           <codeph>none</codeph> and <codeph>reduced</codeph>. The default level is <codeph>moderate</codeph>.
-           The meaning of <codeph>strong</codeph> and <codeph>moderate</codeph> emphasis
-           is interpreted according to the language being spoken (languages indicate
-           emphasis using a possible combination of pitch change, timing changes, loudness
-           and other acoustic differences). The <codeph>reduced</codeph> level is
-           effectively the opposite of emphasizing a word. For example, when the phrase
-           "going to" is reduced it may be spoken as "gonna". The <codeph>none</codeph>
-           level is used to prevent the synthesis processor from emphasizing words that it
-           might typically emphasize.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">That is a &lt;ph props="emphasis"&gt; big &lt;/ph&gt; car!
-That is a &lt;ph props="emphasis level(strong)"&gt; huge &lt;/ph&gt;bank account!</codeblock>
-      <p>
-         Emphasis can also be achieved using the <xmlelement>b</xmlelement> tag.
-      </p>
-      <codeblock scale="80" outputclass="language-xml">That is a &lt;b&gt; big &lt;/b&gt; car!
-That is a &lt;b props="level(strong)"&gt; huge &lt;/b&gt;bank account!</codeblock>
-      <p>
-         This tag inserts pauses into the spoken text. It has the following optional
-         attributes:
-      </p>
-      <ul>
-        <li>
-           <codeph>strength</codeph> - This attribute specifies the length of a pause in
-           terms of varying strength values:
-           <codeph>none,</codeph><codeph>x-weak,</codeph><codeph>weak,</codeph><codeph>medium,</codeph><codeph>strong,</codeph> or <codeph>x-strong.</codeph>
-        </li>
-        <li>
-           <codeph>time</codeph> - This attribute specifies the length of the pause in
-           terms of seconds or milliseconds. The values formats are <codeph>NNNs</codeph>
-           for seconds or <codeph>NNNms</codeph> for milliseconds.
-        </li>
-      </ul>
-      <codeblock scale="80" outputclass="language-xml">Different sized &lt;ph props="break strength(none)"/&gt;pauses.
-Different sized &lt;ph props="break strength(x-weak)"/&gt;pauses.
-Different sized &lt;ph props="break strength(weak)"/&gt;pauses.
-Different sized &lt;ph props="break strength(medium)"/&gt;pauses.
-Different sized &lt;ph props="break strength(strong)"/&gt;pauses.
-Different sized &lt;ph props="break strength(x-strong)"/&gt;pauses.
-Different sized &lt;ph props="break time(1s)"/&gt;pauses.
-Different sized &lt;ph props="break time(1000ms)"/&gt;pauses.</codeblock>
-      <p>
-         This tag controls the pitch, range, speaking rate, and volume of the text. all
-         attributes are optional, but if no attribute is given an error results.
-      </p>
-      <p>
-         Here is a description of the optional attributes:
-      </p>
-      <ul>
-        <li>
-          <p>
-             <codeph>pitch</codeph> - This attribute modifies the baseline pitch for the text
-             enclosed within the tag. Accepted values are either:, a number followed by the
-             Hz designation, a relative change, <codeph>x-low</codeph>,
-             <codeph>low</codeph>, <codeph>medium</codeph>, <codeph>high</codeph>, <codeph>x-high</codeph>, <codeph>default</codeph>
-          </p>
-        </li>
-        <li>
-          <p>
-             <codeph>range</codeph> This attribute modifies the pitch range for the text
-             enclosed within the tag. Accepted values for this attribute are the same as
-             the accepted values for <codeph>pitch</codeph>.
-          </p>
-        </li>
-        <li>
-          <p>
-             <codeph>rate</codeph> - This attribute indicates a change in the speaking rate
-             for contained text. Accepted values are: - a relative change - a positive number, <codeph>x-slow</codeph>,
-             <codeph>slow</codeph>, <codeph>medium</codeph>, <codeph>fast</codeph>,
-             <codeph>x-fast</codeph>, <codeph>default</codeph>
-          </p>
-        </li>
-      </ul>
-      <p>
-         The <codeph>rate</codeph> is specified in terms of words-per-minute. If the
-         speaking rate is 50 words per minute, then <codeph>rate=50</codeph>. If the
-         setting is <codeph>rate=+10</codeph>, the speaking rate will be 10 words per
-         minute faster than your current <codeph>rate</codeph> setting.
-      </p>
-      <ul>
-        <li>
-           volume - This attribute modifies the volume for the contained text. The range
-           for values is <codeph>0.0</codeph> to <codeph>100.0</codeph> or the relative
-           values of : <codeph>silent</codeph>, <codeph>x-soft</codeph>,
-           <codeph>soft</codeph>, <codeph>medium</codeph>, <codeph>loud</codeph>, <codeph>x-loud</codeph>, <codeph>default</codeph>
-        </li>
-      </ul>
-      <p>
-         Examples:
-      </p>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="prosody pitch(150Hz)"&gt; Modified pitch &lt;/ph&gt;
-&lt;ph props="prosody pitch(-20Hz)"&gt; Modified pitch &lt;/ph&gt;
-&lt;ph props="prosody pitch(+20Hz)"&gt; Modified pitch &lt;/ph&gt;
-&lt;ph props="prosody pitch(-12st)"&gt; Modified pitch &lt;/ph&gt;
-&lt;ph props="prosody pitch(+12st)"&gt; Modified pitch &lt;/ph&gt;
-&lt;ph props="prosody pitch(x-low)"&gt; Modified pitch &lt;/ph&gt;
-&lt;ph props="prosody range(150Hz)"&gt; Modified pitch range&lt;/ph&gt;
-&lt;ph props="prosody range(-20Hz)"&gt; Modified pitch range&lt;/ph&gt;
-&lt;ph props="prosody range(+20Hz)"&gt; Modified pitch range&lt;/ph&gt;
-&lt;ph props="prosody range(-12st)"&gt; Modified pitch range&lt;/ph&gt;
-&lt;ph props="prosody range(+12st)"&gt; Modified pitch range&lt;/ph&gt;
-&lt;ph props="prosody range(x-high)"&gt; Modified pitch range&lt;/ph&gt;
-&lt;ph props="prosody rate(slow)"&gt; Modified speaking rate&lt;/ph&gt;
-&lt;ph props="prosody rate(+25)"&gt; Modified speaking rate&lt;/ph&gt;
-&lt;ph props="prosody rate(-25)"&gt; Modified speaking rate&lt;/ph&gt;
-&lt;ph props="prosody volume(88.9)"&gt;Modified volume&lt;/ph&gt;
-&lt;ph props="prosody volume(loud)"&gt;Modified volume&lt;/ph&gt;</codeblock>
-      <p>
-         This tag inserts recorded elements into the generated audio. The only attribute is <codeph>src</codeph>
-         and is required. This attribute specifies the location of the file to be inserted.
-      </p>
-      <codeblock scale="80" outputclass="language-xml">&lt;ph props="audio src(http://www.myfiles.com/files/beep.wav)"/&gt;</codeblock>
-    </body>
-  </topic>
+    <topic id="voice-selection" conref="./voice-selection.dita#voice-selection">
+        <title/>
+        <body/>
+    </topic>
+    <topic id="ssml-markup" conref="./ssml-markup.dita#ssml-markup">
+        <title/>
+        <body/>
+    </topic>
 </topic>

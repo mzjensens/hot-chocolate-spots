@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="autotranslation-services">
+    <title>Automatic Translation Services</title>
+    <body>
+        <p>
+           Several publically available <b>automatic translation</b> cloud services are
+           available for use, they typically offer a <i>try-before-you-buy</i> option and
+           generally offer sample access to the service for without cost. Upgrading to a
+           paid version will be necessary when transforming larger documents.
+        </p>
+        <section id="ibm-cloud-services">
+            <title outputclass="h4 text-secondary">IBM Cloud Services</title>
+            <image deliveryTarget="html" scope="external" href="https://www.nasuni.com/wp-content/uploads/2017/06/ibm-cloud.png" outputclass="float-start mt-1 me-3" height="55"/>
+            <p>
+               The <term>IBM Language Translator</term> allows you to translate text
+               programmatically from one language into another language.
+            </p>
+            <p>
+               Introduction: <xref
+               href="https://cloud.ibm.com/docs/services/language-translator?topic=language-translator-gettingstarted" format="html" scope="external">Getting Started</xref>
+            </p>
+            <p>
+               Create an instance of the service:
+            </p>
+            <ol>
+                <li>
+                   Go to the <xref
+                   href="https://cloud.ibm.com/catalog/services/language-translator" format="html"
+                   scope="external">Language Translator</xref> External link icon page in the IBM
+                   Cloud Catalog.
+                </li>
+                <li>
+                   Sign up for a free IBM Cloud account or log in.
+                </li>
+                <li>
+                   Click Create.
+                </li>
+            </ol>
+            <p>
+               Copy the credentials to authenticate to your service instance:
+            </p>
+            <ol>
+                <li>
+                   From the <xref href="https://cloud.ibm.com/dashboard/apps" format="html"
+                   scope="external">IBM Cloud dashboard</xref> External link icon, click on your
+                   <b>Language Translator</b> service instance to go to the <b>Language Translator</b>
+                   service dashboard page.
+                </li>
+                <li>
+                   On the Manage page, click Show to view your credentials.
+                </li>
+                <li>
+                   Copy the <codeph>API Key</codeph> and <codeph>URL</codeph> values.
+                </li>
+                <li>
+                   Within the plug-in alter the file <codeph>cfg/configuration.properties</codeph>
+                   to hold your <codeph>API Key</codeph> and <codeph>URL</codeph>.
+                </li>
+            </ol>
+            <p>
+               By default the <b>Frankfurt</b> translation service URL used is:
+               <codeph>https://gateway-fra.watsonplatform.net/language-translator/api/v3/translate</codeph>,
+               amend this when using a <b>regional</b> instance.
+            </p>
+        </section>
+        <section id="microsoft-azure">
+            <title outputclass="h4 text-secondary">Microsoft Azure</title>
+            <image deliveryTarget="html" scope="external" href="https://www.confluent.io/wp-content/uploads/MS-Azure_logo_stacked_c-gray_rgb.png" outputclass="float-start mt-1 me-3" height="55"/>
+            <p>
+               <term>Microsoft Translator</term> provides multi-language support for
+               translation, transliteration, language detection, and dictionaries.
+            </p>
+            <p>
+               Introduction: <xref
+               href="https://docs.microsoft.com/en-us/azure/cognitive-services/translator/translator-info-overview" format="html" scope="external">Overview</xref>
+            </p>
+            <p>
+               Create an instance of the service:
+            </p>
+            <ol>
+                <li>
+                   Go to Try <xref href="https://azure.microsoft.com/try/cognitive-services/"
+                   format="html" scope="external">Cognitive Services</xref>
+                </li>
+                <li>
+                   Select the Translator Text APIs tab.
+                </li>
+                <li>
+                   Under Translator Text, select the Get API Key button.
+                </li>
+                <li>
+                   Agree to the terms and select your locale from the drop-down menu.
+                </li>
+                <li>
+                   Sign in by using your Microsoft, Facebook, LinkedIn, or GitHub account.
+                </li>
+            </ol>
+            <p>
+               You can sign up for a free Microsoft account at the Microsoft account portal. To
+               get started, click Sign in with Microsoft and then, when asked to sign in,
+               click Create one. Follow the steps to create and verify your new Microsoft account.
+            </p>
+            <p>
+               After you sign in to Try Cognitive Services, your free trial begins. The
+               displayed webpage lists all the Azure Cognitive Services services for which you
+               currently have trial subscriptions. Two subscription keys are listed beside
+               Speech Services. You can use either key in your applications.
+            </p>
+            <p>
+               Copy the credentials to authenticate to your service instance:
+            </p>
+            <ol>
+                <li>
+                   Copy each of the <codeph>API Key</codeph> and <codeph>Endpoint</codeph> values.
+                </li>
+                <li>
+                   Within the plug-in alter the file <codeph>cfg/configuration.properties</codeph>
+                   to hold your <codeph>API Key</codeph> and <codeph>URL</codeph>.
+                </li>
+            </ol>
+            <p>
+               By default the <b>global</b> translation service URL used is:
+               <codeph>https://api.cognitive.microsofttranslator.com/translate</codeph>, amend
+               this when using a <b>regional</b> instance.
+            </p>
+        </section>
+        <section id="yandex-translate">
+            <title outputclass="h4 text-secondary">Yandex Translate</title>
+            <image deliveryTarget="html" scope="external" href="http://www.companieshistory.com/wp-content/uploads/2014/05/Yandex-NV.png" outputclass="float-start mt-1 me-3" height="55"/>
+            <p>
+               The API provides access to the <term>Yandex online machine translation service.</term>
+               It supports more than 90 languages and can translate separate words or complete texts.
+            </p>
+            <p>
+               Introduction: <xref href="https://tech.yandex.com/translate/" format="html"
+               scope="external">Overview</xref>
+            </p>
+            <p>
+               To sign-up to the service:
+            </p>
+            <ol>
+                <li>
+                   Review the <xref href="http://legal.yandex.com/translate-api/" format="html"
+                   scope="external">user agreement</xref> and rules for <xref
+                   href="https://tech.yandex.com/translate/doc/dg/concepts/design-requirements-docpage" format="html" scope="external">formatting translation results</xref>.
+                </li>
+                <li>
+                   Get a free <xref href="https://translate.yandex.com/developers/keys"
+                   format="html" scope="external">API key</xref>.
+                </li>
+                <li>
+                   Read the <xref
+                   href="https://tech.yandex.com/translate/doc/dg/concepts/about-docpage"
+                   format="html" scope="external">documentation</xref>, where you will find
+                   instructions on enabling the API and detailed descriptions of its features.
+                </li>
+            </ol>
+            <p>
+               After you sign in to your account select API Keys and create a new key as
+               necessary. The latest endpoint can be found in the <xref
+               href="https://tech.yandex.com/translate/doc/dg/reference/translate-docpage/#xml" format="html" scope="external">documentation</xref>.
+            </p>
+            <codeblock outputclass="language-none">https://translate.yandex.net/api/v1.5/tr/translate</codeblock>
+            <p>
+               Copy the credentials to authenticate to your service instance:
+            </p>
+            <ol>
+                <li>
+                   Copy each of the <codeph>API Key</codeph> and <codeph>Endpoint</codeph> values.
+                </li>
+                <li>
+                   Within the plug-in alter the file <codeph>cfg/configuration.properties</codeph>
+                   to hold your <codeph>API Key</codeph> and <codeph>URL</codeph>.
+                </li>
+            </ol>
+        </section>
+        <section id="deepl-api">
+            <title outputclass="h4 text-secondary">DeepL API</title>
+            <image deliveryTarget="html" scope="external" href="https://www.deepl.com/img/logo/DeepL_LogoAndText_darkBlue.svg" outputclass="float-start mt-1 me-3" height="55"/>
+            <p>
+               The <term>DeepL API</term> is accessible with a <xref
+               href="https://www.deepl.com/pro.html#developer" format="html"
+               scope="external">DeepL Pro subscription (DeepL API plan)</xref> only. The API
+               is an interface that allows other computer programs to send texts to the DeepL
+               servers and receive high-quality translations.
+            </p>
+            <p>
+               Introduction: <xref href="https://www.deepl.com" format="html" scope="external">Overview</xref>
+            </p>
+            <p>
+               To sign-up to the service:
+            </p>
+            <ol>
+                <li>
+                   Open a <xref href="https://www.deepl.com/pro.html#developer" format="html"
+                   scope="external">DeepL API</xref><b>developers</b> account. Note that not all
+                   accounts offer access to the DeepL API. It is <b>essential</b> that the account
+                   type includes REST API access.
+                </li>
+                <li>
+                   Fill out the application details and add a credit card. No payments are required
+                   for the first 30 days. You can cancel the card and still maintain free access
+                   for the trial period.
+                </li>
+                <li>
+                   Read the <xref href="https://www.deepl.com/docs-api.html" format="html"
+                   scope="external">documentation</xref>, where you will find instructions on
+                   enabling the API and detailed descriptions of its features.
+                </li>
+            </ol>
+            <p>
+               After you sign in to your account select API Keys and create a new key as
+               necessary. The latest endpoint can be found in the <xref
+               href="https://www.deepl.com/docs-api.html?part=translating-text" format="html"
+               scope="external">documentation</xref>
+            </p>
+            <codeblock outputclass="language-none">https://api.deepl.com/v2/translate</codeblock>
+            <p>
+               Copy the credentials to authenticate to your service instance:
+            </p>
+            <ol>
+                <li>
+                   Copy each of the <codeph>API Key</codeph> and <codeph>Endpoint</codeph> values.
+                </li>
+                <li>
+                   Within the plug-in alter the file <codeph>cfg/configuration.properties</codeph>
+                   to hold your <codeph>API Key</codeph> and <codeph>URL</codeph>.
+                </li>
+            </ol>
+        </section>
+    </body>
+</topic>
