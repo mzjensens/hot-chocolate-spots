@@ -53,7 +53,7 @@
            within the plug-in at: <codeph>PATH_TO_DITA_OT/plugins/fox.jason.prismjs/sample</codeph>.
         </p>
         <section id="invocation-from-the-command-line">
-            <title>Invocation from the command line</title>
+            <title outputclass="h4 text-secondary">Invocation from the command line</title>
             <p>
                The Plug-in extends the existing PDF and HTML transforms.
             </p>
@@ -83,7 +83,7 @@
             </fig>
         </section>
         <section id="customizing-the-output">
-            <title>Customizing the output</title>
+            <title outputclass="h4 text-secondary">Customizing the output</title>
             <p>
                Prism-JS is easily extended to other languages since it purely relies on regular
                expressions. Additional languages are loaded dynamically during processing. A
