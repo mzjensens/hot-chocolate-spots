@@ -28,12 +28,16 @@
     <topic id="example">
         <title>Example</title>
         <body>
-            <image deliveryTarget="html" scope="external" href="https://jason-fox.github.io/fox.jason.passthrough.javadoc/javalogo.png" outputclass="float-start mt-1 me-3" height="55"/>
-            <p>
-               <term>Javadoc</term> is a tool that parses the declarations and documentation
-               comments in a set of source files and produces a set of HTML pages describing
-               the classes, interfaces, constructors, methods, and fields.
-            </p>
+            <div outputclass="row">
+               <div>
+                    <image deliveryTarget="html" scope="external" href="https://jason-fox.github.io/fox.jason.passthrough.javadoc/javalogo.png" outputclass="float-start mt-1 me-3" height="55"/>
+                    <p>
+                       <term>Javadoc</term> is a tool that parses the declarations and documentation
+                       comments in a set of source files and produces a set of HTML pages describing
+                       the classes, interfaces, constructors, methods, and fields.
+                    </p>
+                </div>
+            </div>
             <p>
                <term>Javadoc</term> supports doclets used to customize Javadoc output. A doclet
                is a program written with the Doclet API that specifies the content and format

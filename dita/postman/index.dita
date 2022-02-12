@@ -24,13 +24,17 @@
     <topic id="background">
         <title>Background</title>
         <body>
-            <image deliveryTarget="html" scope="external" href="https://assets.getpostman.com/common-share/postman-logo-horizontal-orange.svg" outputclass="float-start mt-1 me-3" height="55"/>
-            <p>
-               <term>Postman</term> is a software development tool which a developer can use to
-               build, publish, document, design, monitor, test and debug their REST APIs. More
-               information about <term>Postman</term> can be found at <xref
-               href="https://www.postman.com/" format="html" scope="external">postman.com</xref>.
-            </p>
+            <div outputclass="row">
+                <div>
+                    <image deliveryTarget="html" scope="external" href="https://assets.getpostman.com/common-share/postman-logo-horizontal-orange.svg" outputclass="float-start mt-1 me-3" height="55"/>
+                    <p>
+                       <term>Postman</term> is a software development tool which a developer can use to
+                       build, publish, document, design, monitor, test and debug their REST APIs. More
+                       information about <term>Postman</term> can be found at <xref
+                       href="https://www.postman.com/" format="html" scope="external">postman.com</xref>.
+                    </p>
+                </div>
+            </div>
             <p>
                This plugin processes a Postman collection to Pandoc markdown, and the converts
                the markdown to DITA using the <xref href="../pandoc/index.dita"

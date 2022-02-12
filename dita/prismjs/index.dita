@@ -31,21 +31,19 @@
     <topic id="background">
         <title>Background</title>
         <body>
-            <div>
-                <image deliveryTarget="html" scope="external" href="https://pbs.twimg.com/profile_images/2451426554/Screen_Shot_2012-07-31_at_21.57.03__400x400.png" outputclass="float-start mt-1 me-3" height="55"/>
-                <p>
-                   <term>Prism</term> is a lightweight, extensible syntax highlighter, built with
-                   modern web standards in mind. It’s a spin-off project from <xref
-                   href="http://dabblet.com/" format="html" scope="external"> Dabblet</xref>.
-                </p>
-                <p deliveryTarget="html">
-                </p>
-                <p deliveryTarget="html">
-                </p>
+            <div outputclass="row">
+                <div>
+                    <image deliveryTarget="html" scope="external" href="https://pbs.twimg.com/profile_images/2451426554/Screen_Shot_2012-07-31_at_21.57.03__400x400.png" outputclass="float-start mt-1 me-3" height="55"/>
+                    <p>
+                       <term>Prism</term> is a lightweight, extensible syntax highlighter, built with
+                       modern web standards in mind. It’s a spin-off project from <xref
+                       href="http://dabblet.com/" format="html" scope="external"> Dabblet</xref>.
+                    </p>
+                </div>
             </div>
             <ul>
                 <li>
-                   Highlights embedded languages (e.g. CSS inside HTML, JavaScript inside HTML)
+                   Highlights embedded languages (e.g. CSS inside HTML, JavaScript inside HTML)
                 </li>
                 <li>
                    Highlights inline code (<xmlelement>codeph</xmlelement>) as well, not just code

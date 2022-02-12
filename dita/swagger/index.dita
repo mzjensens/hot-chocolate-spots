@@ -24,15 +24,19 @@
     <topic id="background">
         <title>Background</title>
         <body>
-            <image deliveryTarget="html" scope="external" href="https://swagger.io/swagger/media/assets/images/swagger_logo.svg" outputclass="float-start mt-1 me-3" height="55"/>
-            <p>
-               <term>Swagger</term> is an open-source software framework backed by a large
-               ecosystem of tools that helps developers design, build, document, and consume
-               RESTful Web services. While most users identify Swagger by the Swagger UI tool,
-               the Swagger toolset includes support for automated documentation, code
-               generation, and test-case generation. More information about
-               <term>Swagger</term> can be found at <xref href="https://swagger.io/" format="html" scope="external">swagger.io</xref>.
-            </p>
+            <div outputclass="row">
+                <div>
+                    <image deliveryTarget="html" scope="external" href="https://swagger.io/swagger/media/assets/images/swagger_logo.svg" outputclass="float-start mt-1 me-3" height="55"/>
+                    <p>
+                       <term>Swagger</term> is an open-source software framework backed by a large
+                       ecosystem of tools that helps developers design, build, document, and consume
+                       RESTful Web services. While most users identify Swagger by the Swagger UI tool,
+                       the Swagger toolset includes support for automated documentation, code
+                       generation, and test-case generation. More information about
+                       <term>Swagger</term> can be found at <xref href="https://swagger.io/" format="html" scope="external">swagger.io</xref>.
+                    </p>
+                </div>
+            </div>
             <p>
                <xref href="https://github.com/swagger2markup/swagger2markup" format="html"
                scope="external">Swagger2Markup</xref> converts a Swagger JSON or YAML file

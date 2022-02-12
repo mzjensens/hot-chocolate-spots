@@ -28,12 +28,16 @@
         <body>
             <section id="the-cat-api">
                 <title outputclass="h4 text-secondary">The Cat API</title>
-                <image deliveryTarget="html" scope="external" href="https://cdn2.thecatapi.com/logos/thecatapi_256xW.png" outputclass="float-start mt-1 me-3" height="55"/>
-                <p>
-                   The <term>Cat API</term> was created by Aden Forshaw back in 2012 as a way to
-                   give back and help teach people to code, it’s now been used by thousands of App
-                   developers making all sorts of weird &amp; wonderful creations.
-                </p>
+                <div outputclass="row">
+                    <div>
+                        <image deliveryTarget="html" scope="external" href="https://cdn2.thecatapi.com/logos/thecatapi_256xW.png" outputclass="float-start mt-1 me-3" height="55"/>
+                        <p>
+                           The <term>Cat API</term> was created by Aden Forshaw back in 2012 as a way to
+                           give back and help teach people to code, it’s now been used by thousands of App
+                           developers making all sorts of weird &amp; wonderful creations.
+                        </p>
+                    </div>
+                </div>
                 <p>
                    It allows anyone to build apps that search for Cat images, upload their own,
                    vote or favourite them, and to allow their users to do the same.
@@ -52,14 +56,18 @@
             </section>
             <section id="xkcd">
                 <title outputclass="h4 text-secondary">XKCD</title>
-                <image deliveryTarget="html" scope="external" href="https://xkcd.com/s/0b7742.png" outputclass="float-start mt-1 me-3" height="55"/>
-                <p>
-                   <term>xkcd</term>, sometimes styled <term>XKCD</term> is a webcomic created by
-                   Randall Munroe. The comic’s tagline describes it as "A webcomic of romance,
-                   sarcasm, math, and language". Munroe states on the comic’s website that the
-                   name of the comic is not an initialism but "just a word with no phonetic
-                   pronunciation".
-                </p>
+                <div outputclass="row">
+                    <div>
+                        <image deliveryTarget="html" scope="external" href="https://xkcd.com/s/0b7742.png" outputclass="float-start mt-1 me-3" height="55"/>
+                        <p>
+                           <term>xkcd</term>, sometimes styled <term>XKCD</term> is a webcomic created by
+                           Randall Munroe. The comic’s tagline describes it as "A webcomic of romance,
+                           sarcasm, math, and language". Munroe states on the comic’s website that the
+                           name of the comic is not an initialism but "just a word with no phonetic
+                           pronunciation".
+                        </p>
+                    </div>
+                </div>
                 <p>
                    The subject matter of the comic varies from statements on life and love to
                    mathematical, programming, and scientific in-jokes. Some strips feature simple

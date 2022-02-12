@@ -26,12 +26,16 @@
     <topic id="background">
         <title>Background</title>
         <body>
-            <image deliveryTarget="html" scope="external" href="https://jason-fox.github.io/fox.jason.passthrough.pandoc/pandoc-300x194.png" outputclass="float-start me-3" height="55"/>
-            <p>
-               <term>Pandoc</term> is a Haskell library for converting from one markup format
-               to another, and a command-line tool that uses this library. It can convert from
-               the following formats:
-            </p>
+            <div outputclass="row">
+                <div>
+                    <image deliveryTarget="html" scope="external" href="https://jason-fox.github.io/fox.jason.passthrough.pandoc/pandoc-300x194.png" outputclass="float-start me-3" height="55"/>
+                    <p>
+                       <term>Pandoc</term> is a Haskell library for converting from one markup format
+                       to another, and a command-line tool that uses this library. It can convert from
+                       the following formats:
+                    </p>
+                </div>
+            </div>
             <ul>
                 <li>
                    <b>Markdown:</b><codeph>commonmark</codeph> (<xref href="http://commonmark.org"
