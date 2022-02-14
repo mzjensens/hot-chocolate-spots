@@ -9,7 +9,7 @@
            which are missing from the vanilla DITA specification. These can be
            accommodated using the <xmlatt>props</xmlatt> attribute added to <xmlelement>ph</xmlelement>
            tag. Examples are given below. The listing is mainly based on the <xref
-           href="https://www.ibm.com/support/knowledgecenter/ssmqsv-6.1.1/com.ibm.voicetools.ssml.doc/tts-ssml.pdf"
+           href="https://www.ibm.com/docs/en/SSMQSV_6.1.1/com.ibm.voicetools.ssml.doc/tts_ssml.pdf"
            format="html" scope="external">IBM Text to Speech Programming Guide</xref>,
            however the DITA plug-in is not service specific so some additional tags can be
            used. Obviously common substitutions should be replaced with <xmlelement>keyword</xmlelement>
