@@ -4,7 +4,7 @@
     <title>Configuration</title>
     <body>
         <section id="internationalization">
-            <title outputclass="h4 text-secondary">Internationalization</title>
+            <title>Internationalization</title>
             <p>
                The spelling and grammar checker currently supports three languages:
             </p>
@@ -38,7 +38,7 @@
             </p>
         </section>
         <section id="adding-new-mis-spellings-to-the-plug-in">
-            <title outputclass="h4 text-secondary">Adding new mis-spellings to the plug-in</title>
+            <title>Adding new mis-spellings to the plug-in</title>
             <p>
                The list of misspelt words to check when spell-checking can be altered by
                amending entries in the xml files under <filepath>cfg/dictionary</filepath>.
@@ -66,7 +66,7 @@
             <codeblock scale="80" outputclass="language-xml"><coderef href="./src/entry.xml"/></codeblock>
         </section>
         <section id="altering-the-severity-of-a-validator-rule">
-            <title outputclass="h4 text-secondary">Altering the severity of a validator rule</title>
+            <title>Altering the severity of a validator rule</title>
             <p>
                The severity of a validator rule can be altered by amending entries in the
                <filepath>cfg/ruleset/default.xml</filepath> file The plug-in supports four

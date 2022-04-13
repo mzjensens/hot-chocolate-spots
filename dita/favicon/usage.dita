@@ -23,7 +23,7 @@
   <parmname>--input</parmname> <filepath>document.ditamap</filepath> \
   <parmname>--args.faviconpath</parmname>=<filepath>https://example.com/static/assets</filepath></codeblock>
         <section id="parameter-reference">
-            <title outputclass="h4 text-secondary">Parameter Reference</title>
+            <title>Parameter Reference</title>
                <indexterm><parmname>args.favicon</parmname>
             </indexterm>
                <indexterm><parmname>args.faviconpath</parmname>

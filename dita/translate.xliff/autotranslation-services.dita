@@ -10,7 +10,7 @@
            paid version will be necessary when transforming larger documents.
         </p>
         <section id="ibm-cloud-services">
-            <title outputclass="h4 text-secondary">IBM Cloud Services</title>
+            <title>IBM Cloud Services</title>
             <div outputclass="row">
                <div>
                   <image deliveryTarget="html" scope="external" href="https://www.nasuni.com/wp-content/uploads/2017/06/ibm-cloud.png" outputclass="float-start mt-1 me-3" height="55"/>
@@ -69,7 +69,7 @@
             </p>
         </section>
         <section id="microsoft-azure">
-            <title outputclass="h4 text-secondary">Microsoft Azure</title>
+            <title>Microsoft Azure</title>
             <div outputclass="row">
                <div>
                   <image deliveryTarget="html" scope="external" href="https://www.confluent.io/wp-content/uploads/MS-Azure_logo_stacked_c-gray_rgb.png" outputclass="float-start mt-1 me-3" height="55"/>
@@ -134,7 +134,7 @@
             </p>
         </section>
         <section id="yandex-translate">
-            <title outputclass="h4 text-secondary">Yandex Translate</title>
+            <title>Yandex Translate</title>
             <div outputclass="row">
                <div>
                   <image deliveryTarget="html" scope="external" href="http://www.companieshistory.com/wp-content/uploads/2014/05/Yandex-NV.png" outputclass="float-start mt-1 me-3" height="55"/>
@@ -188,7 +188,7 @@
             </ol>
         </section>
         <section id="deepl-api">
-            <title outputclass="h4 text-secondary">DeepL API</title>
+            <title>DeepL API</title>
             <div outputclass="row">
                <div>
                   <image deliveryTarget="html" scope="external" href="https://www.deepl.com/img/logo/DeepL_LogoAndText_darkBlue.svg" outputclass="float-start mt-1 me-3" height="55"/>

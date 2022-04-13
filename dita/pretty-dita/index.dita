@@ -22,7 +22,7 @@
     </prolog>
     <body>
         <section id="example">
-            <title outputclass="h4 text-secondary">Example</title>
+            <title>Example</title>
             <p>
                A typical DITA file can contain long lines, missing carriage returns and
                un-aligned elements:

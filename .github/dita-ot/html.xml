@@ -27,7 +27,8 @@
       <param name="icons.include" value="yes"/>
       <param name="args.breadcrumbs" value="yes"/>
       <param name="menubar-toc.include" value="yes"/>
-      <param name="bootstrap.css.header" value="text-primary"/>
+      <param name="bootstrap.css.topic.title" value="text-primary"/>
+      <param name="bootstrap.css.section.title" value="h4 text-secondary"/>
     </publication>
   </deliverable>
 </project>

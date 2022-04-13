@@ -8,7 +8,7 @@
            <codeph>PATH_TO_DITA_OT/plugins/com.here.validate.svrl/sample</codeph>
         </note>
         <section id="creating-an-svrl-file">
-            <title outputclass="h4 text-secondary">Creating an SVRL file</title>
+            <title>Creating an SVRL file</title>
             <p>
                To create an SVRL file use the <option>svrl</option> transform with the
                <parmname>--args.validate.mode</parmname>=<option>report</option> parameter.
@@ -35,7 +35,7 @@
             </fig>
         </section>
         <section id="echoing-results-to-the-command-line">
-            <title outputclass="h4 text-secondary">Echoing results to the command line</title>
+            <title>Echoing results to the command line</title>
             <p>
                To echo results to the command line use the <option>svrl</option> transform
                without specifying a <option>report</option>
@@ -71,7 +71,7 @@
     <parmname>--args.validate.color</parmname>=<option>true</option></codeblock>
         </section>
         <section id="fix-common-errors-automatically">
-            <title outputclass="h4 text-secondary">Fix common errors automatically</title>
+            <title>Fix common errors automatically</title>
             <p>
                To run the auto-fix command from the command line use the <option>svrl</option>
                transform with the <parmname>--args.validate.mode</parmname>=<option>fix-dita</option> parameter.
@@ -85,7 +85,7 @@
             </p>
         </section>
         <section id="parameter-reference">
-            <title outputclass="h4 text-secondary">Parameter Reference</title>
+            <title>Parameter Reference</title>
                <indexterm><parmname>args.validate.ignore.rules</parmname>
             </indexterm>
                <indexterm><parmname>args.validate.blacklist</parmname>

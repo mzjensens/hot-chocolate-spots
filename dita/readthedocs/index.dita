@@ -38,7 +38,7 @@
                 <codeblock scale="80" outputclass="language-xml"><coderef href="./src/document.ditamap"/></codeblock>
             </fig>
             <section id="limitations">
-                <title outputclass="h4 text-secondary">Limitations</title>
+                <title>Limitations</title>
                 <p>
                    It is assumed that the underlying markdown is well-formed and usable by DITA-OT
                    - in other words every heading must be at most one level deeper that the

@@ -8,7 +8,7 @@
            document.
         </p>
         <section id="prettifying-dita-files-for-a-document">
-            <title outputclass="h4 text-secondary">Prettifying DITA files for a document</title>
+            <title>Prettifying DITA files for a document</title>
             <p>
                To prettify DITA files for a document, set the <parmname>transtype</parmname>
                parameter to <option>pretty-dita</option>, or pass the <parmname>--format</parmname>=<option>pretty-dita</option>
@@ -22,7 +22,7 @@
             </p>
         </section>
         <section id="prettifying-a-single-dita-file">
-            <title outputclass="h4 text-secondary">Prettifying a single DITA file</title>
+            <title>Prettifying a single DITA file</title>
             <p>
                Alternatively, to prettify a single DITA file, set the <parmname>--input</parmname>
                parameter to point to a <codeph>*.dita</codeph> file:
@@ -34,7 +34,7 @@
             </p>
         </section>
         <section id="parameter-reference">
-            <title outputclass="h4 text-secondary">Parameter Reference</title>
+            <title>Parameter Reference</title>
                <indexterm><parmname>args.indent</parmname>
             </indexterm>
                <indexterm><parmname>args.style</parmname>
@@ -84,7 +84,7 @@
             </ul>
         </section>
         <section id="ignoring-dita-files">
-            <title outputclass="h4 text-secondary">Ignoring DITA files</title>
+            <title>Ignoring DITA files</title>
             <p>
                The prettifier will ignore any DITA file containing a comment starting <codeph>prettier-ignore</codeph>
                - the file will not be updated.

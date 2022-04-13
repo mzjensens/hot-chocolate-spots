@@ -4,7 +4,7 @@
     <title>Error Messages</title>
     <body>
         <section id="sample-document">
-            <title outputclass="h4 text-secondary">Sample Document</title>
+            <title>Sample Document</title>
             <p>
                A sample document can be found within the plug-in which can used to test plug-in
                rules. The document covers both positive and negative test cases. The sample
@@ -34,7 +34,7 @@
             </ul>
         </section>
         <section id="spell-checker-error-messages">
-            <title outputclass="h4 text-secondary">Spell-checker Error Messages</title>
+            <title>Spell-checker Error Messages</title>
             <p>
                The following table list the spell-checker error messages by message ID.
             </p>

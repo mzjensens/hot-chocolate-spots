@@ -10,7 +10,7 @@
             </p>
         </note>
         <section id="obtaining-a-unit-test-report">
-            <title outputclass="h4 text-secondary">Obtaining a unit test report</title>
+            <title>Obtaining a unit test report</title>
             <p>
                To run, use the <option>unit-test</option> transform.
             </p>
@@ -44,7 +44,7 @@
             </ul>
         </section>
         <section id="xslt-coverage-report">
-            <title outputclass="h4 text-secondary">XSLT Coverage Report</title>
+            <title>XSLT Coverage Report</title>
             <p>
                To run a XSLT Coverage Report, each DITA-OT Plug-In must be <b>instrumented</b>
                - this annotates the XSLT templates within the plugin to be able to generate
@@ -90,7 +90,7 @@
      <parmname>--input</parmname> PATH_TO_PLUGIN</codeblock>
         </section>
         <section id="sample-xsl-report">
-            <title outputclass="h4 text-secondary">Sample XSL Report</title>
+            <title>Sample XSL Report</title>
             <p>
                The XSL coverage report will show a schematic of all template decision points,
                with covered lines displayed in green, and uncovered lines displayed in red.
@@ -103,7 +103,7 @@
             </fig>
         </section>
         <section id="token-coverage-report">
-            <title outputclass="h4 text-secondary">Token Coverage Report</title>
+            <title>Token Coverage Report</title>
             <p>
                This is a quicker alternative report to XSLT instrumentation and code coverage,
                but it requires the developer to create the token <codeph>coverage.xml</codeph>
@@ -118,7 +118,7 @@
             </p>
         </section>
         <section id="sample-token-report">
-            <title outputclass="h4 text-secondary">Sample Token Report</title>
+            <title>Sample Token Report</title>
             <p>
                This is the token report from the example tests found within the plug-in
                <codeph>sample</codeph> directory.
@@ -152,7 +152,7 @@
             </ul>
         </section>
         <section id="obtaining-ant-script-profile-information">
-            <title outputclass="h4 text-secondary">Obtaining ANT script profile information</title>
+            <title>Obtaining ANT script profile information</title>
             <p>
                <b>Antro</b> is a hierarchical and line-level profiler for Ant build scripts. It
                can be run to check which ANT scripts have been invoked and how long they took.
@@ -168,7 +168,7 @@
             </p>
         </section>
         <section id="viewing-profiler-information">
-            <title outputclass="h4 text-secondary">Viewing profiler information</title>
+            <title>Viewing profiler information</title>
             <p>
                To run the UI for the Antro profiler, use the <option>antro-ui</option>
                transform. The <parmname>--input</parmname> parameter is mandatory for all
@@ -203,7 +203,7 @@
             </fig>
         </section>
         <section id="parameter-reference">
-            <title outputclass="h4 text-secondary">Parameter Reference</title>
+            <title>Parameter Reference</title>
                <indexterm><parmname>test.colorize</parmname>
             </indexterm>
                <indexterm><parmname>test.copy</parmname>

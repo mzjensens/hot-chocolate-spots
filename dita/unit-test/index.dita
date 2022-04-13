@@ -26,7 +26,7 @@
         <title>Transforms</title>
         <body>
             <section id="unit-testing">
-                <title outputclass="h4 text-secondary">Unit Testing</title>
+                <title>Unit Testing</title>
                 <ul>
                     <li>
                        The <option>unit-test</option> transform allows a user to runs a sequence of <cmdname>dita</cmdname>
@@ -41,7 +41,7 @@
                 </ul>
             </section>
             <section id="code-coverage">
-                <title outputclass="h4 text-secondary">Code Coverage</title>
+                <title>Code Coverage</title>
                 <ul>
                     <li>
                        The <option>token-report</option> transform checks to see if a series of tokens
@@ -62,7 +62,7 @@
                 </ul>
             </section>
             <section id="profiling">
-                <title outputclass="h4 text-secondary">ANT Profiling</title>
+                <title>ANT Profiling</title>
                 <ul>
                     <li>
                        The <option>antro</option> transform runs an ANT script profiler against a

@@ -22,7 +22,7 @@
            extension points described below.
         </p>
         <section id="extension-points">
-            <title outputclass="h4 text-secondary">Extension points</title>
+            <title>Extension points</title>
             <indexterm>ANT</indexterm>
                <indexterm><parmname>extend.css.process.pre</parmname>
             </indexterm>
@@ -51,7 +51,7 @@
             </ul>
         </section>
         <section id="example">
-            <title outputclass="h4 text-secondary">Example</title>
+            <title>Example</title>
             <p>
                The following <codeph>plugin.xml</codeph> will invoke an extension point and
                append additional CSS to <codeph>extend.css.file</codeph> which is copied to

@@ -8,7 +8,7 @@
            <filepath>PATH_TO_DITA_OT/plugins/com.here.validate.svrl.text-rules/sample</filepath>
         </note>
         <section id="creating-an-svrl-file">
-            <title outputclass="h4 text-secondary">Creating an SVRL file</title>
+            <title>Creating an SVRL file</title>
             <p>
                To create an SVRL file with the spell-checker plug-in use the <option>text-rules</option>
                transform with the <parmname>--args.validate.mode=report</parmname> parameter.
@@ -34,7 +34,7 @@
             </fig>
         </section>
         <section id="echoing-results-to-the-command-line">
-            <title outputclass="h4 text-secondary">Echoing results to the command line</title>
+            <title>Echoing results to the command line</title>
             <p>
                To echo results to the command line with the spell-checker plug-in use the
                <option>text-rules</option> transform without specifying a <option>report</option>.
@@ -63,7 +63,7 @@
             </fig>
         </section>
         <section id="auto-correction-from-the-command-line">
-            <title outputclass="h4 text-secondary">Auto-correction from the command line</title>
+            <title>Auto-correction from the command line</title>
             <p>
                To auto-correct spelling mistakes with the spell-checker plug-in use the
                <option>auto-correct</option> transform.
@@ -85,7 +85,7 @@
             </note>
         </section>
         <section id="parameter-reference">
-            <title outputclass="h4 text-secondary">Parameter Reference</title>
+            <title>Parameter Reference</title>
                <indexterm><parmname>args.validate.ignore.rules</parmname>
             </indexterm>
                <indexterm><parmname>args.validate.blacklist</parmname>

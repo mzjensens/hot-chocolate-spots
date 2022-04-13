@@ -13,7 +13,7 @@
     </prolog>
     <body>
         <section id="adding-a-new-fixable-rule">
-            <title outputclass="h4 text-secondary">Adding a new fixable rule</title>
+            <title>Adding a new fixable rule</title>
             <p>
                An editable macrofile can be found in <filepath>cfg/rulesset/fix-macros.xml</filepath>.
                If a rule can be auto fixed, a macro should be added to the file in the
@@ -56,7 +56,7 @@
             </ul>
         </section>
         <section id="amending-a-fixable-rule">
-            <title outputclass="h4 text-secondary">Amending a fixable rule</title>
+            <title>Amending a fixable rule</title>
             <p>
                The default functionality applied to fix a broken rule can be amended by
                altering the macro. If a rule is inactive within the ruleset it will not be fixed.

@@ -22,7 +22,7 @@
            By default the output PDF will be watermarked as a <b>DRAFT</b>.
         </p>
         <section id="parameter-reference">
-            <title outputclass="h4 text-secondary">Parameter Reference</title>
+            <title>Parameter Reference</title>
             <ul>
                 <li>
                    <parmname>pdf.watermark</parmname> - Decides which watermark to use:

@@ -4,7 +4,7 @@
     <title>Test suite files</title>
     <body>
         <section id="bootstrap.xml-file">
-           <title outputclass="h4 text-secondary"><codeph>bootstrap.xml</codeph> file
+           <title><codeph>bootstrap.xml</codeph> file
             </title>
             <p>
                At the root of the tests lies a <codeph>bootstrap.xml</codeph> file which
@@ -28,7 +28,7 @@
             </ul>
         </section>
         <section id="coverage.xml-file">
-           <title outputclass="h4 text-secondary"><codeph>coverage.xml</codeph> file
+           <title><codeph>coverage.xml</codeph> file
             </title>
             <p>
                A token coverage file consists of a list of XML elements or string literals
@@ -38,7 +38,7 @@
             <codeblock scale="80" outputclass="language-xml"><coderef href="./src/coverage.xml"/></codeblock>
         </section>
         <section id="template-coverage.xml-file">
-           <title outputclass="h4 text-secondary"><codeph>template-coverage.xml</codeph> file
+           <title><codeph>template-coverage.xml</codeph> file
             </title>
             <p>
                An XSL coverage file consists of a list of XSL elements which are present within
@@ -47,7 +47,7 @@
             <codeblock scale="80" outputclass="language-xml"><coderef href="./src/template-coverage.xml"/></codeblock>
         </section>
         <section id="disabled.txt-file">
-           <title outputclass="h4 text-secondary"><codeph>disabled.txt</codeph> file
+           <title><codeph>disabled.txt</codeph> file
             </title>
             <p>
                If a <codeph>disabled.txt</codeph> file is present within a test suite
@@ -55,7 +55,7 @@
             </p>
         </section>
         <section id="overrides-for-attributes.xml-colors.xml-and-fonts.xml">
-           <title outputclass="h4 text-secondary">Overrides for
+           <title>Overrides for
            <codeph>attributes.xml</codeph>, <codeph>colors.xml</codeph> and <codeph>fonts.xml</codeph>
             </title>
             <p>
@@ -66,7 +66,7 @@
             </p>
         </section>
         <section id="overrides-for-test.properties">
-           <title outputclass="h4 text-secondary">Overrides for <codeph>test.properties</codeph>
+           <title>Overrides for <codeph>test.properties</codeph>
             </title>
             <p>
                Additional test properties can be passed to DITA-OT when each test is run if a

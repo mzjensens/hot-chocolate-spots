@@ -4,7 +4,7 @@
     <title>Usage</title>
     <body>
         <section id="xliff-1-2-invocation-from-the-command-line">
-            <title outputclass="h4 text-secondary">XLIFF 1.2 Invocation from the command line</title>
+            <title>XLIFF 1.2 Invocation from the command line</title>
             <p>
                1. to create an XLIFF 1.2 File and associated skeletons with run:
             </p>
@@ -46,7 +46,7 @@
             </fig>
         </section>
         <section id="xliff-2-1-invocation-from-the-command-line">
-            <title outputclass="h4 text-secondary">XLIFF 2.1 Invocation from the command line</title>
+            <title>XLIFF 2.1 Invocation from the command line</title>
             <p>
                3. to create an XLIFF 2.1 File and associated skeletons with run:
             </p>
@@ -82,7 +82,7 @@
             </fig>
         </section>
         <section id="populating-skeletons-from-the-command-line">
-            <title outputclass="h4 text-secondary">Populating Skeletons from the command line</title>
+            <title>Populating Skeletons from the command line</title>
             <p>
                5. recreate <codeph>*.dita</codeph> files using an XLIFF File and its associated
                skeletons with run:
@@ -106,7 +106,7 @@
             </note>
         </section>
         <section id="parameter-reference">
-            <title outputclass="h4 text-secondary">Parameter Reference</title>
+            <title>Parameter Reference</title>
                <indexterm><parmname>translate.from</parmname>
             </indexterm>
                <indexterm><parmname>translate.to</parmname>

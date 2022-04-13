@@ -27,7 +27,7 @@
         <title>Examples</title>
         <body>
             <section id="the-cat-api">
-                <title outputclass="h4 text-secondary">The Cat API</title>
+                <title>The Cat API</title>
                 <div outputclass="row">
                     <div>
                         <image deliveryTarget="html" scope="external" href="https://cdn2.thecatapi.com/logos/thecatapi_256xW.png" outputclass="float-start mt-1 me-3" height="55"/>
@@ -55,7 +55,7 @@
                 </fig>
             </section>
             <section id="xkcd">
-                <title outputclass="h4 text-secondary">XKCD</title>
+                <title>XKCD</title>
                 <div outputclass="row">
                     <div>
                         <image deliveryTarget="html" scope="external" href="https://xkcd.com/s/0b7742.png" outputclass="float-start mt-1 me-3" height="55"/>

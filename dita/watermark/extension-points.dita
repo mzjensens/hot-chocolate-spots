@@ -13,7 +13,7 @@
             </li>
         </ul>
         <section id="example">
-            <title outputclass="h4 text-secondary">Example</title>
+            <title>Example</title>
             <p>
                The following <codeph>plugin.xml</codeph> will enable the watermarking of PDF
                files to depend on an authorization server.

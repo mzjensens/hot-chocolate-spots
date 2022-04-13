@@ -4,13 +4,13 @@
     <title>Passthrough-Iterate</title>
     <body>
         <section id="description">
-            <title outputclass="h4 text-secondary">Description</title>
+            <title>Description</title>
             <p>
                Post process all files of a given format using the macro supplied.
             </p>
         </section>
         <section id="parameters">
-            <title outputclass="h4 text-secondary">Parameters</title>
+            <title>Parameters</title>
             <table>
                 <tgroup cols="3">
                     <colspec colname="col1" colnum="1"/>
@@ -43,7 +43,7 @@
             </table>
         </section>
         <section id="example">
-            <title outputclass="h4 text-secondary">Example</title>
+            <title>Example</title>
             <codeblock scale="80" outputclass="language-xml"> &lt;passthrough-iterate format="NEW_FORMAT" macro="do-something"/&gt;</codeblock>
             <p>
                Files marked as <xmlatt>format="NEW_FORMAT"</xmlatt> should be processed by the <codeph>macrodef</codeph>

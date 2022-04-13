@@ -8,7 +8,7 @@
            files are formatted to according to a well-defined set of rules.
         </p>
         <section id="basic-block-elements">
-            <title outputclass="h4 text-secondary">Basic Block Elements</title>
+            <title>Basic Block Elements</title>
             <p>
                By default all DITA elements (not listed in the categories below) are indented
                one level further than the containing DITA element.
@@ -21,7 +21,7 @@
 &lt;/topic&gt;</codeblock>
         </section>
         <section id="indented-block-elements">
-            <title outputclass="h4 text-secondary">Indented Block Elements</title>
+            <title>Indented Block Elements</title>
                <indexterm><xmlelement>abstract</xmlelement>
             </indexterm>
                <indexterm><xmlelement>shortdesc</xmlelement>
@@ -68,7 +68,7 @@
 &lt;/ul&gt;</codeblock>
         </section>
         <section id="inline-elements">
-            <title outputclass="h4 text-secondary">Inline Elements</title>
+            <title>Inline Elements</title>
             <p>
                The following elements are treated as inline elements, they do not warrant an
                additional line and are kept within the surrounding text.
@@ -109,7 +109,7 @@
 &lt;/p&gt;</codeblock>
         </section>
         <section id="text-elements">
-            <title outputclass="h4 text-secondary">Text Elements</title>
+            <title>Text Elements</title>
             <p>
                Text elements on a single line are kept within the containing element Text
                element on multiple lines are indented one level further than the surrounding
@@ -126,7 +126,7 @@
 &lt;/p&gt;</codeblock>
         </section>
         <section id="whitespace-sensitive-elements">
-            <title outputclass="h4 text-secondary">Whitespace sensitive elements</title>
+            <title>Whitespace sensitive elements</title>
                <indexterm><xmlelement>codeblock</xmlelement>
             </indexterm>
                <indexterm><xmlelement>lines</xmlelement>

@@ -15,7 +15,7 @@
     </prolog>
     <body>
         <section id="obtaining-a-series-of-ssml-files">
-            <title outputclass="h4 text-secondary">Obtaining a series of SSML Files</title>
+            <title>Obtaining a series of SSML Files</title>
             <p>
                To run the SSML transformation, set the <parmname>transtype</parmname> parameter to <option>ssml</option>,
                or pass the <parmname>--format</parmname>=<option>ssml</option> option to the <cmdname>dita</cmdname>
@@ -30,7 +30,7 @@
             </p>
         </section>
         <section id="obtaining-a-series-of-mp3-files">
-            <title outputclass="h4 text-secondary">Obtaining a series of MP3 Files</title>
+            <title>Obtaining a series of MP3 Files</title>
             <p>
                To run the MP3 transformation, set the <parmname>transtype</parmname> parameter to <option>mp3</option>,
                or pass the <parmname>--format</parmname>=<option>mp3</option> option to the <cmdname>dita</cmdname>
@@ -46,7 +46,7 @@
             </p>
         </section>
         <section id="creating-an-audiobook">
-            <title outputclass="h4 text-secondary">Creating an audiobook</title>
+            <title>Creating an audiobook</title>
             <p>
                To run the audiobook transformation, set the <parmname>transtype</parmname>
                parameter to <option>audiobook</option>, or pass the <parmname>--format</parmname>=<option>audiobook</option>
@@ -62,7 +62,7 @@
             </p>
         </section>
         <section id="parameter-reference">
-            <title outputclass="h4 text-secondary">Parameter Reference</title>
+            <title>Parameter Reference</title>
                <indexterm><parmname>ssml.service</parmname>
             </indexterm>
                <indexterm><parmname>ssml.gender</parmname>

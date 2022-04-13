@@ -32,7 +32,7 @@
            The <cmdname>dita</cmdname> command line tool requires no additional configuration.
         </p>
         <section id="installing-node.js">
-            <title outputclass="h4 text-secondary">Installing Node.js</title>
+            <title>Installing Node.js</title>
             <div outputclass="row">
                <div>
                     <image deliveryTarget="html" scope="external" href="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" outputclass="float-start mt-1 me-3" height="55"/>
