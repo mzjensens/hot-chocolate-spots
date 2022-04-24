@@ -35,9 +35,8 @@
                    <parmname>args.favicon</parmname> - Specifies the name of the favicon file. The
                    value of this parameter should be only the file name. The absolute path to the
                    parent directory should be specified with <parmname>args.faviconroot</parmname>.
-                   Defaults to <xref
-                   href="https://github.com/jason-fox/fox.jason.favicon/blob/master/includes/favicon.svg"
-                   scope="external"><codeph>favicon.svg</codeph></xref> - the name of the default
+                   Defaults to <xref href="https://github.com/jason-fox/fox.jason.favicon/blob/master/includes/favicon.svg" scope="external"><codeph
+            >favicon.svg</codeph></xref> - the name of the default
                    image found within the plugin itself.
                 </li>
                 <li>

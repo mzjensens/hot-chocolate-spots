@@ -54,12 +54,18 @@
                         <row>
                             <entry colname="col1" align="left">a-followed-by-vowel</entry>
                             <entry colname="col2" align="left">In the following text, change  to  where appropriate:</entry>
-                            <entry colname="col3" align="left">In English, the general guideline is that the indefinite article in front of count nouns that begin with a vowel sound should be .</entry>
+                            <entry
+                colname="col3"
+                align="left"
+              >In English, the general guideline is that the indefinite article in front of count nouns that begin with a vowel sound should be .</entry>
                         </row>
                         <row>
                             <entry colname="col1" align="left">an-followed-by-consonant</entry>
                             <entry colname="col2" align="left">In the following text, change  to  where appropriate:</entry>
-                            <entry colname="col3" align="left">In English, the general guideline is that the indefinite article in front of count nouns that begin with a consonant sound should be .</entry>
+                            <entry
+                colname="col3"
+                align="left"
+              >In English, the general guideline is that the indefinite article in front of count nouns that begin with a consonant sound should be .</entry>
                         </row>
                         <row>
                             <entry colname="col1" align="left">blacklisted-word</entry>
@@ -94,12 +100,18 @@
                         <row>
                             <entry colname="col1" align="left">incorrect-spelling</entry>
                             <entry colname="col2" align="left">The word  is a spelling mistake in the following text:</entry>
-                            <entry colname="col3" align="left">The indicated word is not spelled correctly. Fix the spelling. It is assumed that documentation follows US English spelling conventions.</entry>
+                            <entry
+                colname="col3"
+                align="left"
+              >The indicated word is not spelled correctly. Fix the spelling. It is assumed that documentation follows US English spelling conventions.</entry>
                         </row>
                         <row>
                             <entry colname="col1" align="left">latin-abbreviation</entry>
                             <entry colname="col2" align="left">The accronym i.e or e.g has been used in the following text:</entry>
-                            <entry colname="col3" align="left">Latin accronyms are difficult to understand. Consider rewriting the phrase using alternatives, such as "for example"</entry>
+                            <entry
+                colname="col3"
+                align="left"
+              >Latin accronyms are difficult to understand. Consider rewriting the phrase using alternatives, such as "for example"</entry>
                         </row>
                         <row>
                             <entry colname="col1" align="left">sentence-capitalization</entry>
@@ -109,7 +121,10 @@
                         <row>
                             <entry colname="col1" align="left">split-inifinitive</entry>
                             <entry colname="col2" align="left">The phrase  is written using a split-infinitive in the following text:</entry>
-                            <entry colname="col3" align="left">The indicated sentence includes a split-infinitive, which is considered poor grammatical style - consider rephrasing the sentence.</entry>
+                            <entry
+                colname="col3"
+                align="left"
+              >The indicated sentence includes a split-infinitive, which is considered poor grammatical style - consider rephrasing the sentence.</entry>
                         </row>
                         <row>
                             <entry colname="col1" align="left">where-not-were</entry>

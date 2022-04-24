@@ -12,8 +12,7 @@
             <p>
                To completely remove rules which do not apply to your document set, you can
                create a customized DITA-OT plug-in which extends the base validator. See the
-               <xref href="https://github.com/jason-fox/com.here.validate.svrl.overrides"
-               format="html" scope="external">Extended DITA Validator</xref> as an example of
+               <xref href="https://github.com/jason-fox/com.here.validate.svrl.overrides" format="html" scope="external">Extended DITA Validator</xref> as an example of
                how to do this.
             </p>
         </section>
@@ -28,7 +27,8 @@
                For example to ignore the <codeph>table-id-missing</codeph> validation rule
                within a document you would run:
             </p>
-            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> -f <option>svrl-echo</option><parmname>--input</parmname> <filepath>document.ditamap</filepath> -D<parmname>args.validate.ignore.rules</parmname>=table-id-missing</codeblock>
+            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> -f <option>svrl-echo</option><parmname>--input</parmname> <filepath
+        >document.ditamap</filepath> -D<parmname>args.validate.ignore.rules</parmname>=table-id-missing</codeblock>
         </section>
         <section id="ignoring-a-specific-instance-of-a-validator-rule">
             <title>Ignoring a specific instance of a validator rule</title>

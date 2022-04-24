@@ -5,8 +5,10 @@
     <body>
         <p>
            To download a copy of <term>Pandoc</term> follow the instructions on the <xref
-           href="https://github.com/jgm/pandoc/blob/master/install.md" format="html"
-           scope="external">Install page</xref>.
+        href="https://github.com/jgm/pandoc/blob/master/install.md"
+        format="html"
+        scope="external"
+      >Install page</xref>.
         </p>
     </body>
 </topic>

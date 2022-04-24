@@ -7,9 +7,7 @@
            The following tables list the validator error messages by type and message ID.
            Base DITA validator rules are in normal text. Rules in <b>bold</b> are examples
            of custom rules which can be detected if the <codeph>overrides</codeph>
-           transform from the <xref
-           href="https://github.com/jason-fox/com.here.validate.svrl.overrides"
-           format="html" scope="external">Extended DITA Validator</xref> is used.
+           transform from the <xref href="https://github.com/jason-fox/com.here.validate.svrl.overrides" format="html" scope="external">Extended DITA Validator</xref> is used.
         </p>
         <section id="content-validation">
             <title>Content Validation</title>
@@ -120,8 +118,10 @@
                                content in the <xmlelement>codeblock</xmlelement> element is JSON use the key
                                value pair <xmlatt>outputclass="language-javascript"</xmlatt>. For more
                                information on the <xmlelement>codeblock</xmlelement> element, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/codeblock.html"
-                               format="html" scope="external">codeblock</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/codeblock.html"
+                  format="html"
+                  scope="external"
+                >codeblock</xref>.
                             </entry>
                         </row>
                         <row outputclass="table-success">
@@ -135,8 +135,10 @@
                                the size of the code text in the output to make it easier to read (the values
                                are percent). We recommend you set the scale to 80 percent. For more
                                information on the <xmlelement>codeblock</xmlelement> element, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/codeblock.html"
-                               format="html" scope="external">codeblock</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/codeblock.html"
+                  format="html"
+                  scope="external"
+                >codeblock</xref>.
                             </entry>
                         </row>
                         <row outputclass="table-success">
@@ -151,8 +153,10 @@
                                for importing documentation segements reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
-                               format="html" scope="external">conref</xref>. When you get this error, the
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                  format="html"
+                  scope="external"
+                >conref</xref>. When you get this error, the
                                source file specified in the <xmlatt>conref</xmlatt> attribute references a
                                file with an invalid name. For instance, if you define the <xmlatt>conref</xmlatt>
                                attribute as follows <xmlelement>p
@@ -194,8 +198,10 @@
                             </entry>
                                <entry colname="col4" align="left">In order to assist with search engine
                                optimization (SEO) of content, all <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/fig.html"
-                               format="html" scope="external">figure</xref> elements must have an <xmlatt>id</xmlatt>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/fig.html"
+                  format="html"
+                  scope="external"
+                >figure</xref> elements must have an <xmlatt>id</xmlatt>.
                             </entry>
                         </row>
                         <row>
@@ -207,8 +213,10 @@
                             </entry>
                                <entry colname="col4" align="left">In order to assist with search engine
                                optimization (SEO) of content, all <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/fig.html"
-                               format="html" scope="external">figure</xref> elements must have an <xmlatt>id</xmlatt>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/fig.html"
+                  format="html"
+                  scope="external"
+                >figure</xref> elements must have an <xmlatt>id</xmlatt>.
                             </entry>
                         </row>
                         <row outputclass="table-success">
@@ -219,7 +227,10 @@
                                invalid name, allowed characters in file names are: lowercase, a-z only, words
                                separated by hyphens.
                             </entry>
-                            <entry colname="col4" align="left">In order to assist with search engine optimization (SEO) of content, file names must be lower case. Fix the name as appropriate.</entry>
+                            <entry
+                colname="col4"
+                align="left"
+              >In order to assist with search engine optimization (SEO) of content, file names must be lower case. Fix the name as appropriate.</entry>
                         </row>
                         <row outputclass="table-success">
                            <entry colname="col1" align="left"><b>YES</b>
@@ -245,9 +256,7 @@
                                <entry colname="col4" align="left"><b>Custom Rule</b>: Some delivery channels
                                used to deliver content to customers may be configured to already use certain <xmlatt>id</xmlatt>
                                values. Change the word content to another <xmlatt>id</xmlatt>. For more information on <xmlatt>id</xmlatt>
-                               attributes, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html"
-                               format="html" scope="external">id</xref>.
+                               attributes, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html" format="html" scope="external">id</xref>.
                             </entry>
                         </row>
                         <row outputclass="table-success">
@@ -269,9 +278,7 @@
                                include arbitrary strings to indicate the contents of the chapter, topic type,
                                etc. - Do not include computer-generated text such as <codeph>topic-2</codeph>
                                or <codeph>GUID-1234-5678-1234</codeph>. For more information on <xmlatt>id</xmlatt>
-                               atrributes, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html"
-                               format="html" scope="external">id</xref>.
+                               atrributes, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html" format="html" scope="external">id</xref>.
                             </entry>
                         </row>
                         <row>
@@ -296,8 +303,10 @@
                             </entry>
                                <entry colname="col4" align="left">In order to assist with search engine
                                optimization (SEO), all <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/section.html"
-                               format="html" scope="external">section</xref> elements must have an <xmlatt>id</xmlatt>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/section.html"
+                  format="html"
+                  scope="external"
+                >section</xref> elements must have an <xmlatt>id</xmlatt>.
                             </entry>
                         </row>
                         <row>
@@ -310,8 +319,10 @@
                                <entry colname="col4" align="left">In order to assist with search engine
                                optimization (SEO), add an <xmlatt>id</xmlatt> to <xmlelement>table</xmlelement>
                                elements. For more information on tables, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
-                               format="html" scope="external">table</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
+                  format="html"
+                  scope="external"
+                >table</xref>.
                             </entry>
                         </row>
                         <row outputclass="table-success">
@@ -326,10 +337,11 @@
                                optimization (SEO) of content, the <xmlatt>id</xmlatt> for <xmlelement>topic</xmlelement>
                                elements must be the same as the file name, which also ends up by the name of
                                the HTML file. For more information on topics, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topic.html"
-                               format="html" scope="external">topic</xref>. For more information on <xmlatt>id</xmlatt>,
-                               see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/id.html"
-                               format="html" scope="external">id</xref>
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topic.html"
+                  format="html"
+                  scope="external"
+                >topic</xref>. For more information on <xmlatt>id</xmlatt>,
+                               see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/id.html" format="html" scope="external">id</xref>
                             </entry>
                         </row>
                         <row outputclass="table-success">
@@ -343,9 +355,7 @@
                                <entry colname="col4" align="left">Specify a value for the <xmlatt>format</xmlatt>
                                attribute for <xmlelement>xref</xmlelement> elements. Examples of valid values include <codeph>dita</codeph>,<codeph>html</codeph>,
                                and <codeph>pdf</codeph>. For more information on <xmlelement>xref</xmlelement>
-                               elements, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
-                               format="html" scope="external">xref</xref>.
+                               elements, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html" format="html" scope="external">xref</xref>.
                             </entry>
                         </row>
                     </tbody>
@@ -383,25 +393,24 @@
                                the following two attributes: <xmlatt>navtitle="..." lockitle="yes"</xmlatt>.
                                This approach has the effect of adding a title but not content on the chapter
                                page/node. For more information on the <xmlelement>chapter</xmlelement>
-                               element, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/chapter.html"
-                               format="html" scope="external">chapter</xref>.
+                               element, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/chapter.html" format="html" scope="external">chapter</xref>.
                             </entry>
                         </row>
                         <row>
                            <entry colname="col1" align="left"><b>NO</b>
                             </entry>
                             <entry colname="col2" align="left">coderef-href-ref-file-not-found</entry>
-                            <entry colname="col3" align="left">The linked source file does not exist. Check the related folder for the missing file and make sure the file name is correct.</entry>
+                            <entry
+                colname="col3"
+                align="left"
+              >The linked source file does not exist. Check the related folder for the missing file and make sure the file name is correct.</entry>
                                <entry colname="col4" align="left">The <xmlelement>coderef</xmlelement> element
                                is generally used for importing a source file when the validator builds the
                                document. When you get this error, the reference cannot be resolved. Note that
                                DITA does not allow you to reference files outside the root folder of the
                                document. By default, these files should be in the <xmlatt>source</xmlatt>
                                folder under the document root folder. For more information on the <xmlelement>coderef</xmlelement>
-                               element, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/codeblock.html"
-                               format="html" scope="external">codeblock</xref>.
+                               element, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/codeblock.html" format="html" scope="external">codeblock</xref>.
                             </entry>
                         </row>
                         <row>
@@ -416,21 +425,28 @@
                                following codeblock illustrates well-formated DITA that complies with this
                                requirement. <xmlelement>colspec colnum="1"/&gt;&lt;colspec colnum="2"/&gt;&lt;colspec colnum="3"/</xmlelement>
                                For more information on the <xmlelement>table</xmlelement> element, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
-                               format="html" scope="external">table</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
+                  format="html"
+                  scope="external"
+                >table</xref>.
                             </entry>
                         </row>
                         <row>
                            <entry colname="col1" align="left"><b>NO</b>
                             </entry>
                             <entry colname="col2" align="left">conref-external-file-not-found</entry>
-                            <entry colname="col3" align="left">The linked file does not exist. Check the related folder for the missing file and make sure the file name is correct.</entry>
+                            <entry
+                colname="col3"
+                align="left"
+              >The linked file does not exist. Check the related folder for the missing file and make sure the file name is correct.</entry>
                                <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
                                for importing documentation segements reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
-                               format="html" scope="external">conref</xref>. When you get this error, the
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                  format="html"
+                  scope="external"
+                >conref</xref>. When you get this error, the
                                referenced file cannot be resolved. Note that DITA does not allow you to
                                reference files outside the root folder of the document. By default, this kind
                                of content should be in the <codeph>includes.dita</codeph> file.
@@ -448,8 +464,10 @@
                                for importing documentation segements reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
-                               format="html" scope="external">conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                  format="html"
+                  scope="external"
+                >conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
                                in the source file specified in the <xmlatt>conref</xmlatt> attribute is an <xmlatt>id</xmlatt>
                                for an element that is of a different type than the element with the <xmlatt>conref</xmlatt>
                                attribute. DITA requires that <xmlatt>conref</xmlatt> attributes point at the
@@ -469,8 +487,10 @@
                                for importing documentation segements reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
-                               format="html" scope="external">conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                  format="html"
+                  scope="external"
+                >conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
                                in the source file specified in the <xmlatt>conref</xmlatt> attribute cannot be
                                resolved. For instance, if you define the <xmlatt>conref</xmlatt> attribute as
                                follows <xmlelement>p conref="includes.dita#includes/submission-note"</xmlelement>
@@ -487,8 +507,10 @@
                                for importing documentation segements reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
-                               format="html" scope="external">conref</xref>. When you get this error, the
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                  format="html"
+                  scope="external"
+                >conref</xref>. When you get this error, the
                                source file specified in the <xmlatt>conref</xmlatt> attribute cannot be
                                resolved. For instance, if you define the <xmlatt>conref</xmlatt> attribute as
                                follows <xmlelement>p conref="includes.dita#includes/submission-note"</xmlelement>
@@ -509,8 +531,10 @@
                                for importing documentation segements reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
-                               format="html" scope="external">conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                  format="html"
+                  scope="external"
+                >conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
                                in the source file specified in the <xmlatt>conref</xmlatt> attribute is an <xmlatt>id</xmlatt>
                                for an element that is of a different type than the element with the <xmlatt>conref</xmlatt>
                                attribute. DITA requires that <xmlatt>conref</xmlatt> attributes point at the
@@ -530,8 +554,10 @@
                                for importing documentation segements reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
-                               format="html" scope="external">conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                  format="html"
+                  scope="external"
+                >conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
                                specified in the <xmlatt>conref</xmlatt> attribute cannot be resolved. For
                                instance, if you define the <xmlatt>conref</xmlatt> attribute as follows
                                <xmlelement>p conref="submission-note"</xmlelement> and you get this error,
@@ -551,8 +577,10 @@
                                for importing documentation segements reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
-                               format="html" scope="external">conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                  format="html"
+                  scope="external"
+                >conref</xref>. When you get this error, the referenced <xmlatt>id</xmlatt>
                                specified in the <xmlatt>conref</xmlatt> attribute is an ID for an element that
                                is of a different type than the element with the <xmlatt>conref</xmlatt>
                                attribute. DITA requires that <xmlatt>conref</xmlatt> attributes point at the
@@ -570,8 +598,10 @@
                                for importing documentation segements reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
-                               format="html" scope="external">conref</xref>. When you get this error, the
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
+                  format="html"
+                  scope="external"
+                >conref</xref>. When you get this error, the
                                value specified in the <xmlatt>conref</xmlatt> attribute cannot be resolved.
                                For instance, if you define the <xmlatt>conref</xmlatt> attribute as follows
                                <xmlelement>p conref="&lt;file_name&gt;#submission-note"</xmlelement> and you
@@ -601,15 +631,20 @@
                                <entry colname="col4" align="left">DITA requires that all <xmlatt>id</xmlatt>
                                attributes within a file must be unique. Change the <xmlatt>id</xmlatt> value.
                                For more information on <xmlatt>id</xmlatt> attributes, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html"
-                               format="html" scope="external">id</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html"
+                  format="html"
+                  scope="external"
+                >id</xref>.
                             </entry>
                         </row>
                         <row>
                            <entry colname="col1" align="left"><b>NO</b>
                             </entry>
                             <entry colname="col2" align="left">image-href-ref-file-not-found</entry>
-                            <entry colname="col3" align="left">The linked image file does not exist. Check the graphics folder for the missing file and make sure the link and file name specified are correct.</entry>
+                            <entry
+                colname="col3"
+                align="left"
+              >The linked image file does not exist. Check the graphics folder for the missing file and make sure the link and file name specified are correct.</entry>
                                <entry colname="col4" align="left">The validator cannot find the file specified in the <xmlatt>href</xmlatt>
                                attribute. Check the path to ensure the file is there.
                             </entry>
@@ -627,8 +662,10 @@
                                for various customers it is necessary to filter the images used. By placing all
                                images in a single conref’d file it is easier to ensure that all images will be
                                present for all customers. see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
-                               format="html" scope="external">ditavals</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
+                  format="html"
+                  scope="external"
+                >ditavals</xref>.
                             </entry>
                         </row>
                         <row>
@@ -646,10 +683,11 @@
                                variant attribute to ensure the list has items in all variants or remove the
                                list entirely by specifiying the appropriate attributes. For more information
                                on creating variants, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
-                               format="html" scope="external">ditavals</xref>. For information on list items,
-                               see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/li.html"
-                               format="html" scope="external">li</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
+                  format="html"
+                  scope="external"
+                >ditavals</xref>. For information on list items,
+                               see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/li.html" format="html" scope="external">li</xref>.
                             </entry>
                         </row>
                         <row>
@@ -667,11 +705,11 @@
                                ensure the table has rows in all variants or remove the table entirely by
                                specifiying the appropriate attributes. For more information on creating
                                variants, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
-                               format="html" scope="external">ditavals</xref>. For more information on tables,
-                               see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
-                               format="html" scope="external">table</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
+                  format="html"
+                  scope="external"
+                >ditavals</xref>. For more information on tables,
+                               see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html" format="html" scope="external">table</xref>.
                             </entry>
                         </row>
                         <row>
@@ -686,9 +724,7 @@
                                <entry colname="col4" align="left">In order to generate PDFs correctly, the
                                number of <xmlelement>colspec</xmlelement> elements must match the number in
                                the <xmlelement>tgroup cols="..."</xmlelement> attribute. For more information
-                               on tables, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
-                               format="html" scope="external">table</xref>.
+                               on tables, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html" format="html" scope="external">table</xref>.
                             </entry>
                         </row>
                         <row>
@@ -704,8 +740,10 @@
                                number of <xmlelement>entry</xmlelement> elements in a <xmlelement>row</xmlelement>
                                element must match the number in the <xmlelement>tgroup cols="..."</xmlelement>
                                attribute. For more information on tables, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
-                               format="html" scope="external">table</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
+                  format="html"
+                  scope="external"
+                >table</xref>.
                             </entry>
                         </row>
                         <row>
@@ -717,12 +755,16 @@
                             </entry>
                                <entry colname="col4" align="left">DITA uses the <xmlatt>href</xmlatt> attribute
                                to specify connections between <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"
-                               format="html" scope="external">topicref</xref> elements and a file. Add an <xmlatt>href</xmlatt>
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"
+                  format="html"
+                  scope="external"
+                >topicref</xref> elements and a file. Add an <xmlatt>href</xmlatt>
                                attribute to the element and specify the appropriate value. For more
                                information on <xmlelement>topicref</xmlelement> elements, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"
-                               format="html" scope="external">topicref</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"
+                  format="html"
+                  scope="external"
+                >topicref</xref>.
                             </entry>
                         </row>
                         <row>
@@ -737,8 +779,10 @@
                                cannot be resolved. Note that DITA does not allow you to reference files
                                outside the root folder of the document. Make sure the path exists. For more
                                information on <xmlelement>xref</xmlelement> elements, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
-                               format="html" scope="external">xref</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                  format="html"
+                  scope="external"
+                >xref</xref>.
                             </entry>
                         </row>
                         <row>
@@ -752,9 +796,7 @@
                                resolve the <xmlatt>id</xmlatt> in the target file. Note that DITA does not
                                allow you to reference files outside the root folder of the document. Make sure
                                the file exists and contains the <xmlatt>id</xmlatt>. For more information on <xmlelement>xref</xmlelement>
-                               elements, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
-                               format="html" scope="external">xref</xref>.
+                               elements, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html" format="html" scope="external">xref</xref>.
                             </entry>
                         </row>
                         <row>
@@ -768,9 +810,7 @@
                                resolve the <xmlatt>id</xmlatt> in the target file. Note that DITA does not
                                allow you to reference files outside the root folder of the document. Make sure
                                the file exists and contains the <xmlatt>id</xmlatt>. For more information on <xmlelement>xref</xmlelement>
-                               elements, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
-                               format="html" scope="external">xref</xref>.
+                               elements, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html" format="html" scope="external">xref</xref>.
                             </entry>
                         </row>
                         <row>
@@ -783,8 +823,10 @@
                                <entry colname="col4" align="left">When you get this error, the validator cannot
                                resolve the <xmlatt>id</xmlatt> in the file. Make sure the file contains the <xmlatt>id</xmlatt>.
                                For more information on <xmlelement>xref</xmlelement> elements, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
-                               format="html" scope="external">xref</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                  format="html"
+                  scope="external"
+                >xref</xref>.
                             </entry>
                         </row>
                         <row>
@@ -797,8 +839,10 @@
                                <entry colname="col4" align="left">When you get this error, the validator cannot
                                resolve the provided path in the file. Make sure the file contains the path.
                                For more information on <xmlelement>xref</xmlelement> elements, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
-                               format="html" scope="external">xref</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                  format="html"
+                  scope="external"
+                >xref</xref>.
                             </entry>
                         </row>
                         <row outputclass="table-success">
@@ -813,9 +857,7 @@
                                <entry colname="col4" align="left">Specify a value for the <xmlatt>format</xmlatt>
                                attribute for <xmlelement>xref</xmlelement> elements. Examples of valid values include <xmlatt>dita</xmlatt>,
                                <xmlatt>html</xmlatt>, and <xmlatt>pdf</xmlatt>. For more information on <xmlelement>xref</xmlelement>
-                               elements, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
-                               format="html" scope="external">xref</xref>.
+                               elements, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html" format="html" scope="external">xref</xref>.
                             </entry>
                         </row>
                         <row outputclass="table-success">
@@ -830,8 +872,10 @@
                                a web page or similar target, which means the <xmlatt>scope</xmlatt> attribute
                                must have the value <xmlatt>external</xmlatt>. Change the value as required.
                                For more information on <xmlelement>xref</xmlelement> elements, see <xref
-                               href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
-                               format="html" scope="external">xref</xref>.
+                  href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"
+                  format="html"
+                  scope="external"
+                >xref</xref>.
                             </entry>
                         </row>
                     </tbody>
@@ -842,8 +886,10 @@
             <title>Deprecated Elements</title>
             <p>
                According to the <xref
-               href="https://lists.oasis-open.org/archives/dita/201803/msg00024.html"
-               format="html" scope="external">DITA 2.0 proposal to remove deprecated markup</xref>
+          href="https://lists.oasis-open.org/archives/dita/201803/msg00024.html"
+          format="html"
+          scope="external"
+        >DITA 2.0 proposal to remove deprecated markup</xref>
                certain elements, attributes and values will cease to be supported under DITA
                2.0. These structure rules are all currently set to <b>WARNING</b> level and
                are auto-fixable.

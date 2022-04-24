@@ -20,7 +20,8 @@
         <p>
            Run the plug-in installation command:
         </p>
-        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/com.here.validate.svrl/archive/master.zip
+        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname
+      >install</parmname> https://github.com/jason-fox/com.here.validate.svrl/archive/master.zip
 <cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/com.here.validate.svrl.text-rules/archive/master.zip</codeblock>
         <p>
            The <cmdname>dita</cmdname> command line tool requires no additional configuration.

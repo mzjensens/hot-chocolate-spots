@@ -30,8 +30,7 @@
                Where the <xmlatt>name</xmlatt> of the macro matches the rule <xmlatt>id</xmlatt>.
                The <xmlatt>file</xmlatt> attribute supplies name of the file to be updated and the <xmlatt>path</xmlatt>
                attribute supplies the XPath to the invalid element. The DITA file can be
-               updated using <xref href="http://www.oopsconsultancy.com/software/xmltask/"
-               format="html" scope="external">XMLTask</xref> which has been supplied as a
+               updated using <xref href="http://www.oopsconsultancy.com/software/xmltask/" format="html" scope="external">XMLTask</xref> which has been supplied as a
                library. The following convenience functions are also available by default:
             </p>
             <ul>

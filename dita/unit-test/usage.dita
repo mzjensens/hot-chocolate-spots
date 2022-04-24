@@ -161,7 +161,8 @@
                To obtain profile information, use the <option>antro</option> transform and
                supply an additional test transtype.
             </p>
-            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>antro</option><parmname>--test.transform</parmname>=TRANSFORM_TO_PROFILE \
+            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>antro</option><parmname
+        >--test.transform</parmname>=TRANSFORM_TO_PROFILE \
      <parmname>--input</parmname> document.ditamap</codeblock>
             <p>
                A profiler JSON file will be generated.

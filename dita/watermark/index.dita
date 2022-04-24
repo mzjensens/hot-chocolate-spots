@@ -4,8 +4,7 @@
     <title>Watermark Plug-in</title>
     <abstract>
         <shortdesc>
-           This is a <xref href="https://www.dita-ot.org/plugins" format="html"
-           scope="external">DITA-OT Plug-in</xref> to add a watermark to generated PDF
+           This is a <xref href="https://www.dita-ot.org/plugins" format="html" scope="external">DITA-OT Plug-in</xref> to add a watermark to generated PDF
            files. The plugin extends standard PDF processing. It offers an extension-point
            for further processing.
         </shortdesc>

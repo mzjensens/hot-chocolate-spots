@@ -6,7 +6,8 @@
         <p>
            Run any HTML dita transform e.g.:
         </p>
-        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> html5 <parmname>--output</parmname> out <parmname>--input</parmname> <filepath>document.ditamap</filepath></codeblock>
+        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> html5 <parmname>--output</parmname> out <parmname
+      >--input</parmname> <filepath>document.ditamap</filepath></codeblock>
         <p>
            Each HTML output file will include an additional line in the <xmlelement>head</xmlelement>.
         </p>
@@ -66,9 +67,11 @@
                 <codeblock scale="80" outputclass="language-xml"><coderef href="./src/ant-target.xml"/></codeblock>
             </fig>
             <p>
-               Working examples can be found in the <xref href="http://swaggerdita-ot.rtfd.io/"
-               format="html" scope="external">DITA-OT Swagger plug-in</xref> and <xref
-               href="https://prismjsdita-ot.rtfd.io/" format="html" scope="external">DITA-OT
+               Working examples can be found in the <xref href="http://swaggerdita-ot.rtfd.io/" format="html" scope="external">DITA-OT Swagger plug-in</xref> and <xref
+          href="https://prismjsdita-ot.rtfd.io/"
+          format="html"
+          scope="external"
+        >DITA-OT
                Prism-JS plug-in</xref> repositories.
             </p>
         </section>

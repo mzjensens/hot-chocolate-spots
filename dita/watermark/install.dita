@@ -19,7 +19,8 @@
         <p>
            Run the plug-in installation commands:
         </p>
-        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>install</parmname> https://github.com/jason-fox/fox.jason.watermark/archive/master.zip</codeblock>
+        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname
+      >install</parmname> https://github.com/jason-fox/fox.jason.watermark/archive/master.zip</codeblock>
         <p>
            The <cmdname>dita</cmdname> command line tool requires no additional configuration.
         </p>

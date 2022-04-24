@@ -4,8 +4,7 @@
     <title>CSS-only Tabs Plug-in</title>
     <abstract>
         <shortdesc>
-           This is a <xref href="https://www.dita-ot.org/plugins" format="html"
-           scope="external">DITA-OT Plug-in</xref> used to create CSS-only tabbed dialog
+           This is a <xref href="https://www.dita-ot.org/plugins" format="html" scope="external">DITA-OT Plug-in</xref> used to create CSS-only tabbed dialog
            within DITA HTML output.
         </shortdesc>
         <p>

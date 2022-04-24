@@ -5,8 +5,7 @@
     <abstract>
         <shortdesc>
            This plug-in requires the presence of the <codeph>fox.jason.extend.css</codeph>
-           to function correctly. It also needs <xref href="https://nodejs.org/"
-           format="html" scope="external">Node.js</xref> running on  user's machine to
+           to function correctly. It also needs <xref href="https://nodejs.org/" format="html" scope="external">Node.js</xref> running on  user's machine to
            avoid deprecation errors.
         </shortdesc>
     </abstract>
@@ -35,7 +34,13 @@
             <title>Installing Node.js</title>
             <div outputclass="row">
                <div>
-                    <image deliveryTarget="html" scope="external" href="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" outputclass="float-start mt-1 me-3" height="55"/>
+                    <image
+            deliveryTarget="html"
+            scope="external"
+            href="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg"
+            outputclass="float-start mt-1 me-3"
+            height="55"
+          />
                     <p>
                         <term>Node.js</term> is an open-source, cross-platform, back-end JavaScript runtime 
                         environment that runs on the V8 engine and executes JavaScript code outside a web browser
@@ -43,22 +48,19 @@
                 </div>
             </div>
             <p>
-               Due to the deprecation and removal of the Nashorn Engine in JDK11-14 <xref
-               href="https://openjdk.java.net/jeps/335" format="html" scope="external">JEP 335</xref>
+               Due to the deprecation and removal of the Nashorn Engine in JDK11-14 <xref href="https://openjdk.java.net/jeps/335" format="html" scope="external">JEP 335</xref>
                any plug-in using JavaScript within <xmlelement>script</xmlelement> or <xmlelement>scriptdef</xmlelement>
                ANT tasks will start throwing warnings with Java 11 onwards and above. From
                Java 15 onwards, these plugins will no longer work.
             </p>
             <p>
                The DITA-OT Prism-JS syntax highlighter relies heavily the Prism-JS JavaScript
-               library, and therefore has been updated to run using <xref
-               href="https://nodejs.org/" format="html" scope="external">Node.js</xref> where
+               library, and therefore has been updated to run using <xref href="https://nodejs.org/" format="html" scope="external">Node.js</xref> where
                present on a user’s machine. Node.js is a JavaScript runtime built on Chrome’s
                V8 JavaScript engine.
             </p>
             <p>
-               To download a copy follow the instructions on the <xref
-               href="https://nodejs.org/en/download/" format="html" scope="external">Install Page</xref>.
+               To download a copy follow the instructions on the <xref href="https://nodejs.org/en/download/" format="html" scope="external">Install Page</xref>.
             </p>
         </section>
     </body>

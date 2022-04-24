@@ -45,8 +45,10 @@
                    previous heading. To ensure this, it is recommended to prettify the existing
                    markdown using <xref href="https://prettier.io" format="html" scope="external">prettier</xref>
                    and fix the markup levels using the <xref
-                   href="https://dita-validator-for-dita-ot.readthedocs.io/en/latest/"
-                   format="html" scope="external">DITA Validator</xref><option>fix-dita</option>
+            href="https://dita-validator-for-dita-ot.readthedocs.io/en/latest/"
+            format="html"
+            scope="external"
+          >DITA Validator</xref><option>fix-dita</option>
                    transform.
                 </p>
                 <p>

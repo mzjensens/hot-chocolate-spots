@@ -15,12 +15,17 @@
     <body>
         <div outputclass="row">
             <div>
-                <image deliveryTarget="html" scope="external" href="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" outputclass="float-start mt-1 me-3" height="55"/>
+                <image
+          deliveryTarget="html"
+          scope="external"
+          href="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg"
+          outputclass="float-start mt-1 me-3"
+          height="55"
+        />
                 <p>
                    <term>GitHub Actions</term> are a CI/CD environment integrated directly with
                    GitHub. More information about how to set up GitHub Actions can be found on the
-                   <xref href="https://docs.github.com/en/free-pro-team@latest/actions"
-                   format="html" scope="external">GitHub website</xref>.
+                   <xref href="https://docs.github.com/en/free-pro-team@latest/actions" format="html" scope="external">GitHub website</xref>.
                 </p>
             </div>
         </div>
@@ -32,8 +37,10 @@
         </fig>
         <p>
            A GitHub Action has been created to automate your <xref
-           href="https://github.com/jason-fox/dita-unit-test-action" format="html"
-           scope="external">DITA-OT Plugin testing</xref>. To add automated CI/CD testing
+        href="https://github.com/jason-fox/dita-unit-test-action"
+        format="html"
+        scope="external"
+      >DITA-OT Plugin testing</xref>. To add automated CI/CD testing
            of your DITA-OT plug-ins, place your tests under a <codeph>test</codeph>
            directory under the root of the repository along with the <codeph>ci.yml</codeph>
            in the <filepath>.github/workflows</filepath> directory.

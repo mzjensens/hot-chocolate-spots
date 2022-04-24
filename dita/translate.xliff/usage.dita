@@ -146,8 +146,7 @@
                         </li>
                         <li>
                            <option>custom</option> - Sends the translate to an arbitrary URL using POST -
-                           use this to connect to proxies for <xref
-                           href="https://cloud.google.com/translate/" format="html" scope="external">Google Cloud Translate</xref>
+                           use this to connect to proxies for <xref href="https://cloud.google.com/translate/" format="html" scope="external">Google Cloud Translate</xref>
                         </li>
                         <li>
                            <option>deepl</option> - Connects to the <b>DeepL API</b> Translation service

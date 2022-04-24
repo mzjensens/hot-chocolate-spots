@@ -93,10 +93,8 @@
                         </li>
                         <li>
                            <option>custom</option> - Sends the SSML to an arbitrary URL using POST - use
-                           this to connect to proxies for Amazon <xref
-                           href="https://docs.aws.amazon.com/polly/" format="html" scope="external">Polly</xref>
-                           or Google Cloud <xref href="https://cloud.google.com/text-to-speech/"
-                           format="html" scope="external">Text-to-Speech</xref>
+                           this to connect to proxies for Amazon <xref href="https://docs.aws.amazon.com/polly/" format="html" scope="external">Polly</xref>
+                           or Google Cloud <xref href="https://cloud.google.com/text-to-speech/" format="html" scope="external">Text-to-Speech</xref>
                         </li>
                         <li>
                            <option>watson</option> - Connects to the IBM Cloud Speech-to-Text service

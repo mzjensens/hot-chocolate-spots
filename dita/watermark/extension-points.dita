@@ -29,8 +29,10 @@
             </fig>
             <p>
                A working example can be found in the <xref
-               href="https://github.com/jason-fox/fox.jason.watermark.auth" format="html"
-               scope="external">Authorized Watermark DITA-OT plug-in</xref>.
+          href="https://github.com/jason-fox/fox.jason.watermark.auth"
+          format="html"
+          scope="external"
+        >Authorized Watermark DITA-OT plug-in</xref>.
             </p>
         </section>
     </body>

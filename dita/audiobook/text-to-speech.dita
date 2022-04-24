@@ -13,7 +13,13 @@
             <title>IBM Cloud Services</title>
             <div outputclass="row">
                <div>
-                  <image deliveryTarget="html" scope="external" href="https://www.nasuni.com/wp-content/uploads/2017/06/ibm-cloud.png" outputclass="float-start mt-1 me-3" height="55"/>
+                  <image
+            deliveryTarget="html"
+            scope="external"
+            href="https://www.nasuni.com/wp-content/uploads/2017/06/ibm-cloud.png"
+            outputclass="float-start mt-1 me-3"
+            height="55"
+          />
                   <p>
                      The IBM Text to Speech service processes text and natural language to generate
                      synthesized audio output complete with appropriate cadence and intonation. It
@@ -21,7 +27,10 @@
                   </p>
                   <p>
                      Introduction: <xref
-                     href="https://cloud.ibm.com/docs/services/text-to-speech?topic=text-to-speech-gettingstarted" format="html" scope="external">Getting Started</xref>.
+              href="https://cloud.ibm.com/docs/services/text-to-speech?topic=text-to-speech-gettingstarted"
+              format="html"
+              scope="external"
+            >Getting Started</xref>.
                   </p>
                </div>
             </div>
@@ -30,8 +39,7 @@
             </p>
             <ol>
                 <li>
-                   Go to the <xref href="https://cloud.ibm.com/catalog/services/text-to-speech"
-                   format="html" scope="external">Text to Speech</xref> External link icon page in
+                   Go to the <xref href="https://cloud.ibm.com/catalog/services/text-to-speech" format="html" scope="external">Text to Speech</xref> External link icon page in
                    the IBM Cloud Catalog.
                 </li>
                 <li>
@@ -46,8 +54,8 @@
             </p>
             <ol>
                 <li>
-                   From the <xref href="https://cloud.ibm.com/dashboard/apps" format="html"
-                   scope="external">IBM Cloud dashboard</xref> External link icon, click on your <b>Text to Speech</b>
+                   From the <xref href="https://cloud.ibm.com/dashboard/apps" format="html" scope="external">IBM Cloud dashboard</xref> External link icon, click on your <b
+          >Text to Speech</b>
                    service instance to go to the <b>Text to Speech</b> service dashboard page.
                 </li>
                 <li>
@@ -66,7 +74,13 @@
             <title>Microsoft Azure</title>
             <div outputclass="row">
                <div>
-                  <image deliveryTarget="html" scope="external" href="https://www.confluent.io/wp-content/uploads/MS-Azure_logo_stacked_c-gray_rgb.png" outputclass="float-start mt-1 me-3" height="55"/>
+                  <image
+            deliveryTarget="html"
+            scope="external"
+            href="https://www.confluent.io/wp-content/uploads/MS-Azure_logo_stacked_c-gray_rgb.png"
+            outputclass="float-start mt-1 me-3"
+            height="55"
+          />
                   <p>
                      The Speech Services allow you to convert text into synthesized speech and get a
                      list of supported voices for a region using a set of REST APIs. Each available
@@ -77,15 +91,17 @@
             </div>
             <p>
                Introduction: <xref
-               href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started" format="html" scope="external">Getting Started</xref>.
+          href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started"
+          format="html"
+          scope="external"
+        >Getting Started</xref>.
             </p>
             <p>
                Create an instance of the service:
             </p>
             <ol>
                 <li>
-                   Go to Try <xref href="https://azure.microsoft.com/try/cognitive-services/"
-                   format="html" scope="external">Cognitive Services</xref>
+                   Go to Try <xref href="https://azure.microsoft.com/try/cognitive-services/" format="html" scope="external">Cognitive Services</xref>
                 </li>
                 <li>
                    Select the Speech APIs tab.

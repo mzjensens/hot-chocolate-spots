@@ -72,9 +72,8 @@
                Additional test properties can be passed to DITA-OT when each test is run if a
                <codeph>test.properties</codeph> file is present in the test directory or
                test-suite directory. The name of the file to search for can also be altered.
-               See <xref
-               href="http://www.dita-ot.org/3.0/topics/using-dita-properties-file.html"
-               format="html" scope="external">Setting build parameters with <codeph>.properties</codeph>
+               See <xref href="http://www.dita-ot.org/3.0/topics/using-dita-properties-file.html" format="html" scope="external">Setting build parameters with <codeph
+          >.properties</codeph>
                files</xref> for more details.
             </p>
         </section>

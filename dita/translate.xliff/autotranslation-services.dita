@@ -13,7 +13,13 @@
             <title>IBM Cloud Services</title>
             <div outputclass="row">
                <div>
-                  <image deliveryTarget="html" scope="external" href="https://www.nasuni.com/wp-content/uploads/2017/06/ibm-cloud.png" outputclass="float-start mt-1 me-3" height="55"/>
+                  <image
+            deliveryTarget="html"
+            scope="external"
+            href="https://www.nasuni.com/wp-content/uploads/2017/06/ibm-cloud.png"
+            outputclass="float-start mt-1 me-3"
+            height="55"
+          />
                   <p>
                      The <term>IBM Language Translator</term> allows you to translate text
                      programmatically from one language into another language.
@@ -22,7 +28,10 @@
             </div>
             <p>
                Introduction: <xref
-               href="https://cloud.ibm.com/docs/services/language-translator?topic=language-translator-gettingstarted" format="html" scope="external">Getting Started</xref>
+          href="https://cloud.ibm.com/docs/services/language-translator?topic=language-translator-gettingstarted"
+          format="html"
+          scope="external"
+        >Getting Started</xref>
             </p>
             <p>
                Create an instance of the service:
@@ -30,8 +39,10 @@
             <ol>
                 <li>
                    Go to the <xref
-                   href="https://cloud.ibm.com/catalog/services/language-translator" format="html"
-                   scope="external">Language Translator</xref> External link icon page in the IBM
+            href="https://cloud.ibm.com/catalog/services/language-translator"
+            format="html"
+            scope="external"
+          >Language Translator</xref> External link icon page in the IBM
                    Cloud Catalog.
                 </li>
                 <li>
@@ -46,8 +57,7 @@
             </p>
             <ol>
                 <li>
-                   From the <xref href="https://cloud.ibm.com/dashboard/apps" format="html"
-                   scope="external">IBM Cloud dashboard</xref> External link icon, click on your
+                   From the <xref href="https://cloud.ibm.com/dashboard/apps" format="html" scope="external">IBM Cloud dashboard</xref> External link icon, click on your
                    <b>Language Translator</b> service instance to go to the <b>Language Translator</b>
                    service dashboard page.
                 </li>
@@ -72,7 +82,13 @@
             <title>Microsoft Azure</title>
             <div outputclass="row">
                <div>
-                  <image deliveryTarget="html" scope="external" href="https://www.confluent.io/wp-content/uploads/MS-Azure_logo_stacked_c-gray_rgb.png" outputclass="float-start mt-1 me-3" height="55"/>
+                  <image
+            deliveryTarget="html"
+            scope="external"
+            href="https://www.confluent.io/wp-content/uploads/MS-Azure_logo_stacked_c-gray_rgb.png"
+            outputclass="float-start mt-1 me-3"
+            height="55"
+          />
                   <p>
                      <term>Microsoft Translator</term> provides multi-language support for
                      translation, transliteration, language detection, and dictionaries.
@@ -81,15 +97,17 @@
             </div>
             <p>
                Introduction: <xref
-               href="https://docs.microsoft.com/en-us/azure/cognitive-services/translator/translator-info-overview" format="html" scope="external">Overview</xref>
+          href="https://docs.microsoft.com/en-us/azure/cognitive-services/translator/translator-info-overview"
+          format="html"
+          scope="external"
+        >Overview</xref>
             </p>
             <p>
                Create an instance of the service:
             </p>
             <ol>
                 <li>
-                   Go to Try <xref href="https://azure.microsoft.com/try/cognitive-services/"
-                   format="html" scope="external">Cognitive Services</xref>
+                   Go to Try <xref href="https://azure.microsoft.com/try/cognitive-services/" format="html" scope="external">Cognitive Services</xref>
                 </li>
                 <li>
                    Select the Translator Text APIs tab.
@@ -137,7 +155,13 @@
             <title>Yandex Translate</title>
             <div outputclass="row">
                <div>
-                  <image deliveryTarget="html" scope="external" href="http://www.companieshistory.com/wp-content/uploads/2014/05/Yandex-NV.png" outputclass="float-start mt-1 me-3" height="55"/>
+                  <image
+            deliveryTarget="html"
+            scope="external"
+            href="http://www.companieshistory.com/wp-content/uploads/2014/05/Yandex-NV.png"
+            outputclass="float-start mt-1 me-3"
+            height="55"
+          />
                   <p>
                      The API provides access to the <term>Yandex online machine translation service.</term>
                      It supports more than 90 languages and can translate separate words or complete texts.
@@ -145,33 +169,34 @@
                </div>
             </div>
             <p>
-               Introduction: <xref href="https://tech.yandex.com/translate/" format="html"
-               scope="external">Overview</xref>
+               Introduction: <xref href="https://tech.yandex.com/translate/" format="html" scope="external">Overview</xref>
             </p>
             <p>
                To sign-up to the service:
             </p>
             <ol>
                 <li>
-                   Review the <xref href="http://legal.yandex.com/translate-api/" format="html"
-                   scope="external">user agreement</xref> and rules for <xref
-                   href="https://tech.yandex.com/translate/doc/dg/concepts/design-requirements-docpage" format="html" scope="external">formatting translation results</xref>.
+                   Review the <xref href="http://legal.yandex.com/translate-api/" format="html" scope="external">user agreement</xref> and rules for <xref
+            href="https://tech.yandex.com/translate/doc/dg/concepts/design-requirements-docpage"
+            format="html"
+            scope="external"
+          >formatting translation results</xref>.
                 </li>
                 <li>
-                   Get a free <xref href="https://translate.yandex.com/developers/keys"
-                   format="html" scope="external">API key</xref>.
+                   Get a free <xref href="https://translate.yandex.com/developers/keys" format="html" scope="external">API key</xref>.
                 </li>
                 <li>
-                   Read the <xref
-                   href="https://tech.yandex.com/translate/doc/dg/concepts/about-docpage"
-                   format="html" scope="external">documentation</xref>, where you will find
+                   Read the <xref href="https://tech.yandex.com/translate/doc/dg/concepts/about-docpage" format="html" scope="external">documentation</xref>, where you will find
                    instructions on enabling the API and detailed descriptions of its features.
                 </li>
             </ol>
             <p>
                After you sign in to your account select API Keys and create a new key as
                necessary. The latest endpoint can be found in the <xref
-               href="https://tech.yandex.com/translate/doc/dg/reference/translate-docpage/#xml" format="html" scope="external">documentation</xref>.
+          href="https://tech.yandex.com/translate/doc/dg/reference/translate-docpage/#xml"
+          format="html"
+          scope="external"
+        >documentation</xref>.
             </p>
             <codeblock outputclass="language-none">https://translate.yandex.net/api/v1.5/tr/translate</codeblock>
             <p>
@@ -191,11 +216,19 @@
             <title>DeepL API</title>
             <div outputclass="row">
                <div>
-                  <image deliveryTarget="html" scope="external" href="https://www.deepl.com/img/logo/DeepL_LogoAndText_darkBlue.svg" outputclass="float-start mt-1 me-3" height="55"/>
+                  <image
+            deliveryTarget="html"
+            scope="external"
+            href="https://www.deepl.com/img/logo/DeepL_LogoAndText_darkBlue.svg"
+            outputclass="float-start mt-1 me-3"
+            height="55"
+          />
                   <p>
                      The <term>DeepL API</term> is accessible with a <xref
-                     href="https://www.deepl.com/pro.html#developer" format="html"
-                     scope="external">DeepL Pro subscription (DeepL API plan)</xref> only. The API
+              href="https://www.deepl.com/pro.html#developer"
+              format="html"
+              scope="external"
+            >DeepL Pro subscription (DeepL API plan)</xref> only. The API
                      is an interface that allows other computer programs to send texts to the DeepL
                      servers and receive high-quality translations.
                   </p>
@@ -209,8 +242,7 @@
             </p>
             <ol>
                 <li>
-                   Open a <xref href="https://www.deepl.com/pro.html#developer" format="html"
-                   scope="external">DeepL API</xref><b>developers</b> account. Note that not all
+                   Open a <xref href="https://www.deepl.com/pro.html#developer" format="html" scope="external">DeepL API</xref><b>developers</b> account. Note that not all
                    accounts offer access to the DeepL API. It is <b>essential</b> that the account
                    type includes REST API access.
                 </li>
@@ -220,16 +252,17 @@
                    for the trial period.
                 </li>
                 <li>
-                   Read the <xref href="https://www.deepl.com/docs-api.html" format="html"
-                   scope="external">documentation</xref>, where you will find instructions on
+                   Read the <xref href="https://www.deepl.com/docs-api.html" format="html" scope="external">documentation</xref>, where you will find instructions on
                    enabling the API and detailed descriptions of its features.
                 </li>
             </ol>
             <p>
                After you sign in to your account select API Keys and create a new key as
                necessary. The latest endpoint can be found in the <xref
-               href="https://www.deepl.com/docs-api.html?part=translating-text" format="html"
-               scope="external">documentation</xref>
+          href="https://www.deepl.com/docs-api.html?part=translating-text"
+          format="html"
+          scope="external"
+        >documentation</xref>
             </p>
             <codeblock outputclass="language-none">https://api.deepl.com/v2/translate</codeblock>
             <p>

@@ -26,8 +26,10 @@
     <body>
         <p>
            With the default Prism-JS <xref
-           href="https://prismjs.com/download.html#themes=prism&amp;languages=markup+css+clike+javascript"
-           format="html" scope="external">library</xref> the following languages can be
+        href="https://prismjs.com/download.html#themes=prism&amp;languages=markup+css+clike+javascript"
+        format="html"
+        scope="external"
+      >library</xref> the following languages can be
            highlighted
         </p>
         <ul>
@@ -88,8 +90,7 @@
                Prism-JS is easily extended to other languages since it purely relies on regular
                expressions. Additional languages are loaded dynamically during processing. A
                large number of additional languages are supported - just look at the list on
-               <xref href="https://github.com/prismjs/prism/tree/master/components"
-               format="html" scope="external">https://github.com/PrismJS/prism/tree/master/components</xref>.
+               <xref href="https://github.com/prismjs/prism/tree/master/components" format="html" scope="external">https://github.com/PrismJS/prism/tree/master/components</xref>.
             </p>
             <p>
                Extend with an additional plug-in which overrides the default <parmname>prismjs.css.file</parmname>
@@ -106,8 +107,10 @@
             </fig>
             <p>
                A working example can be found in the <xref
-               href="https://github.com/jason-fox/fox.jason.prismjs.dark-theme" format="html"
-               scope="external">Dark Theme CSS DITA-OT plug-in</xref>.
+          href="https://github.com/jason-fox/fox.jason.prismjs.dark-theme"
+          format="html"
+          scope="external"
+        >Dark Theme CSS DITA-OT plug-in</xref>.
             </p>
             <p>
                The <codeph>cfg/fo/attrs/prismjs-attr.xsl</codeph> provides the colors for the
@@ -128,8 +131,10 @@
             </fig>
             <p>
                A working example can be found in the <xref
-               href="https://github.com/jason-fox/fox.jason.prismjs.dark-theme" format="html"
-               scope="external">Dark Theme CSS DITA-OT plug-in</xref>.
+          href="https://github.com/jason-fox/fox.jason.prismjs.dark-theme"
+          format="html"
+          scope="external"
+        >Dark Theme CSS DITA-OT plug-in</xref>.
             </p>
         </section>
     </body>

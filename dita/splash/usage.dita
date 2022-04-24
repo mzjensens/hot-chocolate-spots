@@ -16,8 +16,7 @@
         <section id="displaying-a-random-cat-photo">
             <title>Displaying a random Cat Photo</title>
             <p>
-               To display a random photo from the <xref href="https://thecatapi.com/"
-               format="html" scope="external">Cat API</xref>, use the <option>cats</option>
+               To display a random photo from the <xref href="https://thecatapi.com/" format="html" scope="external">Cat API</xref>, use the <option>cats</option>
                transform.
             </p>
             <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>cats</option> \
@@ -26,8 +25,7 @@
         <section id="displaying-a-random-xkcd-comic-strip">
             <title>Displaying a random XKCD Comic Strip</title>
             <p>
-               To display a random XKCD comic strip from <xref href="https://xkcd.com/"
-               format="html" scope="external">xkcd.com</xref>, use the <option>xkcd</option>
+               To display a random XKCD comic strip from <xref href="https://xkcd.com/" format="html" scope="external">xkcd.com</xref>, use the <option>xkcd</option>
                transform.
             </p>
             <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xkcd</option> \

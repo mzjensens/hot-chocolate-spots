@@ -7,8 +7,10 @@
            The examples below use Markdown as a passthrough format, other formats need to
            provide equivalent annotations to obtain full functionality. Where possible,
            annotation aligns with the <xref
-           href="https://www.dita-ot.org/dev/topics/markdown-dita-syntax-reference.html"
-           format="html" scope="external">Markdown DITA syntax reference</xref> based on
+        href="https://www.dita-ot.org/dev/topics/markdown-dita-syntax-reference.html"
+        format="html"
+        scope="external"
+      >Markdown DITA syntax reference</xref> based on
            <xref href="http://commonmark.org/" format="html" scope="external">CommonMark</xref>.
            The chapter <xmlelement>title</xmlelement> is taken from the first header
            found. Thereafter the document is processed as expected:
@@ -32,8 +34,8 @@ Body of topic 2 goes here.
            Ideally input files should only contain a single <codeph>#</codeph> header.
         </p>
         <p>
-           Pandoc <xref href="http://pandoc.org/manual.html#extension-header-attributes"
-           format="html" scope="external">header_attributes</xref> can be used to define <xmlatt>id</xmlatt>
+           Pandoc <xref href="http://pandoc.org/manual.html#extension-header-attributes" format="html" scope="external">header_attributes</xref> can be used to define <xmlatt
+      >id</xmlatt>
            or <xmlatt>outputclass</xmlatt> attributes:
         </p>
         <fig>
@@ -42,8 +44,10 @@ Body of topic 2 goes here.
         </fig>
         <p>
            The following class values in <xref
-           href="http://pandoc.org/manual.html#extension-header-attributes" format="html"
-           scope="external">header_attributes</xref> have a special meaning on header levels.
+        href="http://pandoc.org/manual.html#extension-header-attributes"
+        format="html"
+        scope="external"
+      >header_attributes</xref> have a special meaning on header levels.
         </p>
         <ul>
             <li>

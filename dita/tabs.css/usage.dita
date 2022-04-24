@@ -43,7 +43,8 @@
            When running an HTML based transform, the section will be transformed into a
            tabbed dialog. e.g.:
         </p>
-        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> html5 <parmname>--output</parmname> out <parmname>--input</parmname> <filepath>document.ditamap</filepath></codeblock>
+        <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> html5 <parmname>--output</parmname> out <parmname
+      >--input</parmname> <filepath>document.ditamap</filepath></codeblock>
         <p>
            To alter the CSS, amend the <filepath>resource/tabs.css</filepath> file which is
            copied over as part of the DITA processing.

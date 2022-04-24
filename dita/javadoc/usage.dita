@@ -14,8 +14,10 @@
         </fig>
         <p>
            If you are not using <term>Maven</term>, you can use the <xref
-           href="http://search.maven.org/remotecontent?filepath=com/github/markusbernhardt/xml-doclet/1.0.5/xml-doclet-1.0.5-jar-with-dependencies.jar"
-           format="html" scope="external">jar-with-dependencies</xref>, which contains all
+        href="http://search.maven.org/remotecontent?filepath=com/github/markusbernhardt/xml-doclet/1.0.5/xml-doclet-1.0.5-jar-with-dependencies.jar"
+        format="html"
+        scope="external"
+      >jar-with-dependencies</xref>, which contains all
            required libraries.
         </p>
         <codeblock scale="80" outputclass="language-bash"><cmdname>javadoc</cmdname> <parmname>-doclet</parmname> com.github.markusbernhardt.xmldoclet.XmlDoclet \

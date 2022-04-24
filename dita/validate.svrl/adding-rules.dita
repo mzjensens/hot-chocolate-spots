@@ -9,8 +9,10 @@
            users. To add new custom rules (which only apply to your specific use case) you
            should create a separate custom validator plug-in which extends the base
            validator. See the sample <xref
-           href="https://github.com/jason-fox/com.here.validate.svrl.overrides"
-           format="html" scope="external">Extended DITA Validator</xref> as an example of
+        href="https://github.com/jason-fox/com.here.validate.svrl.overrides"
+        format="html"
+        scope="external"
+      >Extended DITA Validator</xref> as an example of
            how to do this.
         </p>
     </body>

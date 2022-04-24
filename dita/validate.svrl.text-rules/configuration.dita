@@ -92,7 +92,8 @@
                A custom ruleset file can be passed into the plug-in using the
                <codeph>text-rules.ruleset.file</codeph> parameter.
             </p>
-            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> text-rules-echo <parmname>--input</parmname> <filepath>document.ditamap</filepath> --text-rules.ruleset.file=PATH_TO_CUSTOM/ruleset.xml</codeblock>
+            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> text-rules-echo <parmname>--input</parmname> <filepath
+        >document.ditamap</filepath> --text-rules.ruleset.file=PATH_TO_CUSTOM/ruleset.xml</codeblock>
         </section>
     </body>
     <topic id="ignoring-rules" conref="./ignoring-rules.dita#ignoring-rules">

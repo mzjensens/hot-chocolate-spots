@@ -32,8 +32,7 @@
                 <codeblock scale="80" outputclass="language-xml"><coderef href="./src/topic.xml"/></codeblock>
             </fig>
             <fig>
-               <title>MP3 Output File</title><xref scope="external"
-               href="https://jason-fox.github.io/fox.jason.audiobook/replacecover.mp3">
+               <title>MP3 Output File</title><xref scope="external" href="https://jason-fox.github.io/fox.jason.audiobook/replacecover.mp3">
 <image scope="external" href="https://jason-fox.github.io/fox.jason.audiobook/mp3.png"/></xref>
             </fig>
         </body>

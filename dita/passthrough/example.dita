@@ -37,9 +37,7 @@
 &lt;/project&gt;</codeblock>
         </fig>
         <p>
-           A working example can be found in the <xref
-           href="https://github.com/jason-fox/fox.jason.pandoc" format="html"
-           scope="external">DITA-OT Pandoc plug-in</xref> repository.
+           A working example can be found in the <xref href="https://github.com/jason-fox/fox.jason.pandoc" format="html" scope="external">DITA-OT Pandoc plug-in</xref> repository.
         </p>
     </body>
 </topic>

@@ -4,8 +4,7 @@
     <title>DITA Validator Plug-in</title>
     <abstract>
         <shortdesc>
-           The DITA Validator plug-in for <xref href="http://www.dita-ot.org/"
-           format="html" scope="external">DITA-OT</xref> is a structure, style and content
+           The DITA Validator plug-in for <xref href="http://www.dita-ot.org/" format="html" scope="external">DITA-OT</xref> is a structure, style and content
            checker for DITA documents. The plug-in returns information about the
            compliance of the document against a <b>modifiable</b> series of validator
            rules. The plug-in also supports standard XML validation.
@@ -37,8 +36,7 @@
             </li>
         </ul>
         <p>
-           More information about SVRL can be found at <xref
-           href="http://www.schematron.com/validators.html" format="html" scope="external">www.schematron.com</xref>.
+           More information about SVRL can be found at <xref href="http://www.schematron.com/validators.html" format="html" scope="external">www.schematron.com</xref>.
         </p>
     </body>
     <topic id="validator-compliant-dita">

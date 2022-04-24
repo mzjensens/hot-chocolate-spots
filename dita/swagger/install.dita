@@ -6,8 +6,7 @@
         <shortdesc>
            This plug-in needs <xref href="https://pandoc.org/" format="html" scope="external">Pandoc</xref>
            running on  user's machine  to function correctly. It also requires the
-           presence of the <xref href="http://www.oopsconsultancy.com/software/xmltask/"
-           format="html" scope="external">xmltask</xref> jar to edit XML files as part of
+           presence of the <xref href="http://www.oopsconsultancy.com/software/xmltask/" format="html" scope="external">xmltask</xref> jar to edit XML files as part of
            the ANT build. It therefore requires a series of commands to install the
            relevant plug-in dependencies and configure Pandoc.
         </shortdesc>
