@@ -23,7 +23,7 @@
         <codeblock scale="80" outputclass="language-xml"><coderef href="./src/usage.xml"/></codeblock>
         <p>
            The additional file will be converted to a <codeph>*.dita</codeph> file and will
-           be added to the build job without further processing. Unless overriden, the <xmlatt>navtitle</xmlatt>
+           be added to the build job without further processing. Unless overridden, the <xmlatt>navtitle</xmlatt>
            of the included <xmlelement>topic</xmlelement> will be the same as root name of
            the file. Any underscores in the filename will be replaced by spaces in title.
         </p>

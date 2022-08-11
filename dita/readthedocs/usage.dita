@@ -19,8 +19,8 @@
             <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>readthedocs</option> \
     <parmname>--input</parmname> <filepath>document.ditamap</filepath></codeblock>
         </section>
-        <section id="coverting-a-readthedocs-project-into-dita-content">
-            <title>Coverting a ReadtheDocs Project into DITA content</title>
+        <section id="converting-a-readthedocs-project-into-dita-content">
+            <title>Converting a ReadtheDocs Project into DITA content</title>
             <p>
                To create the files for a DITA-OT project, use the <option>mkdocs2dita</option>
                transform and set the <parmname>--input</parmname> parameter to point to an

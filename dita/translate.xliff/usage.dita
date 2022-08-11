@@ -26,7 +26,7 @@
                <xmlelement>target</xmlelement> elements.
             </note>
             <p>
-               2. to populate an exisiting XLIFF 1.2 File with auto-translated text:
+               2. to populate an existing XLIFF 1.2 File with auto-translated text:
             </p>
             <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-translate</option> \
      <parmname>--input</parmname> translate.xlf \
@@ -63,7 +63,7 @@
                 <codeblock scale="80" outputclass="language-xml"><coderef href="./src/output-2.1.xliff"/></codeblock>
             </fig>
             <p>
-               4. to populate an exisiting XLIFF 2.1 File with auto-translated text:
+               4. to populate an existing XLIFF 2.1 File with auto-translated text:
             </p>
             <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xliff-translate</option> \
      <parmname>--input</parmname> translate.xlf --translate.service=[bing|deepl|watson|yandex] \
@@ -73,7 +73,7 @@
                The XLIFF 2.1 File is auto-translated in place, with translated text as shown:
             </p>
             <note>
-               Any <xmlelement>segement</xmlelement> elements which are <xmlatt>state="final"</xmlatt>
+               Any <xmlelement>segment</xmlelement> elements which are <xmlatt>state="final"</xmlatt>
                will not be re-translated.
             </note>
             <fig>
@@ -102,7 +102,7 @@
                content from the translation agency integrated into to the XLIFF. For XLIFF
                1.2, each <xmlelement>trans-unit</xmlelement> should be marked <xmlatt>approved="yes"</xmlatt>
                when the <xmlelement>target</xmlelement> element has been verified. Similarly
-               for XLIFF 2.1 each <xmlelement>segement</xmlelement> should be marked as <xmlatt>state="final"</xmlatt>.
+               for XLIFF 2.1 each <xmlelement>segment</xmlelement> should be marked as <xmlatt>state="final"</xmlatt>.
             </note>
         </section>
         <section id="parameter-reference">
@@ -153,7 +153,7 @@
                         </li>
                         <li>
                            <option>dummy</option> - Avoids accessing a translation service, copies sources
-                           to target langauge directly without amendment.
+                           to target language directly without amendment.
                         </li>
                         <li>
                            <option>watson</option> - Connects to the <b>IBM Cloud</b> Translation service

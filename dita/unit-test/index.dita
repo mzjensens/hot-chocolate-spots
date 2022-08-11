@@ -31,7 +31,7 @@
                     <li>
                        The <option>unit-test</option> transform allows a user to runs a sequence of <cmdname>dita</cmdname>
                        commands and checks that the documents created match the expected output. This
-                       is useful for regresssion testing, and confirming that any custom plug-ins do
+                       is useful for regression testing, and confirming that any custom plug-ins do
                        not conflict when upgrading the base DITA-OT engine.
                     </li>
                     <li>

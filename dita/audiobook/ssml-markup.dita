@@ -203,7 +203,7 @@
 &lt;ph props="voice name(Allison)"&gt;Use the IBM TTS voice named Allison.&lt;/ph&gt;
 &lt;ph props="voice name(Allison, Andrew, Tyler)"&gt;Use the first available IBM TTS voice named in the given list.&lt;/ph&gt;</codeblock>
         <p>
-           The <xmlelement>emphasis</xmlelement> element equests that the contained text be
+           The <xmlelement>emphasis</xmlelement> element requests that the contained text be
            spoken with emphasis (also referred to as prominence or stress).
         </p>
         <ul>

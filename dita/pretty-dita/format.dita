@@ -115,7 +115,7 @@
                element on multiple lines are indented one level further than the surrounding
                text. Long lines of text are truncated to approximately 80 characters length by
                default before adding a carriage return. Carriage returns are usually placed so
-               as not to split inline elements, but this is sometimes not feasable within the
+               as not to split inline elements, but this is sometimes not feasible within the
                line limits, so a line break may occur before an inline attribute.
             </p>
             <codeblock scale="80" outputclass="language-xml">&lt;p&gt;

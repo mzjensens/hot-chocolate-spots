@@ -16,7 +16,7 @@
   <parmname>--args.faviconpath</parmname>=<filepath>DESTINATION_PATH_OF_FAVICON</filepath>  \
   <parmname>--args.faviconroot</parmname>=<filepath>SOURCE_PATH_OF_FAVICON</filepath></codeblock>
         <p>
-           To refer to an exisiting file hosted on a server, use a URL as the
+           To refer to an existing file hosted on a server, use a URL as the
            <parmname>--args.faviconpath</parmname> parameter
         </p>
         <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>[html5|xhtml]</option> \

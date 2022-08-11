@@ -33,7 +33,7 @@
             </p>
             <codeblock scale="80" outputclass="language-xml"><coderef href="./src/ignore-rule.xml"/></codeblock>
         </section>
-        <section id="ignoring-all-warningserrors-within-a-block-of-text">
+        <section id="ignoring-all-warnings-errors-within-a-block-of-text">
             <title>Ignoring all warnings/errors within a block of text</title>
             <ul>
                 <li>

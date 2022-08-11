@@ -63,7 +63,7 @@
                 <codeblock scale="80" outputclass="language-none"><coderef href="./src/error.txt"/></codeblock>
             </fig>
             <p>
-               Optionally, the output can be highlighed using ANSI color codes by adding the
+               Optionally, the output can be highlighted using ANSI color codes by adding the
                <parmname>args.validate.color</parmname> parameter.
             </p>
             <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>svrl-echo</option> \

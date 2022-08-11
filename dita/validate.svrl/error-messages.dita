@@ -150,7 +150,7 @@
                                hyphens.
                             </entry>
                                <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
-                               for importing documentation segements reused across the document when the
+                               for importing documentation segments reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
@@ -278,7 +278,7 @@
                                include arbitrary strings to indicate the contents of the chapter, topic type,
                                etc. - Do not include computer-generated text such as <codeph>topic-2</codeph>
                                or <codeph>GUID-1234-5678-1234</codeph>. For more information on <xmlatt>id</xmlatt>
-                               atrributes, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html" format="html" scope="external">id</xref>.
+                               attributes, see <xref href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/id.html" format="html" scope="external">id</xref>.
                             </entry>
                         </row>
                         <row>
@@ -422,7 +422,7 @@
                             </entry>
                                <entry colname="col4" align="left">In order for the validator to render table
                                content properly, these key/value pairs must be unique. For instance, the
-                               following codeblock illustrates well-formated DITA that complies with this
+                               following codeblock illustrates well-formatted DITA that complies with this
                                requirement. <xmlelement>colspec colnum="1"/&gt;&lt;colspec colnum="2"/&gt;&lt;colspec colnum="3"/</xmlelement>
                                For more information on the <xmlelement>table</xmlelement> element, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/table.html"
@@ -440,7 +440,7 @@
                 align="left"
               >The linked file does not exist. Check the related folder for the missing file and make sure the file name is correct.</entry>
                                <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
-                               for importing documentation segements reused across the document when the
+                               for importing documentation segments reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
@@ -461,7 +461,7 @@
                                Check to make sure the referenced elements are the same.
                             </entry>
                                <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
-                               for importing documentation segements reused across the document when the
+                               for importing documentation segments reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
@@ -484,7 +484,7 @@
                                exist in the source file. Make sure the ID value specified is correct.
                             </entry>
                                <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
-                               for importing documentation segements reused across the document when the
+                               for importing documentation segments reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
@@ -504,7 +504,7 @@
                             <entry colname="col2" align="left">conref-external-path-not-found</entry>
                             <entry colname="col3" align="left">The referenced path does not exist. Make sure the path is correct.</entry>
                                <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
-                               for importing documentation segements reused across the document when the
+                               for importing documentation segments reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
@@ -528,7 +528,7 @@
                                sure the path is correct.
                             </entry>
                                <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
-                               for importing documentation segements reused across the document when the
+                               for importing documentation segments reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
@@ -551,7 +551,7 @@
                                exist in this file. Make sure the <xmlatt>id</xmlatt> value specified is correct.
                             </entry>
                                <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
-                               for importing documentation segements reused across the document when the
+                               for importing documentation segments reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
@@ -574,7 +574,7 @@
                                sure the path is correct.
                             </entry>
                                <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
-                               for importing documentation segements reused across the document when the
+                               for importing documentation segments reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
@@ -595,7 +595,7 @@
                             <entry colname="col2" align="left">conref-internal-path-not-found</entry>
                             <entry colname="col3" align="left">The referenced path does not exist in this file. Make sure the path is correct.</entry>
                                <entry colname="col4" align="left">The <xmlatt>conref</xmlatt> attribute is used
-                               for importing documentation segements reused across the document when the
+                               for importing documentation segments reused across the document when the
                                validator builds the document. For more information on using the <xmlatt>conref</xmlatt>
                                attribute, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/archspec/conref.html"
@@ -681,7 +681,7 @@
                                <entry colname="col4" align="left">The specified variant creation attributes
                                result in a variant with a list without list items. Specify an additional
                                variant attribute to ensure the list has items in all variants or remove the
-                               list entirely by specifiying the appropriate attributes. For more information
+                               list entirely by specifying the appropriate attributes. For more information
                                on creating variants, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
                   format="html"
@@ -703,7 +703,7 @@
                             </entry>
                                <entry colname="col4" align="left">Specify an additional variant attribute to
                                ensure the table has rows in all variants or remove the table entirely by
-                               specifiying the appropriate attributes. For more information on creating
+                               specifying the appropriate attributes. For more information on creating
                                variants, see <xref
                   href="http://docs.oasis-open.org/dita/v1.2/os/spec/common/about-ditaval.html"
                   format="html"

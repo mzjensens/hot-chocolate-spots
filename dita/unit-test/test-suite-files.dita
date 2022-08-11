@@ -14,7 +14,7 @@
             <ul>
                 <li>
                    The location of <parmname>test.root.dir</parmname> must be set - this allows the
-                   expecation of a single test to be updated directly from the command line
+                   expectation of a single test to be updated directly from the command line
                    independently of the test harness.
                 </li>
                 <li>

@@ -33,7 +33,7 @@
             </indexterm>
             <p>
                CSS rules are always position dependent - the rule defined last in a file will
-               supercede previous definitions. This plug-in is offers three extension points
+               supersede previous definitions. This plug-in is offers three extension points
                where CSS can be appended to a file so that CSS rules can be added in order.
             </p>
             <ul>
