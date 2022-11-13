@@ -59,11 +59,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Run DITA-OT Unit Test
         uses: jason-fox/dita-unit-test-action@master
         with:
-          plugin: 'com.oxygenxml.editlink'</codeblock>
+          plugin: 'com.oxygenxml.editlink'
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: test-results
+          path: test-results.html</codeblock>
         <ul>
             <li>
                <parmname>plugin</parmname> - <b>Required</b> The name of the DITA-OT plugin to
