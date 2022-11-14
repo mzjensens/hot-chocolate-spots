@@ -21,7 +21,7 @@
     </prolog>
     <body outputclass="language-bash">
         <p>
-           Each DITA-OT Plug-in has been tested against <xref href="http://www.dita-ot.org/download" format="html" scope="external">DITA-OT 3.x</xref>.
+           Each DITA-OT Plug-in has been tested against <xref href="http://www.dita-ot.org/download" format="html" scope="external">DITA-OT 4.x</xref>.
            It is recommended that you upgrade to the latest version. Detailed instructions
            for installing each plug-in can be found in the relevant section of the documentation.
         </p>
@@ -32,11 +32,11 @@
                <term>DITA Open Toolkit</term>, or <term>DITA-OT</term> for short, is a set of
                Java-based, open-source tools that provide processing for content authored in
                the <term>Darwin Information Typing Architecture</term>.Full installation
-               instructions for downloading DITA-OT can be found <xref href="https://www.dita-ot.org/3.6/topics/installing-client.html" format="html" scope="external">here</xref>.
+               instructions for downloading DITA-OT can be found <xref href="https://www.dita-ot.org/4.0/topics/installing-client.html" format="html" scope="external">here</xref>.
             </p>
             <ol>
                 <li>
-                   Download the <codeph>dita-ot-3.6.1.zip</codeph> package from the project website
+                   Download the <codeph>dita-ot-4.0.zip</codeph> package from the project website
                    at <xref href="https://www.dita-ot.org/download" format="html" scope="external">dita-ot.org/download</xref>
                 </li>
                 <li>
@@ -52,9 +52,9 @@
                This defines the necessary environment variable to run the <codeph>dita</codeph>
                command from the command line.
             </p>
-            <codeblock scale="80" outputclass="language-bash">curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.6.1/dita-ot-3.6.1.zip
-unzip -q dita-ot-3.6.1.zip
-rm dita-ot-3.6.1.zip</codeblock>
+            <codeblock scale="80" outputclass="language-bash">curl -LO https://github.com/dita-ot/dita-ot/releases/download/4.0/dita-ot-4.0.zip
+unzip -q dita-ot-4.0.zip
+rm dita-ot-4.0.zip</codeblock>
         </section>
     </body>
 </topic>
