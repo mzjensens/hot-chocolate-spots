@@ -27,6 +27,7 @@
         <chapter format="dita" type="topic" href="validate.svrl/index.dita"/>
         <chapter format="dita" type="topic" href="validate.svrl.text-rules/index.dita"/>
         <chapter format="dita" type="topic" href="watermark/index.dita"/>
+        <chapter format="dita" type="topic" href="open-graph/index.dita"/>
     </part>
     <backmatter deliveryTarget="pdf">
         <booklists>

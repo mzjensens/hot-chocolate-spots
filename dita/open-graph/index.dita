@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="extended-css-plug-in">
+    <title>Extended CSS Plug-in</title>
+    <abstract>
+        <shortdesc>
+           This is a DITA-OT Plug-in used to add open graph meta data to DITA HTML output.
+        </shortdesc>
+        <p>
+           The Open Graph Protocol is a defined system to convey the contents of webpages on SNS.
+            By setting Open Graph properly, a specified <codeph>image</codeph> <codeph>title</codeph>  
+            and <codeph>description</codeph> is displayed when a web content is shared.
+        </p>
+    </abstract>
+    <prolog>
+        <metadata>
+            <keywords>
+                <indexterm>Facebook</indexterm>
+                <indexterm>Twitter</indexterm>
+                <indexterm>Open Graph</indexterm>
+                <indexterm>plug-in</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <body/>
+    <topic id="install" conref="./install.dita#install">
+        <title/>
+        <body/>
+    </topic>
+    <topic id="usage" conref="./usage.dita#usage">
+        <title/>
+        <body/>
+    </topic>
+</topic>
