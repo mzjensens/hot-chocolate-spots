@@ -23,6 +23,6 @@ body {
   background: #344 !important
 }
 
-.bg-light{
+.table {
    color: var(--bs-body-color);
 }
