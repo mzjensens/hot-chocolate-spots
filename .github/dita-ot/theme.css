@@ -13,3 +13,16 @@
     margin: 1rem -.75rem 0;
     border: solid #dee2e6 1px;
 }
+
+body {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+}
+
+[data-bs-theme="dark"] .bg-light{
+  background: #344 !important
+}
+
+.bg-light{
+   color: var(--bs-body-color);
+}
