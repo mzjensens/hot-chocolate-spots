@@ -19,6 +19,9 @@ body {
   background-color: var(--bs-body-bg);
 }
 
+.bg-light {
+    background: #e6efef !important
+}
 [data-bs-theme="dark"] .bg-light{
   background: #344 !important
 }
