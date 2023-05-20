@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="extended-css-plug-in">
-    <title>Extended CSS Plug-in</title>
+<topic id="open-graph-plug-in">
+    <title>Open Graph Plug-in</title>
     <abstract>
         <shortdesc>
            This is a DITA-OT Plug-in used to add open graph meta data to DITA HTML output.
