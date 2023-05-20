@@ -22,7 +22,14 @@
             </keywords>
         </metadata>
     </prolog>
-    <body/>
+    <body>
+        <fig>
+            <title>Open Graph Output</title>
+            <image outputclass="img-thumbnail" scalefit="yes" href="https://jason-fox.github.io/fox.jason.open-graph/open-graph.png" scope="external">
+                <alt/>
+            </image>
+        </fig>
+    </body>
     <topic id="install" conref="./install.dita#install">
         <title/>
         <body/>
