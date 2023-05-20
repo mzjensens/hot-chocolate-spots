@@ -19,6 +19,7 @@
         <chapter format="dita" type="topic" href="postman/index.dita"/>
         <chapter format="dita" type="topic" href="pretty-dita/index.dita"/>
         <chapter format="dita" type="topic" href="prismjs/index.dita"/>
+        <chapter format="dita" type="topic" href="open-graph/index.dita"/>
         <chapter format="dita" type="topic" href="readthedocs/index.dita"/>
         <chapter format="dita" type="topic" href="splash/index.dita"/>
         <chapter format="dita" type="topic" href="swagger/index.dita"/>
