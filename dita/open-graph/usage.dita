@@ -6,7 +6,8 @@
         <section id="adding-open-graph">
             <title>Adding Open Graph Meta Data to HTML output</title>
             <p>
-               To run, use any <option>html</option> transform and add the<parmname>open-graph.url</parmname> parameter. The new <parmname>open-graph.*</parmname> parameters follow the existing syntax used by DITA-OT for CSS files.
+               To run, use any <option>html</option> transform and add the<parmname>open-graph.url</parmname> parameter. The new <parmname
+        >open-graph.*</parmname> parameters follow the existing syntax used by DITA-OT for CSS files.
             </p>
             <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>html5</option> \
     <parmname>--output</parmname> out \

@@ -31,5 +31,27 @@
             <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>xkcd</option> \
     <parmname>--input</parmname> <filepath>document.ditamap</filepath></codeblock>
         </section>
+        <section id="displaying-a-random-anime-character">
+            <title>Displaying a random anime character</title>
+            <p>
+               To display a random anime character from <xref
+          href="https://thisanimedoesnotexist.ai/"
+          format="html"
+          scope="external"
+        >thisanimedoesnotexist.ai</xref>, use the <option>anime</option>
+               transform.
+            </p>
+            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>anime</option> \
+    <parmname>--input</parmname> <filepath>document.ditamap</filepath></codeblock>
+        </section>
+        <section id="displaying-a-random-placeholder-image">
+            <title>Displaying a random placeholder image</title>
+            <p>
+               To display a random placeholder image from <xref href="https://picsum.photos/" format="html" scope="external">picsum.photos</xref>, use the <option>picsum</option>
+               transform.
+            </p>
+            <codeblock scale="80" outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--format</parmname> <option>picsum</option> \
+    <parmname>--input</parmname> <filepath>document.ditamap</filepath></codeblock>
+        </section>
     </body>
 </topic>
