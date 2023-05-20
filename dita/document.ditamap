@@ -12,6 +12,7 @@
         <chapter format="dita" type="topic" href="audiobook/index.dita"/>
         <chapter format="dita" type="topic" href="extend.css/index.dita"/>
         <chapter format="dita" type="topic" href="favicon/index.dita"/>
+        <chapter format="dita" type="topic" href="doxygen/index.dita"/>
         <chapter format="dita" type="topic" href="javadoc/index.dita"/>
         <chapter format="dita" type="topic" href="pandoc/index.dita"/>
         <chapter format="dita" type="topic" href="passthrough/index.dita"/>
