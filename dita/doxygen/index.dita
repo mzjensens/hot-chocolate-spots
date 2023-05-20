@@ -6,7 +6,11 @@
         <shortdesc>
            This is a <xref href="https://www.dita-ot.org/plugins" format="html" scope="external">DITA-OT Plug-in</xref>  used to auto-create valid DITA-based Doxygen documentation.
            The initial source of the documentation can be generated directly using the
-           <xref href="http://www.doxygen.nl/manual/customize.html#xmlgenerator" format="html" scope="external">Doxygen XML</xref> documentation. The XML file can be added to the source and processed as if it had been written in DITA.
+           <xref
+        href="http://www.doxygen.nl/manual/customize.html#xmlgenerator"
+        format="html"
+        scope="external"
+      >Doxygen XML</xref> documentation. The XML file can be added to the source and processed as if it had been written in DITA.
         </shortdesc>
         <p>
         </p>
