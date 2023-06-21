@@ -22,15 +22,15 @@
       <param name="args.ftr" href="footer.xml"/>
       <param name="html5.toc.generate" value="no"/>
       <param name="args.rellinks" value="none"/>
-      <param name="nav-toc" value="nav-pill-scrollspy"/>
+      <param name="nav-toc" value="collapsible"/>
+      <param name="scrollspy-toc" value="list"/>
       <param name="processing-mode" value="strict"/>
       <param name="icons.include" value="yes"/>
       <param name="args.breadcrumbs" value="yes"/>
-      <param name="menubar-toc.include" value="yes"/>
+      <param name="menubar-toc.include" value="no"/>
       <param name="bootstrap.css.topic.title" value="text-primary"/>
       <param name="bootstrap.css.section.title" value="h4 text-secondary"/>
       <param name="open-graph.url" value="https://jason-fox.github.io/dita-ot-plugins"/>
-      <param name="lunr.search" value="https://jason-fox.github.io/dita-ot-plugins"/>
     </publication>
   </deliverable>
 </project>
