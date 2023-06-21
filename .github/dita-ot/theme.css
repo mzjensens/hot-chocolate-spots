@@ -1,4 +1,4 @@
-:root {
+:root [data-bs-theme=light] {
  --bs-primary: #4e9760;
  --bs-secondary: #6c757d;
 }
