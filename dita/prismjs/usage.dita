@@ -107,13 +107,13 @@
                     <parmname>prism.use.theme</parmname> - Specifies which of three included themes to use.
                     <ul>
                         <li>
-                            <option>default</option>
+                            <option>default</option> - default Prism.js theme
                         </li>
                         <li>
-                            <option>solarized</option>
+                            <option>solarized</option> - theme based on solarized colors
                         </li>
                         <li>
-                            <option>bootstrap</option>
+                            <option>bootstrap</option> - theme based on Bootstrap 5 colors
                         </li>
                     </ul>
                 </li>
