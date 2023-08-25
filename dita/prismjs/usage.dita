@@ -84,6 +84,44 @@
                 <image href="https://jason-fox.github.io/fox.jason.prismjs/prism-html.png" scope="external"/>
             </fig>
         </section>
+        <section id="line-numbering">
+            <title>Line numbering</title>
+            <p>To display line numbers in codeblocks in HTML and PDF, add the  <xmlatt> outputclass="show-line-numbers"</xmlatt> to the <xmlelement>codeblock</xmlelement></p>
+
+            <fig>
+                <title>Line numbering</title>
+
+        <codeblock outputclass="language-xml">&lt;codeblock outputclass="language-javascript show-line-numbers"&gt;
+  &lt;coderef href="../src/prism.js"/&gt;
+&lt;/codeblock&gt;</codeblock>
+            </fig>
+            <codeblock outputclass="language-javascript show-line-numbers"><coderef href="./src/prism.js"/></codeblock>
+        </section>
+         <section id="parameter-reference">
+            <title> Parameter Reference</title>
+            <ul>
+                <li>
+                    <parmname>prism.default</parmname> - Specifies the default Prism language
+                </li>
+                <li>
+                    <parmname>prism.use.theme</parmname> - Specifies which of three included themes to use.
+                    <ul>
+                        <li>
+                            <option>default</option>
+                        </li>
+                        <li>
+                            <option>solarized</option>
+                        </li>
+                        <li>
+                            <option>bootstrap</option>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <parmname>prism.css.theme</parmname> - Specifies the location of a custom color theme file relative to the output directory.
+                </li>
+            </ul>
+        </section>
         <section id="customizing-the-output">
             <title>Customizing the output</title>
             <p>
