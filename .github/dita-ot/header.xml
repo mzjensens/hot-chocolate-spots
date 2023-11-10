@@ -26,10 +26,6 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item d-flex align-items-center">
-        <!--simple search box -->
-          <span class="nav-link pe-2">
-            <i class="bi bi-search"/>
-          </span>
           <!--Elaborate search box -->
           <form class="position-relative me-auto search-box">
             <div class="input-group">
