@@ -21,11 +21,11 @@ jobs:
             nodejs -v
           plugins: |
             fox.jason.extend.css
-            https://github.com/jason-fox/dita-bootstrap/archive/develop.zip
-            https://github.com/jason-fox/dita-bootstrap.lunr/archive/feature/offline.zip
-            https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
+            net.infotexture.dita-bootstrap
+            net.infotexture.dita-bootstrap.lunr
+            fox.jason.prismjs
             fox.jason.favicon
-            https://github.com/jason-fox/fox.jason.open-graph/archive/master.zip
+            fox.jason.open-graph
           project: .github/dita-ot/html.xml
       - name: Deploy HTML 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -42,8 +42,8 @@ jobs:
             apt-get install -qy --no-install-recommends nodejs
             nodejs -v
           plugins: |
-            https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
-            https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
+            fox.jason.extend.css
+            fox.jason.open-graph
           project: .github/dita-ot/pdf.xml
       - name: Upload PDF 📚
         uses: actions/upload-artifact@v2
