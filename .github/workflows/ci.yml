@@ -43,7 +43,7 @@ jobs:
             nodejs -v
           plugins: |
             fox.jason.extend.css
-            fox.jason.open-graph
+            fox.jason.prismjs
           project: .github/dita-ot/pdf.xml
       - name: Upload PDF 📚
         uses: actions/upload-artifact@v2

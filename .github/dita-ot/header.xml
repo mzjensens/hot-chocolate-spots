@@ -25,8 +25,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item d-flex align-items-center">
-          <!--Elaborate search box -->
-          <form class="position-relative me-auto search-box">
+          <form class="position-relative me-auto search-box rounded">
             <div class="input-group">
               <span class="input-group-text bg-primary-subtle">
                 <i class="bi bi-search"/>
@@ -39,7 +38,7 @@
                   dir="auto"
                 />
             </div>
-            </form>
+          </form>
         </li>
         <!--
           This is a dark/light color theme toggler.
