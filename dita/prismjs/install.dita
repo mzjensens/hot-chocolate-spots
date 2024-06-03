@@ -37,7 +37,7 @@
                     <image
             deliveryTarget="html"
             scope="external"
-            href="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg"
+            href="https://simpleicons.org/icons/nodedotjs.svg"
             outputclass="float-start mt-1 me-3"
             height="55"
           />
