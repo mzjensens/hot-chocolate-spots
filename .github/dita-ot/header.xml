@@ -8,7 +8,7 @@
         data-bs-toggle="offcanvas"
         data-bs-target="#bdSidebar"
         aria-controls="bdSidebar"
-        aria-label="Toggle docs navigation"
+        aria-label="Toggle navigation"
       >
         <i class="bi bi-list"/>
       </button>
