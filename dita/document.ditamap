@@ -1,39 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
-<bookmap>
-    <title>DITA Bootstrap</title>
-    <frontmatter deliveryTarget="pdf">
-        <booklists>
-            <toc/>
-        </booklists>
-    </frontmatter>
-    <chapter navtitle="Introduction" format="dita" href="index.dita"/>
-    <part navtitle="Plug-Ins">
-        <chapter format="dita" type="topic" href="audiobook/index.dita"/>
-        <chapter format="dita" type="topic" href="extend.css/index.dita"/>
-        <chapter format="dita" type="topic" href="favicon/index.dita"/>
-        <chapter format="dita" type="topic" href="doxygen/index.dita"/>
-        <chapter format="dita" type="topic" href="javadoc/index.dita"/>
-        <chapter format="dita" type="topic" href="pandoc/index.dita"/>
-        <chapter format="dita" type="topic" href="passthrough/index.dita"/>
-        <chapter format="dita" type="topic" href="postman/index.dita"/>
-        <chapter format="dita" type="topic" href="pretty-dita/index.dita"/>
-        <chapter format="dita" type="topic" href="prismjs/index.dita"/>
-        <chapter format="dita" type="topic" href="open-graph/index.dita"/>
-        <chapter format="dita" type="topic" href="readthedocs/index.dita"/>
-        <chapter format="dita" type="topic" href="splash/index.dita"/>
-        <chapter format="dita" type="topic" href="swagger/index.dita"/>
-        <chapter format="dita" type="topic" href="tabs.css/index.dita"/>
-        <chapter format="dita" type="topic" href="translate.xliff/index.dita"/>
-        <chapter format="dita" type="topic" href="unit-test/index.dita"/>
-        <chapter format="dita" type="topic" href="validate.svrl/index.dita"/>
-        <chapter format="dita" type="topic" href="validate.svrl.text-rules/index.dita"/>
-        <chapter format="dita" type="topic" href="watermark/index.dita"/>
-        <chapter format="dita" type="topic" href="open-graph/index.dita"/>
-    </part>
-    <backmatter deliveryTarget="pdf">
-        <booklists>
-            <indexlist/>
-        </booklists>
-    </backmatter>
-</bookmap>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="icecream">
+    <topicmeta>
+        <author>Michael Lopez</author>
+        <copyright>
+            <copyryear year="2017"/>
+            <copyrholder>Ice Makers</copyrholder>
+        </copyright>
+    </topicmeta>
+    <topicref href="welcome.dita" navtitle="Welcome"/>
+    <topicref href="clean.dita" navtitle="Clean"/>
+    <topicref href="parts.dita" navtitle="Parts" />
+</map>

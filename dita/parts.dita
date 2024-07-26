@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="r-parts">
+    <title>Parts of your Ice Cream Maker FG-05</title>
+    <prolog>
+        
+        <author type="creator">Michael Lopez</author>
+        <copyright>
+            <copyryear year="2017"/>
+            <copyrholder>Ice Makers</copyrholder>
+        </copyright>
+        
+    </prolog>
+    <refbody>
+        <section>
+            <title>Mechanical parts</title>
+            <ul>
+                <li>Thing A</li>
+                <li>Thing B</li>
+            </ul>
+        </section>
+        <section>
+            <title>Electrical parts</title>
+            <ul>
+                <li>Thing C</li>
+                <li>Thing D</li>
+            </ul>
+        </section>
+    </refbody>
+</reference>
