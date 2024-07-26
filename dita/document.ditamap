@@ -4,11 +4,12 @@
     <topicmeta>
         <author>Michael Lopez</author>
         <copyright>
-            <copyryear year="2017"/>
+            <copyryear year="2024"/>
             <copyrholder>Ice Makers</copyrholder>
         </copyright>
     </topicmeta>
-    <topicref href="welcome.dita" navtitle="Welcome"/>
-    <topicref href="clean.dita" navtitle="Clean"/>
-    <topicref href="parts.dita" navtitle="Parts" />
+    <topicref href="index.dita" />
+    <topicref href="welcome.dita" />
+    <topicref href="clean.dita" />
+    <topicref href="parts.dita" />
 </map>
