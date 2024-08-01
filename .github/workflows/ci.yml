@@ -48,5 +48,5 @@ jobs:
       - name: Upload PDF 📚
         uses: actions/upload-artifact@v2
         with:
-          name: dita-artifact
+          name: dita-pdf
           path: 'out/pdf'
