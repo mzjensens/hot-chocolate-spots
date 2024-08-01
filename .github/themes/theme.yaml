@@ -88,10 +88,10 @@ style:
     color: $brand-color-secondary
   # ↓ set-cover-page ↓
   
-  #cover:
-   # background-image: logo.png
-    #background-repeat: no-repeat
-    #height: 25.7cm
+  cover:
+    background-image: logo.png
+    background-repeat: no-repeat
+    height: 25.7cm
   cover-title:
     color: $brand-color-primary
     font-size: 36pt
