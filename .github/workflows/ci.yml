@@ -46,7 +46,7 @@ jobs:
             fox.jason.extend.css
             fox.jason.prismjs
           project: .github/dita-ot/pdf.xml 
-          args: --theme=.github/themes/theme.yaml
+          args: --theme .github/themes/theme.yaml
           # args: --filter .github/filters/your-filter.ditaval
       - name: Upload PDF 📚
         uses: actions/upload-artifact@v2
