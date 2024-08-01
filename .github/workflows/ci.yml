@@ -46,7 +46,7 @@ jobs:
             fox.jason.extend.css
             fox.jason.prismjs
           build: |
-              dita -i dita/document.ditamap -o out -f pdf --theme=.github/themes/theme.yaml
+              dita -i dita/document.ditamap -o out/pdf -f pdf --theme=.github/themes/theme.yaml
          # project: .github/dita-ot/pdf.xml 
          # args: --theme .github/themes/theme.yaml
           # args: --filter .github/filters/your-filter.ditaval
