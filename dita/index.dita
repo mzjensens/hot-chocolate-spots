@@ -1,32 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<!-- Within the sample documentation, where necessary, the texts describing the
-   usage of each component have been copied directly from the official Bootstrap
-   5.0 documentation (found at https://getbootstrap.com/docs/5.0), however DITA
-   markup is used throughout the examples describing how to implement these
-   components correctly using outputclass. -->
-<topic id="index">
-    <title>DITA-OT Experiment</title>
-    <abstract> Life is good</abstract>
-    <prolog>
-        <metadata>
-            <keywords>
-                <indexterm>DITA-OT</indexterm>
-                <indexterm>installing</indexterm>
-            </keywords>
-        </metadata>
-    </prolog>
-    <body outputclass="language-bash">
-        <p> This is an experiment.</p>
-        <p>
-  <xref outputclass="btn-primary" props="collapse-toggle" href="#collapse1">
-    Optional information
-  </xref>
-</p>
-<bodydiv outputclass="collapse" id="collapse1">
-  <div outputclass="card card-body">
-      <p>Thanks for checking. Nothing to see here.</p>
-  </div>
-</bodydiv>
-    </body>
-</topic>
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/concept.dtd" []>
+<concept id="cintro">
+  <title>Monkeys are good people</title>
+  <shortdesc>We appreciate your commitment to the monkey lifestyle</shortdesc>
+  <prolog>
+    
+    <author type="creator">Monkey Isme</author>
+    <copyright>
+      <copyryear year="2024"/>
+      <copyrholder>Monkeys</copyrholder>
+    </copyright>
+    
+  </prolog>
+  <conbody>
+    <p>Hello monkey friend. Not that you are a friend who is a monkey, but
+            you are a friend of monkeys. This manual includes everything you need to know in order
+            to become the best monkey person ever. Please read and be happy.</p>
+   <fig>
+     <title>Harambe forever</title>
+     <image href="harambe.jpg">
+       <alt>Harambe the gorilla</alt>
+     </image>
+
+   </fig>
+   
+    <note id="mean">Monkeys are fun, but they can be mean! Be careful when handling monkeys.</note>
+  </conbody>
+</concept>
