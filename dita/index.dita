@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/concept.dtd" []>
-<concept id="cintro">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA 2.x Topic//EN" "topic.dtd">
+<topic id="intro">
   <title>Monkeys are good people</title>
   <shortdesc>We appreciate your commitment to the monkey lifestyle</shortdesc>
   <prolog>
@@ -12,7 +12,7 @@
     </copyright>
     
   </prolog>
-  <conbody>
+  <body>
     <p>Hello monkey friend. Not that you are a friend who is a monkey, but
             you are a friend of monkeys. This manual includes everything you need to know in order
             to become the best monkey person ever. Please read and be happy.</p>
@@ -23,7 +23,9 @@
      </image>
 
    </fig>
+    
+  
    
     <note id="mean">Monkeys are fun, but they can be mean! Be careful when handling monkeys.</note>
-  </conbody>
-</concept>
+  </body>
+</topic>
