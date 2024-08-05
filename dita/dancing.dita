@@ -23,7 +23,7 @@
       <step>
         <cmd>Start the music and let the magic happen</cmd>
         <info>
-          <note conref="index.dita#cintro/mean"/>
+          <note conref="index.dita#intro/mean"/>
           <fig>
             <title>The dancing monkey</title>
              <image href="dancing.jpg">
