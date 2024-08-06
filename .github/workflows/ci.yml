@@ -27,7 +27,6 @@ jobs:
             fox.jason.favicon
             fox.jason.open-graph
           project: .github/dita-ot/html.xml
-         # args: --filter .github/filters/your-filter.ditaval
       - name: Deploy HTML 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
@@ -47,7 +46,6 @@ jobs:
             fox.jason.prismjs
           build: |
               dita -i dita/document.ditamap -o out/pdf -f pdf --theme=.github/themes/theme.yaml --org.dita.index.skip="yes"
-         # args: --filter .github/filters/your-filter.ditaval
       - name: Upload PDF 📚
         uses: actions/upload-artifact@v2
         with:
