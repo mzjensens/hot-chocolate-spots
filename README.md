@@ -21,7 +21,9 @@ Template site for publishing Bootstrap-themed HTML and PDF using the DITA Open T
 - Now, the Actions will automatically publish a Bootstrap-themed HTML and a PDF using the DITA Open Toolkit
 - You must to have a file named `index.dita` inside the `dita` folder
 - You must to name your main DITA map `document.ditamap`
-  - Of course, you can rename them, but that also requires renaming them inside the workflow file.
+  - Of course, you can rename them, but that also requires renaming them inside the workflow file
+- Customize your header file to replace banner title and icon
+- Change your theme for PDF and HTML styles.
 
 ## Credits
 
