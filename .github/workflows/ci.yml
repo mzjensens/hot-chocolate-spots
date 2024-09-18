@@ -47,7 +47,7 @@ jobs:
           build: |
               dita -i dita/document.ditamap -o out/pdf -f pdf --theme=.github/themes/theme.yaml --org.dita.index.skip="yes"
       - name: Upload PDF 📚
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: dita-pdf
           path: 'out/pdf'
