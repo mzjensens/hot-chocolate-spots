@@ -16,6 +16,10 @@ Template site for publishing Bootstrap-themed HTML and PDF using the DITA Open T
 - Customize your header file to replace banner title and icon
 - Change your theme for PDF and HTML styles.
 
+####  Ensure GITHUB_TOKEN Has Sufficient Permissions
+- Navigate to Settings → Actions → General in your repository
+- Under Workflow permissions, ensure that Read and write permissions is selected. This gives the GITHUB_TOKEN the necessary permission to push to the gh-pages branch.
+
 ## Credits
 
 Thanks to the following DITA-OT experts:
