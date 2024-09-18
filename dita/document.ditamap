@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA 2.x Map//EN" "map.dtd">
+<map>
+    <title>Best Public Universities in Virginia</title>
+    <topicref href="university_of_virginia.dita"/>
+    <topicref href="virginia_tech.dita"/>
+    <topicref href="william_and_mary.dita"/>
+    <topicref href="george_mason_university.dita"/>
+    <topicref href="james_madison_university.dita"/>
+</map>
