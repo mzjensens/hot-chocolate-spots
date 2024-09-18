@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA 2.x Map//EN" "map.dtd">
-<map>
-    <title>Manual for monkey friends</title>
-    <topicref href="index.dita"/>
-    <topicref href="feeding.dita"/>
-    <topicref href="dancing.dita"/>
-
-</map>
