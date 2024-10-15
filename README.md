@@ -32,7 +32,7 @@ All of your DITA files (topics, maps, images, and other resources) should be pla
 Once you have committed your changes (via GitHub or via Oxygen Content Fusion), the GitHub Action for publishing will automatically trigger and will run in the background.
 
 The GitHub Action workflow is pre-configured to start every time you commit changes to the repository.
-It is defined in the .github/workflows/ci.yml file (CI stands for continuous integration), which runs the DITA Open Toolkit to process your DITA content and generate the output files (e.g., HTML, PDF).
+It is defined in the `.github/workflows/ci.yml` file (CI stands for continuous integration), which runs the DITA Open Toolkit to process your DITA content and generate the output files (e.g., HTML, PDF).
 
 ### View the Workflow Progress
 
