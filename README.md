@@ -5,8 +5,8 @@ Template site for publishing Bootstrap-themed HTML and PDF using the DITA Open T
 ## Instructions for ENGL 4814 students
 
 1. Click on the "Use this template" green button on the top of this page
-2. Create a new repository based on the template.
-3. Be sure to select the "Include all branches" option. We need all branches of the repository.
+2. You need to create a repository based on the template. **Be sure to select the "Include all branches" option. We need all branches of the repository.**
+3. Create your new repository based on the template.
 
 ### Next steps and requirements
 - Now, the Actions will automatically publish a Bootstrap-themed HTML and a PDF using the DITA Open Toolkit
