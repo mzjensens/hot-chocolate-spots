@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map id="ditamap-6514" class="- map/map ">
-	<title class="- topic/title ">document</title>	
+<map id="hot-chocolate-guide">
+    <title>Hot Chocolate and Reading Spots</title>
+    <topicref href="index.dita" navtitle="Introduction"/>
+    <topicref href="The_Lighthouse.dita" navtitle="The Lighthouse"/>
+    <topicref href="starbucks.dita" navtitle="Starbucks by the Campus"/>
+    <topicref href="VT_Library.dita" navtitle="Library Café"/>
+    <topicref href="Turners_Place.dita" navtitle="Turner’s Place Coffee Shop"/>
+    <topicref href="Mill_Mountain.dita" navtitle="Mill Mountain Café"/>
 </map>
